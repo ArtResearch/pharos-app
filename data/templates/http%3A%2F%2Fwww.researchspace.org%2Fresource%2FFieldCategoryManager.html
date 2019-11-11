@@ -76,7 +76,7 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
             "xsdDatatype": "xsd:anyURI",
             "minOccurs": "0",
             "maxOccurs": "unbound",
-            "selectPattern": "SELECT $value WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+            "selectPattern": "SELECT $subject WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
             "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#broader> $value} } WHERE {}",
             "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
           },                
