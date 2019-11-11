@@ -77,7 +77,7 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
             "minOccurs": "0",
             "maxOccurs": "unbound",
             "selectPattern": "SELECT $subject $value WHERE { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }}",
-            "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#broader> <http://www.metaphacts.com/ontologies/platform/FieldCategories>} } WHERE {}",
+            "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>} } WHERE {}",
             "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
           },                
           {
