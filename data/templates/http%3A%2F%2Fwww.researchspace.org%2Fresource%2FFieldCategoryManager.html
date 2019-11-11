@@ -76,7 +76,7 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
             "xsdDatatype": "xsd:anyURI",
             "minOccurs": "1",
             "maxOccurs": "unbound",
-            "selectPattern": "SELECT $subject $value WHERE  $subject $p <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+            "selectPattern": "SELECT $subject $value WHERE  { $subject $p <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
             "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject $p <http://www.metaphacts.com/ontologies/platform/FieldCategories>} } WHERE {}",
             "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
           },                
