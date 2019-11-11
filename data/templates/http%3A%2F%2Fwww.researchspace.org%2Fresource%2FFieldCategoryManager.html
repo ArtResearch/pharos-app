@@ -74,7 +74,7 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
             "label": "Parent Category",
             "description": "This will become the parent category",
             "xsdDatatype": "xsd:anyURI",
-            "minOccurs": "0",
+            "minOccurs": "1",
             "maxOccurs": "unbound",
             "selectPattern": "SELECT $subject $value WHERE { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }}",
             "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>} } WHERE {}",
