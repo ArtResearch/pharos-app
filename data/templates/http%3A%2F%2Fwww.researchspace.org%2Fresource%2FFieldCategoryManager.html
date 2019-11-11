@@ -1,0 +1,66 @@
+
+
+<semantic-context repository='default'>
+
+<semantic-table 
+  query="
+          SELECT ?category ?label 
+         
+         WHERE {                    
+GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
+         ?category <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> .
+         ?category <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+      }
+         }
+         "
+  column-configuration='[
+    {"variableName": "category", "displayName": "Category"}, 
+    {"variableName": "label", "displayName": "Label"}
+
+                    
+  ]'
+>
+      </semantic-table>
+                </semantic-context>
+
+      <semantic-form new-subject-template='http://www.metaphacts.com/ontologies/platform/FieldCategories/{{label}}'
+        post-action='reload'
+        browser-persistence=false
+
+        persistence='sparql' 
+        form-id='category'
+        fields='[
+          {
+            "id": "label",
+            "label": "Label",
+            "description": "The name of the category",
+            "xsdDatatype": "xsd:string",
+            "minOccurs": "1",
+            "maxOccurs": "unbound",
+            "selectPattern": "SELECT $value WHERE { $subject rdfs:label $value }",
+            "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject rdfs:label $value} } WHERE {}",
+            "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
+          },
+          {
+            "id": "type",
+            "label": "Type",
+            "description": "The type of the created instance",
+            "xsdDatatype": "xsd:anyURI",
+            "selectPattern": "SELECT $value WHERE { $subject a $value }",
+            "insertPattern": "INSERT { GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value }} WHERE {}",
+            "deletePattern": "DELETE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value } WHERE {}"
+          }
+        ]'>
+        <bs-panel>
+          <h4>Create a new Category</h4>
+          <semantic-form-recover-notification></semantic-form-recover-notification>
+          <semantic-form-text-input for='label'></semantic-form-text-input>
+           <semantic-form-hidden-input for='type'
+            default-value='http://www.metaphacts.com/ontologies/platform/FieldCategories'></semantic-form-hidden-input>
+          <semantic-form-errors></semantic-form-errors>
+          <!-- save and reset button for form -->
+          <button name="submit" class="btn btn-default">Save</button>
+          <button name="reset" class="btn btn-default">Reset</button>
+        </bs-panel>
+      </semantic-form>
+      
