@@ -45,9 +45,11 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
   
   <template id='actions'>
                            <div>
-                             <mp-ldp-remove-from-container-action iri="{{iri.value}}" >
-                               <button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>
-                             </mp-ldp-remove-from-container-action>                          
+                <button name='delete' class='btn btn-xs btn-default'
+                  data-annotation='{{iri.value}}'
+                  title='Delete='>
+                  <span class='fa fa-trash' style='pointer-events: none;'></span>
+                </button>                         
                            </div>
                          </template>
   
