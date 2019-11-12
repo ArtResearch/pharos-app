@@ -20,11 +20,24 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
          "
   column-configuration='[
     {"variableName": "category", "displayName": "Category"}, 
-    {"variableName": "label", "displayName": "Label"}
+    {"variableName": "label", "displayName": "Label"},
+    {"displayName":"Actions", "cellTemplate": "{{> actions}}"}
 
                     
   ]'
 >
+  
+  <template id='actions'>
+                           <div>
+
+
+                             <mp-ldp-remove-from-container-action iri="{{subject.value}}" container="[[container]]">
+                               <button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>
+                             </mp-ldp-remove-from-container-action>                          
+                           </div>
+                         </template>
+  
+  
       </semantic-table>
                 </semantic-context>
 
