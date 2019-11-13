@@ -45,9 +45,9 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
 <template id='actions'>
   <semantic-form>
    {{log category.value}}
-                                 <mp-ldp-remove-from-container-action iri="{{category.value}}" container="asset">
-                               <button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>
-                             </mp-ldp-remove-from-container-action>   
+                                 <button name="delete" iri="{{category.value}}"/>
+                               <!--<button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>-->
+
     
     <!--
   	<button name="delete" class="btn btn-xs btn-danger" style="pointer-events: none;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>
