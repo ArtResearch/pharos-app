@@ -45,8 +45,13 @@ GRAPH <http://www.metaphacts.com/ontologies/platform/FieldCustomizations> {
 <template id='actions'>
   <semantic-form>
    {{log category.value}}
-                                 <button name="delete" iri="{{category.value}}"/>
-                               <!--<button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>-->
+    <button name='delete'
+      class='btn btn-xs btn-default dpub-ctrl-buttons-style'
+      data-annotation='{{category.value}}'
+      title='Delete annotation'>
+      <span class='fa fa-trash' style='pointer-events: none;'></span>
+    </button>
+    <!--<button class="btn btn-xs btn-danger" style="margin-right:8px;"><i class="fa fa-trash" aria-hidden=true></i> Delete</button>-->
 
     
     <!--
