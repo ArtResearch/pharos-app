@@ -1,0 +1,16 @@
+
+<http://www.metaphacts.com/ontologies/platform#fieldDefinitionCategoryContainer/context> {
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionCategoryContainer> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Container to store field definition categories.";
+    a <http://www.w3.org/ns/ldp#Container>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Field Definition Category Container";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T13:37:01.718Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#rootContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/ontologies/platform#fieldDefinitionCategoryContainer> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionCategoryContainer> a
+      <http://www.w3.org/ns/ldp#Resource> .
+}
