@@ -61,7 +61,7 @@
             <mp-overlay-dialog-content>
                 {{node.value}}/container
               <p><strong>You will not be able to recover this category</strong> (and all of its children) again!</p>
-              <mp-ldp-remove-from-container-action iri="{{node.value}}/container" container="http://www.metaphacts.com/ontologies/platform/formContainer">
+              <mp-ldp-remove-from-container-action iri="fieldCategory/{{node.value}}/container" container="http://www.metaphacts.com/ontologies/platform/formContainer">
                 <button class="btn btn-xs btn-danger" style="margin-right:8px;">Yes, Delete it!</button>
               </mp-ldp-remove-from-container-action>   
 
