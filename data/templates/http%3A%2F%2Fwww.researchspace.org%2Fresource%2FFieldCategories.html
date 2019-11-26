@@ -22,7 +22,11 @@
       </h2>
     </div>
   </div>
-  <div class="page__body">
+  
+          <bs-tabs class="page__body-navtabs--borderless-no-image" unmount-on-exit=true>
+          <bs-tab event-key="1" title="Tree View">
+            
+
 
 
     <h3>List of Categories</h3>
@@ -69,6 +73,14 @@
       </template>
     </semantic-tree>
 
+          </bs-tab>
+          <bs-tab event-key="2" title="Table View">
+            Tab 2
+          </bs-tab>
+        </bs-tabs>
+  
+  
+  
     <semantic-form
       new-subject-template="http://www.metaphacts.com/fieldDefinitionCategory/{{label}}"
       post-action="reload"
@@ -124,6 +136,6 @@
         <button name="reset" class="btn btn-default">Reset</button>
       </bs-panel>
     </semantic-form>
-  </div>
+
   <div class="clearfix"></div>
 </div>
