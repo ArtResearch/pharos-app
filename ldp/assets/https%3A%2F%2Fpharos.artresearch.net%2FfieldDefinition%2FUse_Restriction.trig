@@ -1,0 +1,31 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Use_Restriction/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Use_Restriction> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413644;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413645;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Use Restrictions"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413645 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P104_is_subject_to ?rights.
+  ?rights crm:P2_has_type ?type.
+  ?type rdfs:label \"Use Restrictions\".
+  ?rights crm:P190_has_symbolic_content ?value
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413644 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Use_Restriction> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:41:53.459Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Use_Restriction> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Use_Restriction> a <http://www.w3.org/ns/ldp#Resource> .
+}
