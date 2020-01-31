@@ -1,0 +1,33 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Bibliography/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Bibliography> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>, <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414741;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414742;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414742 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by  ?value.
+  ?value  crm:P2_has_type ?type.
+  ?type rdfs:label \"Bibliography\"
+}""" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414741 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414742 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414741 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Bibliography> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:42:11.604Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Bibliography> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Bibliography> a <http://www.w3.org/ns/ldp#Resource> .
+}
