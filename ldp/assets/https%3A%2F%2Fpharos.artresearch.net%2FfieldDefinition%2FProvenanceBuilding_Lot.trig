@@ -1,0 +1,33 @@
+
+<https://pharos.artresearch.net/fieldDefinition/ProvenanceBuilding_Lot/context> {
+  <https://pharos.artresearch.net/fieldDefinition/ProvenanceBuilding_Lot> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>, <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414656;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414657;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Provenance Building Lot"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414656 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414657 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+?subject crm:P24i_changed_ownership_through ?acquisition.
+?acquisition crm:P7_took_place_at ?value.
+?value crm:P2_has_type ?type.
+?type rdfs:label \"Building Lot\"
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414656 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ProvenanceBuilding_Lot> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:41:53.875Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/ProvenanceBuilding_Lot> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ProvenanceBuilding_Lot> a <http://www.w3.org/ns/ldp#Resource> .
+}
