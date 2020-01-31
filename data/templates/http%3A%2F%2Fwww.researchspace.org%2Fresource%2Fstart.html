@@ -7,26 +7,31 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct $subject ?label
+											 SELECT  distinct $subject ?label ?artist ?collection
 											 WHERE {
      	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+                        $subject rdfs:label ?label .
+                         
                         $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
                         ?type_uri rdfs:label "Artwork".
                          
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
-                        ?source_uri rdfs:label "Villa i Tatti".
+                        ?subject crm:has_source  ?source_uri.
+                        ?source_uri rdfs:label "Frick" .
                          
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
-                        ?sub_source_uri rdfs:label "SharedShelf".
+
+                        ?subject crm:P108i_was_produced_by ?production .
+                        ?production crm:P01i_is_domain_of ?carried .
+                        ?carried crm:P02_has_range ?artist .
                          
-   											$subject rdfs:label ?label .
+                        ?subject crm:P46i_forms_part_of?collection .
   											} ORDER BY ASC(?label)' 
                 id="table-result" 
-                number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
  							  {"variableName": "subject", "displayName": "Artwork"},             
-                {"variableName": "label", "displayName": "Label"}
+                {"variableName": "label", "displayName": "Label"},
+                {"variableName": "artist", "displayName": "Artist"},             
+                {"variableName": "collection", "displayName": "Collection"}
                 ]'>
 </semantic-table>
 
