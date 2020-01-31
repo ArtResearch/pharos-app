@@ -1,0 +1,33 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Image_Creation_Participant/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Image_Creation_Participant> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t412987;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t412986;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Creation Participant"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t412987 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t412986 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?work crm:P16i_was_used_for ?creation.
+  ?creation crm:P92_brought_into_existence ?visual_item.
+  ?visual_item crm:P128i_is_carried_by $subject .
+  ?creation crm:P15_had_participant ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t412987 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Image_Creation_Participant> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:42:07.447Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Image_Creation_Participant> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Image_Creation_Participant> a <http://www.w3.org/ns/ldp#Resource> .
+}
