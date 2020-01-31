@@ -1,0 +1,32 @@
+
+<https://pharos.artresearch.net/fieldDefinition/DestructionDate/context> {
+  <https://pharos.artresearch.net/fieldDefinition/DestructionDate> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413485;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413484;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Transformation Date"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413484 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413485 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413484 <http://spinrdf.org/sp#text> """SELECT distinct $value ?label
+WHERE {
+   $subject <http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by> ?transformation .
+    ?transformation <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within> $value .
+} """ .
+  
+  <https://pharos.artresearch.net/fieldDefinition/DestructionDate> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:41:56.991Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/DestructionDate> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/DestructionDate> a <http://www.w3.org/ns/ldp#Resource> .
+}
