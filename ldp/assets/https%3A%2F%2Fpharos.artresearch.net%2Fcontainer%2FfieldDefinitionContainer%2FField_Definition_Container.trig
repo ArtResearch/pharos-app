@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container/context> {
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Container to store field definitions.";
+    a <http://www.w3.org/ns/ldp#Container>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Field Definition Container";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:41:51.035Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
