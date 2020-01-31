@@ -1,39 +1,46 @@
-<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
-<h4 align="center"><b>Artworks</b></h4>
+<style>
+  .component-page-toolbar{
+    display: none;
+  }
+</style>
+<div style="margin-top:5%;">
+  <div data-flex-layout="column center-center">
+    <div>
+       <h2>Welcome to Pharos Digital Collections</h2>
+       <br>
+       <h4>Display Villa I Tatti Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworks>here</a></h4>
+       <h4>Display Villa I Tatti Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotos>here</a></h4>
+       <h4>Display Villa I Tatti Artists: <a href=http://83.212.170.77:10214/resource/DisplayPersons>here</a></h4>
+       <h4>Display Villa I Tatti Institutions: <a href=http://83.212.170.77:10214/resource/DisplayInstitutions>here</a></h4>
+       <h4>Display Villa I Tatti Places: <a href=http://83.212.170.77:10214/resource/DisplayPlaces>here</a></h4>
+       <br>
+       <h4>Display Villa I Tatti Artworks (SharedShelf): <a href=http://83.212.170.77:10214/resource/DisplayArtworksSS>here</a></h4>
+       <h4>Display Villa I Tatti Photographs (SharedShelf): <a href=http://83.212.170.77:10214/resource/DisplayPhotosSS>here</a></h4>
+       <h4>Display Villa I Tatti Artists (SharedShelf): <a href=http://83.212.170.77:10214/resource/DisplayPersonsSS>here</a></h4>
+       <h4>Display Villa I Tatti Institutions (SharedShelf): <a href=http://83.212.170.77:10214/resource/DisplayInstitutionsSS>here</a></h4>
+       <h4>Display Villa I Tatti Places (SharedShelf): <a href=http://83.212.170.77:10214/resource/DisplayPlacesSS>here</a></h4>
+       <br>
+       <h4>Display Villa I Tatti Artworks (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayArtworksFI>here</a></h4>
+       <h4>Display Villa I Tatti Photographs (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPhotosFI>here</a></h4>
+       <h4>Display Villa I Tatti Artists (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPersonsFI>here</a></h4>
+       <h4>Display Villa I Tatti Institutions (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayInstitutionsFI>here</a></h4>
+       <h4>Display Villa I Tatti Places (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPlacesFI>here</a></h4>
+      
+       <br>
+       <h4>Display Hertziana Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksHertziana>here</a></h4>
+       <h4>Display Hertziana Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosHertziana>here</a></h4>
+       <br>
+       <h4>Display Frick Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksFrick>here</a></h4>
+       <h4>Display Frick Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosFrick>here</a></h4>
+       <h4>Display Frick Persons: <a href=http://83.212.170.77:10214/resource/DisplayPersonsFrick>here</a></h4>
+       <h4>Display Frick Colletions: <a href=http://83.212.170.77:10214/resource/DisplayCollectionsFrick>here</a></h4>
+       <h4>Display Frick Places: <a href=http://83.212.170.77:10214/resource/DisplayPlacesFrick>here</a></h4>
+       <br>
+       <h4>Display Zeri Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksZeri>here</a></h4>
+       <h4>Display Zeri Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosZeri>here</a></h4>
+       <br>
+       <h4>Display Marburg Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksMarburg>here</a></h4>
+       <h4>Display Marburg Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosMarburg>here</a></h4>
+    </div>
+  </div>
 </div>
-
- <semantic-table 
-                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-
-											 SELECT  distinct $subject ?label ?artist ?collection
-											 WHERE {
-     	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-                        $subject rdfs:label ?label .
-                         
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                        ?type_uri rdfs:label "Artwork".
-                         
-                        ?subject crm:has_source  ?source_uri.
-                        ?source_uri rdfs:label "Frick" .
-                         
-
-                        ?subject crm:P108i_was_produced_by ?production .
-                        ?production crm:P01i_is_domain_of ?carried .
-                        ?carried crm:P02_has_range ?artist .
-                         
-                        ?subject crm:P46i_forms_part_of?collection .
-  											} limit 1000' 
-                id="table-result" 
-                options='{"showFilter": false, "showTableHeading": true}'
-                column-configuration='[
- 							  {"variableName": "subject", "displayName": "Artwork"},             
-                {"variableName": "label", "displayName": "Label"},
-                {"variableName": "artist", "displayName": "Artist"},             
-                {"variableName": "collection", "displayName": "Collection"}
-                ]'>
-</semantic-table>
-
-<br>
-<br>
