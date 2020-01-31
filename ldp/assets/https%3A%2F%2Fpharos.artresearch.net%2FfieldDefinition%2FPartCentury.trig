@@ -1,0 +1,34 @@
+
+<https://pharos.artresearch.net/fieldDefinition/PartCentury/context> {
+  <https://pharos.artresearch.net/fieldDefinition/PartCentury> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>, <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414810;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t414811;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Part of Century"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414811 <http://spinrdf.org/sp#text> """SELECT distinct $value ?label
+WHERE {
+    $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P10_falls_within> $century .
+    ?century <http://www.cidoc-crm.org/cidoc-crm/P10_falls_within> ?partofcentury.
+    ?partofcentury crm:P1_is_identified_by ?value
+} """;
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t414810 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PartCentury> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:41:55.947Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/PartCentury> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PartCentury> a <http://www.w3.org/ns/ldp#Resource> .
+}
