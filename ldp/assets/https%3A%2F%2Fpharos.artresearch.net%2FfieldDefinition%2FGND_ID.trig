@@ -1,0 +1,33 @@
+
+<https://pharos.artresearch.net/fieldDefinition/GND_ID/context> {
+  <https://pharos.artresearch.net/fieldDefinition/GND_ID> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413415;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t413414;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "GND ID"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413414 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413415 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t413414 <http://spinrdf.org/sp#text> """SELECT distinct $value ?label
+WHERE {
+    $subject crm:P1_is_identified_by ?value .
+    ?value crm:P2_has_type ?type_uri.
+    ?type_uri rdfs:label \"GND\"
+} """ .
+  
+  <https://pharos.artresearch.net/fieldDefinition/GND_ID> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:42:08.174Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/GND_ID> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/GND_ID> a <http://www.w3.org/ns/ldp#Resource> .
+}
