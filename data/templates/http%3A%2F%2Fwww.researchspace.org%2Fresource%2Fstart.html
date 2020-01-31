@@ -1,46 +1,34 @@
-<style>
-  .component-page-toolbar{
-    display: none;
-  }
-</style>
-<div style="margin-top:5%;">
-  <div data-flex-layout="column center-center">
-    <div>
-       <h2>Welcome to Pharos Digital Collections</h2>
-       <br>
-       <h4>Display Villa I Tatti Artworks: <a href=https://pharos.artresearch.net/resource/DisplayArtworks>here</a></h4>
-       <h4>Display Villa I Tatti Photographs: <a href=https://pharos.artresearch.net/resource/DisplayPhotos>here</a></h4>
-       <h4>Display Villa I Tatti Artists: <a href=https://pharos.artresearch.net/resource/DisplayPersons>here</a></h4>
-       <h4>Display Villa I Tatti Institutions: <a href=https://pharos.artresearch.net/resource/DisplayInstitutions>here</a></h4>
-       <h4>Display Villa I Tatti Places: <a href=https://pharos.artresearch.net/resource/DisplayPlaces>here</a></h4>
-       <br>
-       <h4>Display Villa I Tatti Artworks (SharedShelf): <a href=https://pharos.artresearch.net/resource//DisplayArtworksSS>here</a></h4>
-       <h4>Display Villa I Tatti Photographs (SharedShelf): <a href=https://pharos.artresearch.net/resource/DisplayPhotosSS>here</a></h4>
-       <h4>Display Villa I Tatti Artists (SharedShelf): <a href=https://pharos.artresearch.net/resource/DisplayPersonsSS>here</a></h4>
-       <h4>Display Villa I Tatti Institutions (SharedShelf): <a href=https://pharos.artresearch.net/resource/DisplayInstitutionsSS>here</a></h4>
-       <h4>Display Villa I Tatti Places (SharedShelf): <a href=https://pharos.artresearch.net/resource/DisplayPlacesSS>here</a></h4>
-       <br>
-       <h4>Display Villa I Tatti Artworks (FotoIndex): <a href=https://pharos.artresearch.net/resource/resource/DisplayArtworksFI>here</a></h4>
-       <h4>Display Villa I Tatti Photographs (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPhotosFI>here</a></h4>
-       <h4>Display Villa I Tatti Artists (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPersonsFI>here</a></h4>
-       <h4>Display Villa I Tatti Institutions (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayInstitutionsFI>here</a></h4>
-       <h4>Display Villa I Tatti Places (FotoIndex): <a href=http://83.212.170.77:10214/resource/DisplayPlacesFI>here</a></h4>
-      
-       <br>
-       <h4>Display Hertziana Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksHertziana>here</a></h4>
-       <h4>Display Hertziana Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosHertziana>here</a></h4>
-       <br>
-       <h4>Display Frick Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksFrick>here</a></h4>
-       <h4>Display Frick Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosFrick>here</a></h4>
-       <h4>Display Frick Persons: <a href=http://83.212.170.77:10214/resource/DisplayPersonsFrick>here</a></h4>
-       <h4>Display Frick Colletions: <a href=http://83.212.170.77:10214/resource/DisplayCollectionsFrick>here</a></h4>
-       <h4>Display Frick Places: <a href=http://83.212.170.77:10214/resource/DisplayPlacesFrick>here</a></h4>
-       <br>
-       <h4>Display Zeri Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksZeri>here</a></h4>
-       <h4>Display Zeri Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosZeri>here</a></h4>
-       <br>
-       <h4>Display Marburg Artworks: <a href=http://83.212.170.77:10214/resource/DisplayArtworksMarburg>here</a></h4>
-       <h4>Display Marburg Photographs: <a href=http://83.212.170.77:10214/resource/DisplayPhotosMarburg>here</a></h4>
-    </div>
-  </div>
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+<h4 align="center"><b>Artworks</b></h4>
 </div>
+
+ <semantic-table 
+                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+											 SELECT  distinct $subject ?label
+											 WHERE {
+     	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
+                        ?type_uri rdfs:label "Artwork".
+                         
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
+                        ?source_uri rdfs:label "Villa i Tatti".
+                         
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
+                        ?sub_source_uri rdfs:label "SharedShelf".
+                         
+   											$subject rdfs:label ?label .
+  											} ORDER BY ASC(?label)' 
+                id="table-result" 
+                number-of-displayed-rows= 100
+                options='{"showFilter": false, "showTableHeading": true}'
+                column-configuration='[
+ 							  {"variableName": "subject", "displayName": "Artwork"},             
+                {"variableName": "label", "displayName": "Label"}
+                ]'>
+</semantic-table>
+
+<br>
+<br>
