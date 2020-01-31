@@ -1,0 +1,33 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Photographer/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Photographer> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0630767302384a84b31d840f8cefba4c-t933;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0630767302384a84b31d840f8cefba4c-t934;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Photographer"@en .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t934 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?work crm:P16i_was_used_for ?creation.
+  ?creation crm:P92_brought_into_existence ?visual_item.
+  ?visual_item crm:P128i_is_carried_by $subject .
+  ?creation crm:P14_carried_out_by ?value.
+}""" .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t933 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0630767302384a84b31d840f8cefba4c-t934 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Photographer> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-31T12:42:11.722Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Photographer> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Photographer> a <http://www.w3.org/ns/ldp#Resource> .
+}
