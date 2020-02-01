@@ -1,0 +1,37 @@
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+<h4 align="center"><b>Photographs (Villa i Tatti FotoIndex)</b></h4>
+</div>
+
+ <semantic-table 
+                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+											 SELECT  distinct $subject ?artwork ?collection
+											 WHERE {
+                          ?subject crm:P65_shows ?visual_item .
+                          ?visual_item crm:P138_represents $artwork .
+                         
+                          ?subject crm:P46i_forms_part_of ?collection .
+      										$subject crm:P2_has_type ?type .
+                         
+     										  ?type rdfs:label "Photograph" .
+                         
+                          $artwork <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
+                          ?source_uri rdfs:label "Villa i Tatti".
+                         
+                          $artwork <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
+                          ?sub_source_uri rdfs:label "FotoIndex".
+        								 }' 
+                id="table-result" 
+                number-of-displayed-rows= 100
+                options='{"showFilter": false, "showTableHeading": true}'
+                column-configuration='[
+ 							  {"variableName": "subject", "displayName": "Photo"},             
+                {"variableName": "artwork", "displayName": "Artwork"},
+                {"variableName": "collection", "displayName": "Collection"}               
+                ]'>
+</semantic-table>
+
+<br>
+<br>
