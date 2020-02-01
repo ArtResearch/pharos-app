@@ -18,6 +18,9 @@
                          
                         ?subject crm:has_source  ?source_uri.
                         ?source_uri rdfs:label "Marburg" .
+                         
+                        ?subject crm:P138i_is_represented_by ?vi.
+                        ?vi crm:P128i_is_carried_by ?photo
                         
                         OPTIONAL {
                         $subject crm:P108i_was_produced_by ?production.
