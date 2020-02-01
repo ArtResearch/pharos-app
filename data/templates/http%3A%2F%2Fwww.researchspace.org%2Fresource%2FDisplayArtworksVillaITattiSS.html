@@ -20,7 +20,7 @@
                         ?sub_source_uri rdfs:label "SharedShelf".
                          
    											$subject rdfs:label ?label .
-  											} Limit 1000' 
+  											} order by(?label) limit 1000' 
                 id="table-result" 
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
