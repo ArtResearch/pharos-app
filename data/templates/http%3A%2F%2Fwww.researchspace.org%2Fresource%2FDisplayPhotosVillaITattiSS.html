@@ -9,7 +9,6 @@
 
  											 SELECT  distinct $subject ?artwork
 											 WHERE {
-                         	{
                           ?artwork crm:P16i_was_used_for ?creation .
                           ?creation crm:P92_brought_into_existence ?visual_item .
                           ?visual_item crm:P128i_is_carried_by $subject .
