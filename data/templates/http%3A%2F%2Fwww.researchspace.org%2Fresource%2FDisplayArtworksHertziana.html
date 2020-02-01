@@ -19,6 +19,11 @@
                         ?subject crm:has_source  ?source_uri.
                         ?source_uri rdfs:label "Hertziana" .
                         
+                        OPTIONAL {
+                        $subject crm:P108i_was_produced_by ?production.
+                        ?production crm:P01i_is_domain_of ?carried.
+                        ?carried crm:P02_has_range ?artist
+                        }
 
   											} limit 1000' 
                 id="table-result"
@@ -27,8 +32,7 @@
                 column-configuration='[
  							  {"variableName": "subject", "displayName": "Artwork"},             
                 {"variableName": "label", "displayName": "Label"},
-                {"variableName": "artist", "displayName": "Artist"},             
-                {"variableName": "collection", "displayName": "Collection"}
+                {"variableName": "artist", "displayName": "Artist"}
                 ]'>
 </semantic-table>
 
