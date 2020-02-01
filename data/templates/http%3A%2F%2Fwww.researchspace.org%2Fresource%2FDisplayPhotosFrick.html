@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct $subject ?label ?artist 
+											 SELECT  distinct $subject ?artwork
 
 											 WHERE {
      	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
@@ -15,10 +15,12 @@
                          
                         $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
                         ?type_uri rdfs:label "Photograph".
+                         
+                        ?subject crm:P138i_has_representation ?image .
 
                         ?vi crm:P128i_is_carried_by ?subject .
     										?artwork crm:P138i_is_represented_by ?vi.
-
+                         
                         ?artwork crm:has_source  ?source_uri.
                         ?source_uri rdfs:label "Frick" .
 
@@ -27,9 +29,8 @@
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "subject", "displayName": "Artwork"},             
-                {"variableName": "label", "displayName": "Label"},
-                {"variableName": "artist", "displayName": "Artist"}
+ 							  {"variableName": "subject", "displayName": "Label"},             
+                {"variableName": "artwork", "displayName": "Artwork"}
                 ]'>
 </semantic-table>
 
