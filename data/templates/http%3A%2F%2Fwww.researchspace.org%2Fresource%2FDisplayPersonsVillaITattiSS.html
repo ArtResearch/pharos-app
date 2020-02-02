@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  $artist ?name (count(?artwork) as ?c)
+											 SELECT  $artist (count(?artwork) as ?c)
 											 WHERE {
      	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
