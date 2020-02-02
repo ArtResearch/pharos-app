@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  $artist
+											 SELECT  distinct $artist
 											 WHERE {
      	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
