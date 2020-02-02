@@ -22,7 +22,7 @@
                        $artwork crm:P108i_was_produced_by ?production.
                        ?production crm:P14_carried_out_by ?artist.
                        ?artist rdfs:label ?name.
-											 } GROUP BY ?artist ORDER BY DESC($artist)' 
+											 } GROUP BY ?artist ORDER BY DESC(?c)' 
                  
                 id="table-result" 
                 number-of-displayed-rows= 100
