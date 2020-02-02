@@ -22,8 +22,7 @@
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
                        ?sub_source_uri rdfs:label "SharedShelf".
 
-                       $photo crm:P108i_was_produced_by ?production.
-                       ?production crm:P14_carried_out_by ?photographer.
+                       ?creation crm:P14_carried_out_by ?photographer.
                        ?photographer rdfs:label ?name.
 											 } GROUP BY ?photographer ORDER BY DESC(?c)' 
                  
