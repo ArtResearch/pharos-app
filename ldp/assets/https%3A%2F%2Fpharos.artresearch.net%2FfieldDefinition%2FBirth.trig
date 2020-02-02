@@ -1,0 +1,31 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Birth/context> {
+  _:genid-a4a950dd12314ecdbc212fd374540885-lyt6sj a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Birth> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a4a950dd12314ecdbc212fd374540885-rizwe;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-a4a950dd12314ecdbc212fd374540885-rizwe a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
+  ?subject crm:P98i_was_born_by ?birth.
+  ?birth crm:P4_has_time-span ?timespan.
+  ?timespan crm:P82_at_some_time_within ?value
+}""" .
+  
+  _:genid-a4a950dd12314ecdbc212fd374540885-lyt6sj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Birth> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a4a950dd12314ecdbc212fd374540885-lyt6sj;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artist>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-02T14:04:27.273Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/Birth> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Birth> a <http://www.w3.org/ns/ldp#Resource> .
+}
