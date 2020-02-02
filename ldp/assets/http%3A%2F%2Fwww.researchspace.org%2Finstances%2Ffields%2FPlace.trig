@@ -1,0 +1,34 @@
+
+<http://www.researchspace.org/instances/fields/Place/context> {
+  <http://www.researchspace.org/instances/fields/Place> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-8e674d192e644d52ad8fc0a783571a7c-a6x3kp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-8e674d192e644d52ad8fc0a783571a7c-oxs88k <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P74_has_current_or_former_residence ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Place> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8e674d192e644d52ad8fc0a783571a7c-a6x3kp;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-8e674d192e644d52ad8fc0a783571a7c-a6x3kp a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Place> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Place"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8e674d192e644d52ad8fc0a783571a7c-oxs88k;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artist>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-02T14:18:03.323Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Place> .
+  
+  <http://www.researchspace.org/instances/fields/Place> a <http://www.w3.org/ns/ldp#Resource> .
+}
