@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  $artist ?name (count(?artwork) as ?c)
+											 SELECT  $artist (count(?artwork) as ?c)
 											 WHERE {
      	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
@@ -22,7 +22,7 @@
                        $artwork crm:P108i_was_produced_by ?production.
                        ?production crm:P14_carried_out_by ?artist.
                        ?artist rdfs:label ?name.
-											 } GROUP BY ?artist ORDER BY DESC(?name)' 
+											 } GROUP BY ?artist ORDER BY DESC($artist)' 
                  
                 id="table-result" 
                 number-of-displayed-rows= 100
