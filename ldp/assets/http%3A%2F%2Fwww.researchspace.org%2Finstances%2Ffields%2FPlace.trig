@@ -1,0 +1,44 @@
+
+<http://www.researchspace.org/instances/fields/Place/context> {
+  <http://www.researchspace.org/instances/fields/Place> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2c973d3d92e64dac9b9a8bde340e0441-cf0bi;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-2c973d3d92e64dac9b9a8bde340e0441-yhzw1j a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-2c973d3d92e64dac9b9a8bde340e0441-cf0bi a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Place> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>,
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-2c973d3d92e64dac9b9a8bde340e0441-yhzw1j <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+      
+      {
+  $subject crm:P53_has_former_or_current_location ?value.
+}
+      
+          UNION
+      
+      {
+  $subject crm:P89_falls_within ?value.
+  }}""" .
+  
+  <http://www.researchspace.org/instances/fields/Place> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Place"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2c973d3d92e64dac9b9a8bde340e0441-yhzw1j;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artist> .
+  
+  _:genid-2c973d3d92e64dac9b9a8bde340e0441-cf0bi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Place> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-02T14:37:54.026Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Place> .
+  
+  <http://www.researchspace.org/instances/fields/Place> a <http://www.w3.org/ns/ldp#Resource> .
+}
