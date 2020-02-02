@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct ?collection
+											 SELECT  distinct ?collection ?place
 
 											 WHERE {
 
@@ -18,14 +18,15 @@
                         ?source_uri rdfs:label "Frick" .
 
     										?subject crm:P46i_forms_part_of ?collection.
-                        ?collection a crm:E78_Curated_Holding
-
+                        ?collection a crm:E78_Curated_Holding .
+												?collection crm:P53_has_former_or_current_location ?place
   											} limit 1000' 
                 id="table-result"
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "collection", "displayName": "Collection"}
+ 							  {"variableName": "collection", "displayName": "Collection"},
+                {"variableName": "place", "displayName": "Place"}
                 ]'>
 </semantic-table>
 
