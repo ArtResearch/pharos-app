@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons/context> {
+  <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-x9eh2b <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?artwork crm:P16i_was_used_for ?creation .
+  ?creation crm:P92_brought_into_existence ?visual_item .
+  ?visual_item crm:P128i_is_carried_by ?value .
+  ?value crm:P2_has_type ?type .
+  ?type rdfs:label \"Photograph\" .
+  ?creation crm:P14_carried_out_by ?subject.
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Photographs"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-x9eh2b;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>,
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-x9eh2b a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-jc03do <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-jc03do;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artist> .
+  
+  _:genid-ce7b29bb30dc4fda839bdcf2be2b8790-jc03do a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-02T13:22:09.179Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/PhotographsByPersons> a <http://www.w3.org/ns/ldp#Resource> .
+}
