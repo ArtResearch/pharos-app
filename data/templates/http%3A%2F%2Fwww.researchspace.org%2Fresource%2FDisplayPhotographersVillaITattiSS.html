@@ -7,11 +7,14 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  $artist (count(?artwork) as ?c)
+											 SELECT  $photographer (count(?photo) as ?c)
 											 WHERE {
-     	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-                       $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                       ?type_uri rdfs:label "Photograph".
+                         
+                       ?artwork crm:P16i_was_used_for ?creation .
+                       ?creation crm:P92_brought_into_existence ?visual_item .
+                       ?visual_item crm:P128i_is_carried_by $photo .
+      								 $photo crm:P2_has_type ?type .
+     									 ?type rdfs:label "Photograph" .
                          
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
                        ?source_uri rdfs:label "Villa i Tatti".
@@ -19,16 +22,16 @@
                        $artwork <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
                        ?sub_source_uri rdfs:label "SharedShelf".
 
-                       $artwork crm:P108i_was_produced_by ?production.
-                       ?production crm:P14_carried_out_by ?artist.
-                       ?artist rdfs:label ?name.
-											 } GROUP BY ?artist ORDER BY DESC(?c)' 
+                       $photo crm:P108i_was_produced_by ?production.
+                       ?production crm:P14_carried_out_by ?photographer.
+                       ?photographer rdfs:label ?name.
+											 } GROUP BY ?photographer ORDER BY DESC(?c)' 
                  
                 id="table-result" 
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "artist", "displayName": "Artist"},
+ 							  {"variableName": "photographer", "displayName": "Photographer"},
                 {"variableName": "c", "displayName": "No. of Artworks"}
                 ]'>
 </semantic-table>
