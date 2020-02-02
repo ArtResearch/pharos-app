@@ -20,7 +20,7 @@
     										?subject crm:P46i_forms_part_of ?collection.
                         ?collection a crm:E78_Curated_Holding .
 												?collection crm:P89_falls_within ?place
-  											} GROUP BY(?collection) ORDER BY (?c)' 
+  											} GROUP BY(?collection) ORDER BY DESC(?c)' 
                 id="table-result"
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
