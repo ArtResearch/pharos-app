@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist/context> {
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-7d2e0e3618814acf8f63347930bc324d-02x3rp;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-7d2e0e3618814acf8f63347930bc324d-y74ivg a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-7d2e0e3618814acf8f63347930bc324d-02x3rp a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-7d2e0e3618814acf8f63347930bc324d-y74ivg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-7d2e0e3618814acf8f63347930bc324d-y74ivg;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artist> .
+  
+  _:genid-7d2e0e3618814acf8f63347930bc324d-02x3rp <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $value crm:P108i_was_produced_by ?production.
+  ?production crm:P14_carried_out_by ?subject
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Artworks"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-02T13:12:24.701Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/ArtworksByArtist> a <http://www.w3.org/ns/ldp#Resource> .
+}
