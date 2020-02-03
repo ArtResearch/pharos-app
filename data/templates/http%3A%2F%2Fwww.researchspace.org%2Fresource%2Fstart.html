@@ -21,14 +21,14 @@
       ?vi crm:P128i_is_carried_by ?photo.
       ?photo  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
       ?subject rdfs:label ?label
-			} limit 12"
+			} limit 20"
 options='{ "infinite": true, "slidesToShow": 10 }'
 tuple-template= '
 <div class="text-center panel panel-default" style="border:none;font-size:12px;height:100px;width:100px ">
   <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
   <div class="panel-body" style="height:100px;">
     <div style="width:100px;height:100px;margin: 10px auto;" class="text-center">
-      <img src="{{thumbnail.value}}" style="max-height:70px; max-width:70px; margin: 10 auto;" class="img-rounded">
+      <img src="{{thumbnail.value}}" style="max-height:100px; max-width:100px; margin: 10 auto;" class="img-rounded">
     </div>
   </div>
   <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
