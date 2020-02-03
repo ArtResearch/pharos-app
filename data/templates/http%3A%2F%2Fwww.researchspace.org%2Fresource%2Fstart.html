@@ -17,7 +17,9 @@
       $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
 			?subject crm:P2_has_type ?type. 
       ?type rdfs:label 'Artwork'.
-			$subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
+			$subject crm:P138i_is_represented_by ?vi.
+      ?vi crm:P128i_is_carried_by ?photo.
+      ?photo <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
       ?subject rdfs:label ?label.
 			} limit 8"
       options='{ "infinite": false, "slidesToShow": 4 }'
