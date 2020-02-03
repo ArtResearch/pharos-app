@@ -3,6 +3,39 @@
     display: none;
   }
 </style>
+
+
+  <bs-tabs id="tabs" unmount-on-exit=true>
+      <bs-tab event-key="1" title="Persons">
+        <p><br /><i>Selected artists from the collection of the Institute for Art History.</i></p>
+        <semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT distinct ?subject ?thumbnail ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+?subject crm:P2_has_type ?type. ?type rdfs:label "Artwork".
+$subject  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
+} limit 10"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:300px;">
+    <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
+      <img src="{{thumbnail.value}}" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>'
+
+></semantic-carousel>   
+			</bs-tab>
+
+
 <div style="margin-top:5%;">
   <div data-flex-layout="column center-center">
     <div>
