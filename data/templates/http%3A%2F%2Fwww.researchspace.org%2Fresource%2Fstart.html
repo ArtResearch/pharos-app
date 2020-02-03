@@ -14,16 +14,9 @@
 			prefix person: <http://example.com/person/>
 			prefix org: <http://example.com/org/>
 			SELECT distinct ?subject ?thumbnail ?label WHERE {
-      $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-			?subject crm:P2_has_type ?type. 
-      ?type rdfs:label 'Artwork'.
-			$subject crm:P138i_is_represented_by ?vi.
-      ?vi crm:P128i_is_carried_by ?photo.
-      ?photo <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
-      ?subject rdfs:label ?label.
       VALUES (?subject ?thumbnail ?label) {
       ( <http://frickcollection.com/work/b10129947> <https://imagesdigitalcollections.frick.org/media/filename/3107100157905_002.tif> 'The City of Philadelphia...as It Appeared in the Year 1800 (Part XV: Plate 17, Bank of the United States, in Third Street, Philadelphia)')}
-			} limit 8"
+			} "
       options='{ "infinite": false, "slidesToShow": 4 }'
      tuple-template= '
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:280px;width: 33%;display:inline;">
