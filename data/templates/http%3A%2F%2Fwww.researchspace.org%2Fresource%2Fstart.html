@@ -4,7 +4,10 @@
   }
 </style>
 
-<div style="clear:both;"></div>
+
+<div style="margin-top:5%;">
+  <div data-flex-layout="column center-center">
+ 		<div style="clear:both;"></div>
 <div class="page">
   <div class='page__body'>
 
@@ -21,9 +24,9 @@
       ?vi crm:P128i_is_carried_by ?photo.
       ?photo  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
       ?subject rdfs:label ?label
-			} limit 20"
-options='{ "infinite": true, "slidesToShow": 10 }'
-tuple-template= '
+			} limit 12"
+      options='{ "infinite": true, "slidesToShow": 10 }'
+     tuple-template= '
 <div class="text-center panel panel-default" style="border:none;font-size:12px;height:100px;width:100px ">
   <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
   <div class="panel-body" style="height:100px;">
@@ -44,21 +47,6 @@ tuple-template= '
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="margin-top:5%;">
-  <div data-flex-layout="column center-center">
- 
     <div>
        <h2>Welcome to Pharos Digital Collections</h2>
        <br>
