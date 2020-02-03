@@ -4,19 +4,27 @@
   }
 </style>
 
-
+<div style="margin-top:5%;">
+  <div data-flex-layout="column center-center">
+    <div>
+      
+      
   <bs-tabs id="tabs" unmount-on-exit=true>
       <bs-tab event-key="1" title="Persons">
         <p><br /><i>Selected artists from the collection of the Institute for Art History.</i></p>
         <semantic-carousel
-query="
-prefix person: <http://example.com/person/>
-prefix org: <http://example.com/org/>
-SELECT distinct ?subject ?thumbnail ?label WHERE {
-$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-?subject crm:P2_has_type ?type. ?type rdfs:label 'Artwork'.
-$subject  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
-} limit 10"
+			query="
+			prefix person: <http://example.com/person/>
+			prefix org: <http://example.com/org/>
+			SELECT distinct ?subject ?thumbnail ?label WHERE {
+      $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+			?subject crm:P2_has_type ?type. 
+      ?type rdfs:label 'Artwork'.
+			$subject crm:P138i_is_represented_by ?vi.
+      ?vi crm:P128i_is_carried_by ?photo.
+      ?photo  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
+      ?subject rdfs:label ?label
+			} limit 10"
 options='{ "infinite": true, "slidesToShow": 3 }'
 tuple-template= '
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
@@ -35,10 +43,8 @@ tuple-template= '
 ></semantic-carousel>   
 			</bs-tab>
 
-
-<div style="margin-top:5%;">
-  <div data-flex-layout="column center-center">
-    <div>
+      
+      
        <h2>Welcome to Pharos Digital Collections</h2>
        <br>
        <h4>Display Villa I Tatti Artworks (SharedShelf): <a href=https://pharos.artresearch.net/resource/DisplayArtworksVillaITattiSS>here</a></h4>
