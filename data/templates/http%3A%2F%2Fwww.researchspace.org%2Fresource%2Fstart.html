@@ -15,44 +15,6 @@
   <p><b>2,704</b> Collections</p>
  </div>
 
-<div style="margin-top:0px;">
-   <div style="margin-top:10px;">
-        <p><br /><i>Random artworks from the collection of Pharos.</i></p>
-        <semantic-carousel
-			query="
-			prefix person: <http://example.com/person/>
-			prefix org: <http://example.com/org/>
-			SELECT distinct ?subject ?thumbnail ?label ?source WHERE {
-      VALUES (?subject ?thumbnail ?label ?source) {
-      ( <https://collection.itatti.harvard.edu/resource/work/8000841953> <https://ids.lib.harvard.edu/ids/iiif/24235543/full/200%2C/0/native.jpg> 'Adoration of the Magi' 'Villa i Tatti')     
-      ( <http://frickcollection.com/work/b10126971> <https://imagesdigitalcollections.frick.org/media/filename/37756_POST.tif> 'Solitude, Home of John Penn' 'Frick')    
-      ( <http://foto.biblhertz.it/work/08152578> <http://fotothek.biblhertz.it/bh/320px/bh522170.jpg> 'Vision eines Heiligen' 'Hertziana')
-      ( <http://bildarchiv.foto.marburg.com/work/00000190> <http://www.bildindex.de/bilder/d/fm98662> 'Bacchus und Erigone' 'Marburg')
-      ( <http://foto.biblhertz.it/work/08180033> <http://fotothek.biblhertz.it/bh/320px/bhex-si-2018-41-003.jpg> 'Apostel Petrus und Paulus' 'Hertziana') 
-      ( <http://frickcollection.com/work/b10134128> <https://imagesdigitalcollections.frick.org/media/filename/1665_POST.tif> 'Portrait of a Young Lady' 'Frick')
-      ( <http://bildarchiv.foto.marburg.com/work/00000238> <http://www.bildindex.de/bilder/d/fm83157> 'Genuesischer Edelmann' 'Marburg')
-      ( <http://foto.biblhertz.it/work/08060287> <http://fotothek.biblhertz.it/bh/320px/bhfd415c51.jpg> 'Palazzo Ducale' 'Hertziana')
-      ( <http://foto.biblhertz.it/work/08143553%2CT%2C010> <http://fotothek.biblhertz.it/bh/320px/bhim00033805.jpg> 'Museo Chiaramonti' 'Hertziana')
-      ( <https://collection.itatti.harvard.edu/resource/work/8000791844> <https://ids.lib.harvard.edu/ids/iiif/406026622/full/200%2C/0/native.jpg> 'Entombment of Christ' 'Villa i Tatti')
-             }
-			} "
-      options='{ "infinite": false, "slidesToShow": 4 }'
-     tuple-template= '
-<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:280px;width: 33%;display:inline;">
-  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
-  <div class="panel-body" style="height:250px;">
-    <div style="width:220px;height:230px;margin: 50px auto;" class="text-center">
-      <img src="{{thumbnail.value}}" style="max-height:200px; max-width:200px; margin: 10 auto;" class="img-rounded">
-    </div>
-  </div>
-  <div class="panel-footer" style="position: relative;  border: none;  margin: 20px;">
-    <b>{{label.value}}</b> <br> Source: {{source.value}}
-  </div>
-  </semantic-link>
-</div>'>
-    </semantic-carousel>    
- </div>
- </div>
 <div style="margin-top:50px;">
   <div data-flex-layout="column center-center">
     <div>
@@ -168,6 +130,45 @@
         <p><h4>Use Inovvative <b>Structured Search <a href=https://pharos.artresearch.net/resource/Search2>here</a></b> (Disabled at the moment)</h4></p>
     </div>
    </div>
+
+<div style="margin-top:0px;">
+   <div style="margin-top:10px;">
+        <p><br /><i>Random artworks from the collection of Pharos.</i></p>
+        <semantic-carousel
+			query="
+			prefix person: <http://example.com/person/>
+			prefix org: <http://example.com/org/>
+			SELECT distinct ?subject ?thumbnail ?label ?source WHERE {
+      VALUES (?subject ?thumbnail ?label ?source) {
+      ( <https://collection.itatti.harvard.edu/resource/work/8000841953> <https://ids.lib.harvard.edu/ids/iiif/24235543/full/200%2C/0/native.jpg> 'Adoration of the Magi' 'Villa i Tatti')     
+      ( <http://frickcollection.com/work/b10126971> <https://imagesdigitalcollections.frick.org/media/filename/37756_POST.tif> 'Solitude, Home of John Penn' 'Frick')    
+      ( <http://foto.biblhertz.it/work/08152578> <http://fotothek.biblhertz.it/bh/320px/bh522170.jpg> 'Vision eines Heiligen' 'Hertziana')
+      ( <http://bildarchiv.foto.marburg.com/work/00000190> <http://www.bildindex.de/bilder/d/fm98662> 'Bacchus und Erigone' 'Marburg')
+      ( <http://foto.biblhertz.it/work/08180033> <http://fotothek.biblhertz.it/bh/320px/bhex-si-2018-41-003.jpg> 'Apostel Petrus und Paulus' 'Hertziana') 
+      ( <http://frickcollection.com/work/b10134128> <https://imagesdigitalcollections.frick.org/media/filename/1665_POST.tif> 'Portrait of a Young Lady' 'Frick')
+      ( <http://bildarchiv.foto.marburg.com/work/00000238> <http://www.bildindex.de/bilder/d/fm83157> 'Genuesischer Edelmann' 'Marburg')
+      ( <http://foto.biblhertz.it/work/08060287> <http://fotothek.biblhertz.it/bh/320px/bhfd415c51.jpg> 'Palazzo Ducale' 'Hertziana')
+      ( <http://foto.biblhertz.it/work/08143553%2CT%2C010> <http://fotothek.biblhertz.it/bh/320px/bhim00033805.jpg> 'Museo Chiaramonti' 'Hertziana')
+      ( <https://collection.itatti.harvard.edu/resource/work/8000791844> <https://ids.lib.harvard.edu/ids/iiif/406026622/full/200%2C/0/native.jpg> 'Entombment of Christ' 'Villa i Tatti')
+             }
+			} "
+      options='{ "infinite": false, "slidesToShow": 4 }'
+     tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:280px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:250px;">
+    <div style="width:220px;height:230px;margin: 50px auto;" class="text-center">
+      <img src="{{thumbnail.value}}" style="max-height:200px; max-width:200px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative;  border: none;  margin: 20px;">
+    <b>{{label.value}}</b> <br> Source: {{source.value}}
+  </div>
+  </semantic-link>
+</div>'>
+    </semantic-carousel>    
+ </div>
+ </div>
    <br>
    <br>
 <br>
