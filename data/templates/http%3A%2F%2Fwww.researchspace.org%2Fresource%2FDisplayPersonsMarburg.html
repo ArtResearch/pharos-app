@@ -1,6 +1,5 @@
-
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
-<h4 align="center"><b>Photographs (Marburg)</b></h4>
+<h4 align="center"><b>Artists (Marburg)</b></h4>
 </div>
 
  <semantic-table 
@@ -8,28 +7,26 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct $subject ?label ?artwork
-
+											 SELECT  distinct $artist
 											 WHERE {
-     	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-                        $subject rdfs:label ?label .
+     	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+                       $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
+                       ?type_uri rdfs:label "Artwork".
                          
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                        ?type_uri rdfs:label "Photograph".
-                       
-                        ?vi crm:P128i_is_carried_by ?subject .
-                        ?artwork crm:P138i_is_represented_by ?vi.
-  
-                        ?artwork crm:has_source  ?source_uri.
-                        ?source_uri rdfs:label "Marburg" .
-
-  											} limit 1000' 
-                id="table-result"
+                       $artwork <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
+                       ?source_uri rdfs:label "Marburg".
+                         
+                       $artwork crm:P108i_was_produced_by ?production.
+                       ?production crm:P01i_is_domain_of ?carried.
+                       ?carried crm:P02_has_range ?artist.
+                       ?artist rdfs:label ?name.
+											 } limit 1000' 
+                 
+                id="table-result" 
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "subject", "displayName": "Photograph"},             
-                {"variableName": "artwork", "displayName": "Artwork"}
+ 							  {"variableName": "artist", "displayName": "Artist"}
                 ]'>
 </semantic-table>
 
