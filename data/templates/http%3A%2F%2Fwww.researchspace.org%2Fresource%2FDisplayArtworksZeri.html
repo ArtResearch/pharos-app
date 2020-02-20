@@ -7,7 +7,7 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct $subject ?label ?artist 
+											 SELECT  distinct ?label $subject ?artist 
 
 											 WHERE {
      	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
@@ -18,7 +18,11 @@
                          
                         ?subject crm:has_source  ?source_uri.
                         ?source_uri rdfs:label "Zeri" .
-                        
+                         
+                        ?subject crm:P138i_is_represented_by ?vi.
+                        ?vi crm:P128i_is_carried_by ?photo .
+                        ?photo crm:P138i_has_representation ?image .
+                         
                         $subject crm:P108i_was_produced_by ?production.
                         ?production crm:P01i_is_domain_of ?carried.
                         ?carried crm:P02_has_range ?artist
