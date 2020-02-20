@@ -22,7 +22,8 @@
                         ?source_uri rdfs:label "Zeri" .
                          
                         ?photo crm:P108i_was_produced_by ?production.
-                        ?production crm:P14_carried_out_by ?photographer.
+                        ?production crm:P01i_is_domain_of ?carried.
+                        ?carried crm:P02_has_range ?photographer
 											 } limit 1000' 
                  
                 id="table-result" 
