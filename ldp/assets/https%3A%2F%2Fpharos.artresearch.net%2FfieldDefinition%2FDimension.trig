@@ -1,0 +1,35 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Dimension/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Dimension> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E54_Dimension>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-a5ba472754a94a29a9944294c3810c0b-j1pz3k <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
+  $subject crm:P43_has_dimension ?value.
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Dimension> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/artwork>, <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-a5ba472754a94a29a9944294c3810c0b-mwyvnhc <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Dimension> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-a5ba472754a94a29a9944294c3810c0b-j1pz3k;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a5ba472754a94a29a9944294c3810c0b-mwyvnhc;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en .
+  
+  _:genid-a5ba472754a94a29a9944294c3810c0b-mwyvnhc a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-a5ba472754a94a29a9944294c3810c0b-j1pz3k a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Dimension> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/lklic%40itatti.harvard.edu>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-29T16:23:41.057Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Dimension> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Dimension> a <http://www.w3.org/ns/ldp#Resource> .
+}
