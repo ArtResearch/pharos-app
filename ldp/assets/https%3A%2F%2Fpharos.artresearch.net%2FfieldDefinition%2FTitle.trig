@@ -1,0 +1,38 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Title/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Title> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-977191813ec34a7dba6b6b8ae9a552e6-0o64t8m <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Title> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Title"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artwork>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-977191813ec34a7dba6b6b8ae9a552e6-0o64t8m;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-977191813ec34a7dba6b6b8ae9a552e6-509uws .
+  
+  _:genid-977191813ec34a7dba6b6b8ae9a552e6-0o64t8m a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-977191813ec34a7dba6b6b8ae9a552e6-509uws a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Title> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    <http://www.metaphacts.com/ontology/fields#order> "999" .
+  
+  _:genid-977191813ec34a7dba6b6b8ae9a552e6-509uws <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P1_is_identified_by ?value.
+  ?value rdfs:label ?label.
+  ?value crm:P2_has_type ?type_uri .
+  ?type_uri rdfs:label \"Preferred Term\"
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Title> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-02-29T14:30:17.405Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/fieldDefinitionContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Title> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Title> a <http://www.w3.org/ns/ldp#Resource> .
+}
