@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/queryTemplateContainer/count-e22/context> {
+  <https://pharos.artresearch.net/container/queryTemplateContainer/count-e22> a <http://spinrdf.org/spin#Template>,
+      <http://spinrdf.org/spin#SelectTemplate>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "count e22";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "count e22";
+    <http://spinrdf.org/spin#body> <https://pharos.artresearch.net/container/queryContainer/count_e22>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-03-02T13:40:15.138Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryTemplateContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/queryTemplateContainer/count-e22> .
+  
+  <https://pharos.artresearch.net/container/queryTemplateContainer/count-e22> a <http://www.w3.org/ns/ldp#Resource> .
+}
