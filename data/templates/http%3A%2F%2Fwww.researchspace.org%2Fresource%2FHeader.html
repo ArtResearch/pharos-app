@@ -1,0 +1,34 @@
+<div class='page__header-body' data-flex-layout='row top-left'>
+  [[#if notDraggable]]
+  [[else]]
+  <div class="page__header-draggable-title">
+    <mp-draggable iri='[[this]]'>
+      <h2 data-flex-layout='row center-left'>
+        <span class="page__header-gripper"></span>
+        <mp-label iri='[[this]]' class='page__header-gripper-label'></mp-label>
+      </h2>
+    </mp-draggable>
+  </div>
+  [[/if]]
+  <h2 data-flex-layout='row center-left' class="page__header-tagline">
+    <span class="icon-fc--header-title icon-fc--[[#if fc]][[fc]][[/if]]"></span>
+    <small>
+      [[#if fcLabel]][[fcLabel]] record
+      <semantic-query
+        query='
+                             SELECT ?dataset WHERE {
+                               ?? <http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through> ?acquisition .
+                               ?acquisition <http://www.cidoc-crm.org/cidoc-crm/P22_transferred_ownership_to> ?repo .
+                               ?repo rdfs:label ?repo_label.
+                               BIND(IF(BOUND(?repo), concat(", Repository: ",str(?repo_label)), "Unknown Repository") as ?dataset) .
+                             } LIMIT 1
+                             '
+        template='{{bindings.0.dataset.value}}'
+      ></semantic-query>
+      [[else]]
+      [[#if subLabel]][[subLabel]][[/if]]
+      [[#if labelChild]][[> @partial-block]][[/if]]
+      [[/if]]
+    </small>
+  </h2>
+</div>
