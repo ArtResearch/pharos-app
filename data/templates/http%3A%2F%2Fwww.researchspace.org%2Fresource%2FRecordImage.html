@@ -13,10 +13,10 @@
                      }
                      UNION 
                      {
-                         ?? <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation . 
-         								 ?creation <http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> ?visual_item.
-                         ?visual_item  <http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by> ?subject .
-         								 ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage. 
+                        ?? crm:P138i_is_represented_by ?vi.
+     										 ?vi crm:P128i_is_carried_by ?subject .
+      										?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
+                       	 ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
                      }
                      UNION 
                      {
