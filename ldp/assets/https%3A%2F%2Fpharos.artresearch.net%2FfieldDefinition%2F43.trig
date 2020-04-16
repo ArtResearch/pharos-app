@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/43/context> {
+  <https://pharos.artresearch.net/fieldDefinition/43> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-sq0uaze <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P138i_is_represented_by ?visual_item.
+  ?visual_item crm:P165i_is_incorported_in ?value.
+  ?value crm:P2_has_type <http://vocab.getty.edu/aat/300417379>.
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/43> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-sq0uaze;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-sq0uaze a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/43> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/D1_Digital_Object> .
+  
+  _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-4gxog <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/43> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-4gxog;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Digital Images"@en .
+  
+  _:genid-7d2c98766cb24ccbb8a0517e2bb51c1c-4gxog a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/43> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T13:17:04.759Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/43> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/43> a <http://www.w3.org/ns/ldp#Resource> .
+}
