@@ -9,17 +9,11 @@
 
  											 SELECT  distinct $subject ?artwork
 											 WHERE {
-                          ?artwork crm:P16i_was_used_for ?creation .
-                          ?creation crm:P92_brought_into_existence ?visual_item .
-                          ?visual_item crm:P128i_is_carried_by $subject .
-      										$subject crm:P2_has_type ?type .
-     										  ?type rdfs:label "Photograph" .
-                            
-                          $artwork <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
-                          ?source_uri rdfs:label "Villa i Tatti".
-                         
-                          $artwork <http://www.cidoc-crm.org/cidoc-crm/has_sub_source> ?sub_source_uri.
-                          ?sub_source_uri rdfs:label "SharedShelf".
+                          ?artwork crm:P138i_is_represented_by ?visual_item.
+  											  ?visual_item crm:P128i_is_carried_by $subject.
+  												$subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+                          $subject <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/provider/villaitatti/source/SKSCULR9>.
+                          $subject rdfs:label ?label .
         								 } order by(?subject) limit 1000' 
 
                 id="table-result" 
