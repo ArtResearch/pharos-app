@@ -1,0 +1,44 @@
+
+<https://pharos.artresearch.net/fieldDefinition/7/context> {
+  <https://pharos.artresearch.net/fieldDefinition/7> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a111a8ae39b24c10837c3037fd613300-vmmkln .
+  
+  _:genid-a111a8ae39b24c10837c3037fd613300-lbh5iy <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/7> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-a111a8ae39b24c10837c3037fd613300-vmmkln <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+    $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> $value .
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/7> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-a111a8ae39b24c10837c3037fd613300-lbh5iy;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Earliest"@en .
+  
+  _:genid-a111a8ae39b24c10837c3037fd613300-vmmkln a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/7> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-a111a8ae39b24c10837c3037fd613300-lbh5iy a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/7> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T11:26:35.800Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/7> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/7> a <http://www.w3.org/ns/ldp#Resource> .
+}
