@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/Repository/context> {
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-8331944a1c4d4de58f448a048614b0e1-nn7kn a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Repository (Institutions)"@en .
+  
+  _:genid-8331944a1c4d4de58f448a048614b0e1-nn7kn <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P50_has_current_keeper ?value.
+  ?value crm:P2_has_type <http://vocab.getty.edu/aat/300264595>
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-8331944a1c4d4de58f448a048614b0e1-ct8t2p <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8331944a1c4d4de58f448a048614b0e1-ct8t2p;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8331944a1c4d4de58f448a048614b0e1-nn7kn .
+  
+  _:genid-8331944a1c4d4de58f448a048614b0e1-ct8t2p a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T12:44:10.656Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/Repository> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> a <http://www.w3.org/ns/ldp#Resource> .
+}
