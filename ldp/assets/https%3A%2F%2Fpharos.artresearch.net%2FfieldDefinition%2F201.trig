@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/201/context> {
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P104_is_subject_to ?value.
+}""" .
+  
+  _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Rights"@en;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#range>
+      <crm:E30_Right>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T12:52:18.462Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/201> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> a <http://www.w3.org/ns/ldp#Resource> .
+}
