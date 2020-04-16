@@ -1,0 +1,39 @@
+
+<https://pharos.artresearch.net/fieldDefinition/33/context> {
+  <https://pharos.artresearch.net/fieldDefinition/33> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-tfs5sb a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/33> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Inscription"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-nmkvml;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-nmkvml <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P128_carries ?information_object.
+  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300028702>.
+  ?information_object crm:P190_has_symbolic_content ?value
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/33> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-tfs5sb <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/33> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-tfs5sb .
+  
+  _:genid-99a1f4a3e3044cd0be43431a3d6a1c04-nmkvml a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/33> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T12:04:51.829Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/33> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/33> a <http://www.w3.org/ns/ldp#Resource> .
+}
