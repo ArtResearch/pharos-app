@@ -14,9 +14,16 @@
                      UNION 
                      {
                         ?? crm:P138i_is_represented_by ?vi.
-     										 ?vi crm:P128i_is_carried_by ?subject .
-      										?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
-                       	 ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+     										?vi crm:P128i_is_carried_by ?subject .
+      									?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
+                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+                     }
+                      UNION 
+                     {
+                        ?? crm:P138i_is_represented_by ?vi.
+     									  ?vi crm:P165i_is_incorported_in 	?subject.
+ 												?subject crm:P2_has_type <http://vocab.getty.edu/aat/300417379>.
+                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
                      }
                      UNION 
                      {
