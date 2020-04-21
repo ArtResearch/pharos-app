@@ -1,0 +1,44 @@
+
+<https://pharos.artresearch.net/fieldDefinition/79/context> {
+  <https://pharos.artresearch.net/fieldDefinition/79> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-06be8dc42df1443f8f940bbf1641101c-fs0ha a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/79> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-06be8dc42df1443f8f940bbf1641101c-a46f8;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Part of Century"@en .
+  
+  _:genid-06be8dc42df1443f8f940bbf1641101c-a46f8 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/79> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-06be8dc42df1443f8f940bbf1641101c-fs0ha <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+    $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production crm:P4_has_time-span ?tm.
+    ?tm crm:P10_falls_within $timespan .
+    ?timespan crm:P2_has_type ?type.
+    ?type rdfs:label \"Part of Century\".
+    ?timespan crm:P1_is_identified_by ?value
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/79> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-06be8dc42df1443f8f940bbf1641101c-fs0ha;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> .
+  
+  _:genid-06be8dc42df1443f8f940bbf1641101c-a46f8 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/79> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-21T13:30:55.061Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/79> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/79> a <http://www.w3.org/ns/ldp#Resource> .
+}
