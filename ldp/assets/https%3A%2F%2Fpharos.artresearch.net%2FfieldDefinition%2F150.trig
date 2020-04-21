@@ -1,0 +1,37 @@
+
+<https://pharos.artresearch.net/fieldDefinition/150/context> {
+  _:genid-48a2c20b07114708ab9c6c26e4253038-v3m0m <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?information_object.
+  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435418>.
+  ?information_object crm:P190_has_symbolic_content ?value .
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Credit Line"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-48a2c20b07114708ab9c6c26e4253038-v3m0m .
+  
+  _:genid-48a2c20b07114708ab9c6c26e4253038-agcan <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-48a2c20b07114708ab9c6c26e4253038-agcan .
+  
+  _:genid-48a2c20b07114708ab9c6c26e4253038-v3m0m a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-48a2c20b07114708ab9c6c26e4253038-agcan a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-21T11:45:51.222Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/150> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> a <http://www.w3.org/ns/ldp#Resource> .
+}
