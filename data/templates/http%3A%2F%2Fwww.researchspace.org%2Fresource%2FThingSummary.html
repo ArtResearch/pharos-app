@@ -33,6 +33,8 @@
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
   
+       
+            
              [[/if]]
             
             
@@ -63,8 +65,9 @@
                 <mp-overlay-dialog-content>
                   <mp-page-loader iri="http://www.researchspace.org/resource/AllFieldsModal" urlqueryparam-type='crm:E22_Man-Made_Object'></mp-page-loader>
                 </mp-overlay-dialog-content>
-              </mp-overlay-dialog>
+              </mp-overlay-dialog> 
             </div>
+        
           </div>
         </mp-panel-body>
       </mp-panel>
@@ -73,5 +76,6 @@
 
     [[> values title='Pharos']]
 
+   
   </div>
 </div>
