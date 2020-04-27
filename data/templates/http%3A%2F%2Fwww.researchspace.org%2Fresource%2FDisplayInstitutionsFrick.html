@@ -11,15 +11,12 @@
 
 											 WHERE {
 
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                        ?type_uri rdfs:label "Artwork".
-                         
-                        ?subject crm:has_source  ?source_uri.
-                        ?source_uri rdfs:label "Frick" .
-
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025>.
+                        $subject <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/provider/frick/source/1IYHQ66N>.
+ 
     										?subject crm:P46i_forms_part_of ?collection.
                         ?collection a crm:E78_Curated_Holding .
-												?collection crm:P89_falls_within ?place
+					
   											} limit 1000' 
                 id="table-result"
                 number-of-displayed-rows= 100
