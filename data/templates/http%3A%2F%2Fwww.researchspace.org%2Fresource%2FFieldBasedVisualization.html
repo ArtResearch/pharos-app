@@ -61,10 +61,13 @@
                 {{/ifCond}}
                 {{#ifCond (objectLength field.values) '===' 1}}
                   {{#each field.values as |value|}}
-                    <span class="rs-page__field-value">{{> rsp:FieldValueVisualization field=field value=value guess=../../guess }}</span>
+                    <span class="rs-page__field-value">{{> rsp: field=field value=value guess=../../guess }}</span>
                   {{/each}}
                 {{/ifCond}}
               </td>
+              
+
+              
               <td class="center rs-page__count--title">
                 <div class="rs-page__count--field-annotation">
                   <semantic-link

@@ -5,7 +5,7 @@
   {{else}}
   
    {{#if value.binding.qualifier.value }}
-  <semantic-link uri="{{value.value.value}}" guess-repository=false></semantic-link> ({{value.binding.qualifier.value}})  
+  <semantic-link uri="{{value.value.value}}" guess-repository=false></semantic-link> ({{value.binding.qualifier.value}})   ({{value.binding.graph.value}})  
   {{else}}
    <semantic-link uri="{{value.value.value}}" guess-repository=false></semantic-link> 
   {{/if}}

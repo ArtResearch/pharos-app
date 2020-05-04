@@ -1,48 +1,51 @@
 
 <https://pharos.artresearch.net/fieldDefinition/2/context> {
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+      <https://pharos.artresearch.net/category/zeri> .
   
-  _:genid-87bbab38c5764a339317e302784ff6f3-xyzo2c <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier WHERE 
+  _:genid-25eab690d1504303aa1fafdfe293fe6a-19l3rh a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/2> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/collection>,
+      <https://pharos.artresearch.net/category/institution>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-25eab690d1504303aa1fafdfe293fe6a-stjeb;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>,
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E40_Group>,
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Preferred Term"@en .
+  
+  _:genid-25eab690d1504303aa1fafdfe293fe6a-stjeb <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier WHERE 
+
 {
   ?subject crm:P1_is_identified_by ?value. 
   ?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
-}""" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/institution> .
-  
-  _:genid-87bbab38c5764a339317e302784ff6f3-dc9em7 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  }""" .
   
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-87bbab38c5764a339317e302784ff6f3-dc9em7;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E40_Group>,
-      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
+      <http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding>, <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
   
-  _:genid-87bbab38c5764a339317e302784ff6f3-dc9em7 a <http://spinrdf.org/sp#Query> .
+  _:genid-25eab690d1504303aa1fafdfe293fe6a-19l3rh <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Preferred Term"@en;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding>,
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/place>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-87bbab38c5764a339317e302784ff6f3-xyzo2c;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+      <https://pharos.artresearch.net/category/place>, <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana> .
   
-  _:genid-87bbab38c5764a339317e302784ff6f3-xyzo2c a <http://spinrdf.org/sp#Query> .
+  _:genid-25eab690d1504303aa1fafdfe293fe6a-stjeb a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/2> a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-25eab690d1504303aa1fafdfe293fe6a-19l3rh;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the preferred identifier attributed to the documented instance of the documented object.";
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T11:37:45.384Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-04T09:57:59.051Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/2> .
