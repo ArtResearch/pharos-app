@@ -1,9 +1,16 @@
 
 <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D/context> {
-  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> a
-      <http://www.metaphacts.com/ontology/fields#Field> .
+  _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-hl5hg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-419314c94ed349bfa6760f244e4248d8-h1dly <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> a
+      <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-hl5hg;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Main Nationality [Getty]"@en .
+  
+  _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-hl5hg a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-jfvajo <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{
   ?subject owl:sameAs ?getty_uri.
  SERVICE <http://vocab.getty.edu/sparql> {
@@ -13,32 +20,21 @@ WHERE{
     ?nationality_uri <http://www.w3.org/2008/05/skos-xl#prefLabel> ?pref_label.
     ?pref_label <http://vocab.getty.edu/ontology#term> ?value.
       filter(lang(?value)=\"en\")
-  }
+  } BIND(\"http://getty\" as ?graph)
 }
 """ .
   
-  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-419314c94ed349bfa6760f244e4248d8-h1dly;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Main Nationality [Getty]"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-jfvajo;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
   
-  _:genid-419314c94ed349bfa6760f244e4248d8-p780cp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-419314c94ed349bfa6760f244e4248d8-p780cp .
-  
-  _:genid-419314c94ed349bfa6760f244e4248d8-h1dly a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-419314c94ed349bfa6760f244e4248d8-p780cp a <http://spinrdf.org/sp#Query> .
+  _:genid-8ea7d688cb1e45d08a668c2012a1fc7a-jfvajo a <http://spinrdf.org/sp#Query> .
   
   <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> a
       <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-30T11:56:22.656Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-04T10:31:02.852Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Main%20Nationality%20%5BGetty%5D> .
