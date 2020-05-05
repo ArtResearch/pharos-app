@@ -6,6 +6,16 @@
     <img src="/assets/images/tatti.jpg" style="max-height:75px; max-width:75px; margin: 0 auto;" class="img-rounded">
    </semantic-link> 
    {{/case}}
+    {{#case "http://getty" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrdLCKsObsdjG2lduFZ80f9aMmFSCSgP6ve8KUZiohWn3oi5Lu&usqp=CAU" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+     {{#case "http://wikidata" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Wikidata-logo-morse-code.svg/1024px-Wikidata-logo-morse-code.svg.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
    {{#default}}
   <semantic-link uri="http://uknown" guess-repository=false></semantic-link> 
    {{/default}}

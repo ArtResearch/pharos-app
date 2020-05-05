@@ -1,32 +1,38 @@
 
 <https://pharos.artresearch.net/fieldDefinition/17/context> {
-  <https://pharos.artresearch.net/fieldDefinition/17> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <https://pharos.artresearch.net/fieldDefinition/17> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-fc170bc07c664617b6298a4c6d192a41-9s2kkw;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-fc170bc07c664617b6298a4c6d192a41-1vfzjj .
   
-  _:genid-61ffa9c1c8384fb883b2f7205e970c22-yl0hzq a <http://spinrdf.org/sp#Query> .
+  _:genid-fc170bc07c664617b6298a4c6d192a41-9s2kkw a <http://spinrdf.org/sp#Query> .
   
-  _:genid-61ffa9c1c8384fb883b2f7205e970c22-6c0d9 a <http://spinrdf.org/sp#Query> .
+  _:genid-fc170bc07c664617b6298a4c6d192a41-1vfzjj a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/17> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to document a description of an attribution of documented artwork.";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti> .
+  
+  _:genid-fc170bc07c664617b6298a4c6d192a41-1vfzjj <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
+{
+  $subject crm:P67i_is_referred_to_by ?information_object.
+  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300056109>.
+  ?information_object crm:P190_has_symbolic_content ?value .
+  }}""" .
   
   <https://pharos.artresearch.net/fieldDefinition/17> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
   
-  _:genid-61ffa9c1c8384fb883b2f7205e970c22-yl0hzq <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-fc170bc07c664617b6298a4c6d192a41-9s2kkw <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-61ffa9c1c8384fb883b2f7205e970c22-6c0d9 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject crm:P67i_is_referred_to_by ?information_object.
-  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300056109>.
-  ?information_object crm:P190_has_symbolic_content ?value .
-}""" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/17> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-61ffa9c1c8384fb883b2f7205e970c22-6c0d9;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-61ffa9c1c8384fb883b2f7205e970c22-yl0hzq;
-    <http://www.w3.org/2000/01/rdf-schema#label> " Attribution Notes"@en;
+  <https://pharos.artresearch.net/fieldDefinition/17> <http://www.w3.org/2000/01/rdf-schema#label>
+      " Attribution Notes"@en;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T11:52:34.362Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:06:08.670Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/17> .
