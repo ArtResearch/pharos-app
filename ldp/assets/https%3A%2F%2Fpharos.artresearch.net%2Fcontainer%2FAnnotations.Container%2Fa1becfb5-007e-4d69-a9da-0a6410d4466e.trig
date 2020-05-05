@@ -1,0 +1,35 @@
+
+<https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/context> {
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e>
+    a <http://www.researchspace.org/ontology/Annotation>, <http://www.w3.org/ns/oa#Annotation>;
+    <http://www.w3.org/ns/oa#hasTarget> <https://pharos.artresearch.net/fieldDefinition/66>;
+    a <http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object>;
+    <http://www.ics.forth.gr/isl/CRMdig/L43_annotates> <https://pharos.artresearch.net/fieldDefinition/66> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/event>
+    <http://www.ics.forth.gr/isl/CRMdig/L48_created_annotation> <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/event/timespan> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/event/timespan>
+    a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-05-05T13:50:01.634Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end> "2020-05-05T13:50:01.634Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/body>
+    a <http://www.w3.org/ns/oa#TextualBody>;
+    <http://www.w3.org/ns/oa#text> "{\"id\":\"8c3920f6-514f-418e-91e1-88b38de98bbf\",\"cells\":[{\"id\":\"e3ac506e-4047-4605-b70b-3e8de550aea5\",\"inline\":null,\"size\":12,\"content\":{\"plugin\":{\"name\":\"ory/editor/core/content/slate\",\"version\":\"0.0.1\"},\"state\":{\"serialized\":{\"nodes\":[{\"kind\":\"block\",\"type\":\"PARAGRAPH/PARAGRAPH\",\"nodes\":[{\"kind\":\"text\",\"text\":\"this is a test\"}]}]}}}}]}";
+    <http://purl.org/dc/elements/1.1/format> "text/html" .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e>
+    <http://www.w3.org/ns/oa#hasBody> <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e/body>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T13:50:01.636Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Annotations.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/a1becfb5-007e-4d69-a9da-0a6410d4466e>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

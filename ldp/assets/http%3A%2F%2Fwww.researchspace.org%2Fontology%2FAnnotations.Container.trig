@@ -1,0 +1,12 @@
+
+<http://www.researchspace.org/ontology/Annotations.Container/context> {
+  <http://www.researchspace.org/ontology/Annotations.Container> a <http://www.w3.org/ns/ldp#Container>,
+      <http://www.w3.org/ns/ldp#Resource>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Annotations Container";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T13:50:01.580Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#rootContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/ontology/Annotations.Container> .
+}
