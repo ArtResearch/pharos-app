@@ -1,12 +1,15 @@
 <div>
+{{#switch value.binding.graph.value}}
+        
+  {{#case "http://itatti" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/tatti.jpg" style="max-height:75px; max-width:75px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+   {{#default}}
+  <semantic-link uri="http://uknown" guess-repository=false></semantic-link> 
+   {{/default}}
 
-
-  {{#if value.binding.graph.value}}
-  <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false></semantic-link> 
-
-    {{else}}
-   <semantic-link uri="http://uknown" guess-repository=false></semantic-link> 
-  {{/if}}
-  
- 
+{{/switch}}
+   
 </div>

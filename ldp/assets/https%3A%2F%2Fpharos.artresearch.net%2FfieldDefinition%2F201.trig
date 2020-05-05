@@ -1,37 +1,39 @@
 
 <https://pharos.artresearch.net/fieldDefinition/201/context> {
   <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+      <https://pharos.artresearch.net/category/zeri> .
   
-  _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject crm:P104_is_subject_to ?value.
-}""" .
+  _:genid-d06e8d92738746af847356c0c6bbe604-5o3s6 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh a <http://spinrdf.org/sp#Query> .
+  <https://pharos.artresearch.net/fieldDefinition/201> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Rights"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  _:genid-d06e8d92738746af847356c0c6bbe604-5o3s6 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
+  $subject crm:P104_is_subject_to ?right.
+  ?right rdfs:label ?value
+  }}""" .
   
-  _:genid-39a3298ce40543cf98f4fa34229ca238-8o0f9h a <http://spinrdf.org/sp#Query> .
+  _:genid-d06e8d92738746af847356c0c6bbe604-7dc17r <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-d06e8d92738746af847356c0c6bbe604-7dc17r;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate, in a free text form, information regarding the use restrictions pertinent to the documented object.";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi> .
+  
+  _:genid-d06e8d92738746af847356c0c6bbe604-7dc17r a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
-  
-  _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#range>
-      <crm:E30_Right>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-39a3298ce40543cf98f4fa34229ca238-cglyh;
+      <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d06e8d92738746af847356c0c6bbe604-5o3s6;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Use Restrictions"@en;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T12:52:18.462Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T10:41:50.433Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/201> .

@@ -1,35 +1,28 @@
 
 <https://pharos.artresearch.net/fieldDefinition/118/context> {
-  <https://pharos.artresearch.net/fieldDefinition/118> a <http://www.metaphacts.com/ontology/fields#Field> .
+  _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-feflnc <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-eb38f0da45364f0abf19c1df3c9a0a59-sz055k a <http://spinrdf.org/sp#Query> .
+  <https://pharos.artresearch.net/fieldDefinition/118> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-ckbti;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-feflnc;
+    <http://www.w3.org/2000/01/rdf-schema#label> "IIIF Image"@en .
   
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.w3.org/2000/01/rdf-schema#label>
-      "IIIF Image"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-eb38f0da45364f0abf19c1df3c9a0a59-fgtzr;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti> .
-  
-  _:genid-eb38f0da45364f0abf19c1df3c9a0a59-fgtzr a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-eb38f0da45364f0abf19c1df3c9a0a59-sz055k <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-eb38f0da45364f0abf19c1df3c9a0a59-fgtzr <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-ckbti <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
  ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?value. 
  ?value crm:P2_has_type <http://iiif.io/api/image>
-}""" .
+  }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-eb38f0da45364f0abf19c1df3c9a0a59-sz055k;
+  _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-feflnc a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-cff8a66b0e4f45c2a2f9f27686f4d660-ckbti a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T14:18:29.034Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T10:43:35.346Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/118> .
