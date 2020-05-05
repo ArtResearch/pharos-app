@@ -1,22 +1,18 @@
 
 <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D/context> {
-  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-4c1885729d644a16a59e83237d00c0d9-dwolyd;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4c1885729d644a16a59e83237d00c0d9-5vimx;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Date [Wikidata]"@en .
+  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-4c1885729d644a16a59e83237d00c0d9-5vimx a <http://spinrdf.org/sp#Query> .
+  _:genid-cb93e8ce97114fd897219464c9552181-bxv2ek <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-cb93e8ce97114fd897219464c9552181-bxv2ek .
+  
+  _:genid-cb93e8ce97114fd897219464c9552181-3vvd32e a <http://spinrdf.org/sp#Query> .
   
   <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#domain>
       <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
   
-  _:genid-4c1885729d644a16a59e83237d00c0d9-dwolyd a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/person>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#dateTime> .
-  
-  _:genid-4c1885729d644a16a59e83237d00c0d9-dwolyd <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-cb93e8ce97114fd897219464c9552181-3vvd32e <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ {
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -42,11 +38,18 @@ WHERE{ {
    
       """ .
   
-  _:genid-4c1885729d644a16a59e83237d00c0d9-5vimx <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#dateTime> .
   
-  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-cb93e8ce97114fd897219464c9552181-bxv2ek a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Birth Date"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-cb93e8ce97114fd897219464c9552181-3vvd32e;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:41:55.137Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T12:34:01.632Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Birth%20Date%20%5BWikidata%5D> .
