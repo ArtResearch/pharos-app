@@ -2,14 +2,11 @@
   [[> rsp:RecordImage]]
 
   <div class='rs-page__summary' style='width:60%;'>
+   
     [[#*inline "values"]]
     <div class='rs-entity-fields'>
       <mp-panel collapsible=true default-expanded=true bs-style='[[#if asserted]]info[[else]]success[[/if]]'>
-        <mp-panel-header>
-          <div data-flex-layout="row center-left">
-            <span>[[title]]</span>
-          </div>
-        </mp-panel-header>
+   
         <mp-panel-body>
           <div class="rs-page__summary-content table-responsive">
             <table class='table'>
@@ -36,17 +33,6 @@
        
             
              [[/if]]
-            
-            
-             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type . ?type rdfs:label "Builtwork" .}}')]]
-             <mp-field-visualization
-              subject=[[this]]
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/artwork> .} "]]'
-              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
-            ></mp-field-visualization>
-
-           [[/if]]
-            
 
            [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300046300> .}}')]]
             <mp-field-visualization
@@ -72,10 +58,9 @@
         </mp-panel-body>
       </mp-panel>
     </div>
-    [[/inline]]
+    [[/inline]]  
 
-    [[> values title='Pharos']]
-
-   
+    [[> values ]]
+    <a href=[[singleValueFromSelect 'SELECT ?label WHERE {?? owl:sameAs ?label}']] style="margin-top:18px;margin-left:20px;">Source Record</a>
   </div>
 </div>
