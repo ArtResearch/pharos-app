@@ -17,10 +17,9 @@
       <semantic-query
         query='
                              SELECT ?dataset WHERE {
-                               ?? <http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through> ?acquisition .
-                               ?acquisition <http://www.cidoc-crm.org/cidoc-crm/P22_transferred_ownership_to> ?repo .
+                               ?? <http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper> ?repo .
                                ?repo rdfs:label ?repo_label.
-                               BIND(IF(BOUND(?repo), concat(", Repository: ",str(?repo_label)), "Unknown Repository") as ?dataset) .
+                               BIND(IF(BOUND(?repo), concat("(Repository: ",str(?repo_label),")"), "(Repository: Unknown)") as ?dataset) .
                              } LIMIT 1
                              '
         template='{{bindings.0.dataset.value}}'
