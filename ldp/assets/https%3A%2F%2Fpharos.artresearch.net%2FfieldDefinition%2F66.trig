@@ -2,42 +2,39 @@
 <https://pharos.artresearch.net/fieldDefinition/66/context> {
   <https://pharos.artresearch.net/fieldDefinition/66> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-41a3c4c0a5ff4988b83cf6ccbc7c304d-xgu0co;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti> .
   
-  _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-uyqck a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-xggds <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/66> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/photo>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-xggds;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/work> .
-  
-  _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-uyqck <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE 
+  _:genid-41a3c4c0a5ff4988b83cf6ccbc7c304d-xgu0co <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE 
   {
   graph ?graph
-  {
-	$subject crm:P43_has_dimension ?dimension.
- 	?dimension rdfs:label ?value.
-  
-    }
-}""" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/66> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-xggds a <http://spinrdf.org/sp#Query> .
+  	{
+		$subject crm:P43_has_dimension ?dimension.
+ 		?dimension rdfs:label ?value.
+  	}
+}""";
+    a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/66> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <https://pharos.artresearch.net/category/frick>;
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-41a3c4c0a5ff4988b83cf6ccbc7c304d-0fpq5 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-41a3c4c0a5ff4988b83cf6ccbc7c304d-0fpq5;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ebf0e8d97ce042c8a0d2411a83d7c8d0-uyqck;
-    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en .
+  
+  _:genid-41a3c4c0a5ff4988b83cf6ccbc7c304d-0fpq5 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T10:41:09.834Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-11T10:53:23.815Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/66> .
