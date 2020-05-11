@@ -21,16 +21,35 @@
               </thead>
               <tbody></tbody>
             </table>
+
+            
+             
+            [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/pharos/type/pharosrecord> .}}')]]
+              
+            YOU ARE NOW ON THE PHAROS RECORD
+              
+             <mp-field-visualization
+              subject=[[jsonArrayFromSelect "SELECT ?sameAsThis WHERE { ?? owl:sameAs ?sameAsThis }"]]
+                                                   
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[jsonArrayFromSelect "SELECT ?sameAsThis WHERE { ?? owl:sameAs ?sameAsThis }"]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+            
+            [[/if]]
             
             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025> .}}')]]
             
             <mp-field-visualization
               subject=[[this]]
+                                                   
               fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
   
        
+             
             
              [[/if]]
 
