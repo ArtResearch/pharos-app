@@ -1,39 +1,40 @@
 
 <https://pharos.artresearch.net/fieldDefinition/Repository/context> {
   <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-cf79f26a61a1485185e494f2998b5a91-7rga1 a <http://spinrdf.org/sp#Query> .
+  _:genid-374810d61103487c87a160f6ff9286a2-u6gqic a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/Repository> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Repository (Institutions)"@en .
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-374810d61103487c87a160f6ff9286a2-whjte .
   
-  _:genid-cf79f26a61a1485185e494f2998b5a91-brz19q a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-cf79f26a61a1485185e494f2998b5a91-7rga1 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "This field is used to indicate a present custodian of the documented object.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cf79f26a61a1485185e494f2998b5a91-7rga1 .
-  
-  _:genid-cf79f26a61a1485185e494f2998b5a91-brz19q <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
+  _:genid-374810d61103487c87a160f6ff9286a2-whjte <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
 {
   $subject crm:P50_has_current_keeper ?value.
   ?value crm:P2_has_type <http://vocab.getty.edu/aat/300264595>
   }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-cf79f26a61a1485185e494f2998b5a91-brz19q;
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-374810d61103487c87a160f6ff9286a2-whjte a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Repository"@en .
+  
+  _:genid-374810d61103487c87a160f6ff9286a2-u6gqic <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/Repository> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to indicate a present custodian of the documented object.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-374810d61103487c87a160f6ff9286a2-u6gqic;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:06:58.220Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-11T08:52:53.975Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/Repository> .
