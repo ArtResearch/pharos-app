@@ -27,57 +27,13 @@
             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/pharos/type/pharosrecord> .}}')]]
               
             YOU ARE NOW ON THE PHAROS RECORD
-              
-            
-            
+
             <mp-field-visualization
-          subject=[[this]]
-          fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
-          template='{{> perSubject subject="<[[this]]>"}}'
-          >
-		<template id="perSubject">
-		   <div>
-              <semantic-query 
-                query='PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                    SELECT ?sameAsThis WHERE { 
-                        { {{subject}} owl:sameAs ?sameAsThis } 
-                        UNION 
-                        { ?sameAsThis owl:sameAs {{subject}} }
-                        UNION 
-                        { BIND({{subject}} as ?sameAsThis) }
-                      }' 
-                 template='<div>{{#each bindings}}{{> rsp:FieldBasedVisualization subject="{{sameAsThis.value}}" [[#if asserted]]guess="true"[[/if]]}}{{/each}}</div>'
-                ></semantic-query>
-            </div>
-          </template>
-</mp-field-visualization> 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             <mp-field-visualization
-              subject=[[singleValueFromSelect "SELECT ?sameAsThis WHERE { ?? owl:sameAs ?sameAsThis }"]]
-                                                   
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
-              template='{{> rsp:FieldBasedVisualization subject="[[singleValueFromSelect "SELECT ?sameAsThis WHERE { ?? owl:sameAs ?sameAsThis }"]]" [[#if asserted]]guess="true"[[/if]]}}'
-            ></mp-field-visualization>
-            
-            
-            
-            
-            
-            
-            
-            
-            
+                subject='[[this]]'
+                fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
+                template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+             ></mp-field-visualization> 
+                  
             [[/if]]
             
             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025> .}}')]]
