@@ -27,6 +27,32 @@
             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/pharos/type/pharosrecord> .}}')]]
               
             YOU ARE NOW ON THE PHAROS RECORD
+            
+            <semantic-query
+                query='PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                    SELECT ?sameAsThis WHERE {
+                        { ?? owl:sameAs ?sameAsThis }
+                        UNION
+                        { ?sameAsThis owl:sameAs ?? }
+                        UNION
+                        { BIND(?? as ?sameAsThis) }
+                      }'
+                 template='{{> perSubject}}'
+                >
+              <template id="perSubject">
+                <div>
+                  {{#each bindings}}
+                  <mp-field-visualization
+                                          subject='{{sameAsThis.value}}'
+                                          fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w)"]]'
+                                          template='{{> rsp:FieldBasedVisualization subject="{{sameAsThis.value}}" [[#if asserted]]guess="true"[[/if]]}}'
+                                          >
+                  </mp-field-visualization>
+                  {{/each}}
+                </div>
+              </template>
+            </semantic-query>
+            
             <mp-field-visualization
               subject='[[this]]'
               fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
