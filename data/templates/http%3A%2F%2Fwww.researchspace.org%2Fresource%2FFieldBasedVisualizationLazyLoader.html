@@ -1,0 +1,7 @@
+                  <mp-field-visualization
+                                          subject='[[urlParam "subject"]]'
+                                          fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w)"]]'
+                                          [[!-- [[> rsp:FieldBasedVisualization ]] --]]
+                                          template='{{> rsp:FieldBasedVisualization subject="[[urlParam "subject"]]" [[#if (urlParam "guess")]]guess="true"[[/if]]}}'
+                                          >
+                  </mp-field-visualization>
