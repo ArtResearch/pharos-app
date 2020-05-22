@@ -1,5 +1,5 @@
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
-<h4 align="center"><b>Photographers (Hertziana)</b></h4>
+<h4 align="center"><b>Repositories (Villa i Tatti FotoIndex)</b></h4>
 </div>
 
  <semantic-table 
@@ -7,20 +7,17 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT distinct $photographer
+											 SELECT  $institution
 											 WHERE {
-												$subject <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/hertziana/source/1IAVEUY6>.
-                        $subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
-                         
-                        ?subject crm:P108i_was_produced_by ?production.
-                        ?production crm:P14_carried_out_by ?photographer.
-											 } limit 1000' 
+     	                 $institution <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300264595> .
+                       ?institution <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/villaitatti/source/T4F1HMQO> .
+											 }' 
                  
                 id="table-result" 
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "photographer", "displayName": "Photographer"}
+ 							  {"variableName": "institution", "displayName": "Repository"}
                 ]'>
 </semantic-table>
 

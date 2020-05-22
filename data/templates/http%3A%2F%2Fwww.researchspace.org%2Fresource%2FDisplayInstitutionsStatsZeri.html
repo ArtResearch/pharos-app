@@ -1,5 +1,5 @@
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
-<h4 align="center"><b>Collections (Zeri)</b></h4>
+<h4 align="center"><b>Repositories (Zeri)</b></h4>
 </div>
 
  <semantic-table 
@@ -7,24 +7,22 @@
 											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											 SELECT  distinct ?collection (count(?subject) as ?c)
+											 SELECT  distinct ?repository (count(?subject) as ?c)
 
 											 WHERE {
 
-                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                        ?type_uri rdfs:label "Artwork".
-                         
-                        ?subject crm:has_source  ?source_uri.
-                        ?source_uri rdfs:label "Zeri" .
+                       	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025>.
+                        $subject <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/1HV88CWW>.
 
-    										?subject crm:P46i_forms_part_of ?collection.
-                        ?collection a crm:E78_Curated_Holding 
-  											} GROUP BY(?collection) ORDER BY DESC(?c)' 
+    										?subject crm:P50_has_current_keeper ?repository.
+                 
+  											} GROUP BY(?repository) ORDER BY DESC(?c)' 
                 id="table-result"
                 number-of-displayed-rows= 100
                 options='{"showFilter": false, "showTableHeading": true}'
                 column-configuration='[
- 							  {"variableName": "collection", "displayName": "Collection"},
+ 							  {"variableName": "repository", "displayName": "Repository"},
                 {"variableName": "c", "displayName": "No. of Artworks"}
                 ]'>
 </semantic-table>

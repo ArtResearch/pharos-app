@@ -9,21 +9,11 @@
 
 											 SELECT distinct ?photographer
 											 WHERE {
-
-                        $photo a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-
-                        $photo <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                        ?type_uri rdfs:label "Photograph".
+                       	$subject <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/1HV88CWW>.
+                       	$subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
                          
-                        ?vi crm:P128i_is_carried_by ?photo .
-    										?artwork crm:P138i_is_represented_by ?vi.
-                         
-                        ?artwork crm:has_source  ?source_uri.
-                        ?source_uri rdfs:label "Zeri" .
-                         
-                        ?photo crm:P108i_was_produced_by ?production.
-                        ?production crm:P01i_is_domain_of ?carried.
-                        ?carried crm:P02_has_range ?photographer
+                        ?subject crm:P108i_was_produced_by ?production.
+                        ?production crm:P14_carried_out_by ?photographer
 											 } limit 1000' 
                  
                 id="table-result" 
