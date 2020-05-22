@@ -9,12 +9,10 @@
 
 											 SELECT  distinct $artist
 											 WHERE {
-     	                 $artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-                       $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type_uri.
-                       ?type_uri rdfs:label "Artwork".
-                         
-                       $artwork <http://www.cidoc-crm.org/cidoc-crm/has_source> ?source_uri.
-                       ?source_uri rdfs:label "Hertziana".
+     	                 	$artwork a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+                        $artwork <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025>.
+                        $artwork <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/hertziana/source/1IAVEUY6>.
+                        $artwork rdfs:label ?label .
                          
                        $artwork crm:P108i_was_produced_by ?production.
                        ?production crm:P01i_is_domain_of ?carried.
