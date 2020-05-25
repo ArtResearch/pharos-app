@@ -1,0 +1,40 @@
+
+<https://pharos.artresearch.net/fieldDefinition/280/context> {
+  <https://pharos.artresearch.net/fieldDefinition/280> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-mxadca <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/280> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-mxadca;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-c5vcbj;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-c5vcbj <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P108i_was_produced_by ?production.
+  ?production crm:P125_used_object_of_type ?value.
+}""" .
+  
+  _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-mxadca a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-8ad9f5eec6d144f38bf0a21a39e42d39-c5vcbj a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/280> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T12:36:14.879Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/280> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/280> a <http://www.w3.org/ns/ldp#Resource> .
+}
