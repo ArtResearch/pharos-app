@@ -1,0 +1,44 @@
+
+<https://pharos.artresearch.net/fieldDefinition/14/context> {
+  _:genid-98fb0ee914cf4c1691bedf5603d34d8f-2fx0wp a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/14> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to provide information on the Destruction of the documented object." .
+  
+  _:genid-98fb0ee914cf4c1691bedf5603d34d8f-ckwm4 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/14> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Destruction"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-98fb0ee914cf4c1691bedf5603d34d8f-2fx0wp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/14> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-98fb0ee914cf4c1691bedf5603d34d8f-2fx0wp .
+  
+  _:genid-98fb0ee914cf4c1691bedf5603d34d8f-ckwm4 <http://spinrdf.org/sp#text> """SELECT  ?value ?label WHERE {
+  	$subject crm:P13i_destroyed_in ?event.
+ 	?event crm:P2_has_type ?type_uri.
+  	?type_uri rdfs:label ?type.
+  	?event crm:P14_carried_out_by ?actor_uri .
+  	?actor_uri rdfs:label ?actor.
+    ?event crm:P4_has_time-span ?tm_uri .
+  	?tm_uri crm:P82_at_some_time_within ?timespan.
+    BIND(CONCAT(?type,\" - actor:\",?actor,\" - date:\",?timespan) as ?value)
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/14> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-98fb0ee914cf4c1691bedf5603d34d8f-ckwm4;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T11:25:01.705Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/14> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/14> a <http://www.w3.org/ns/ldp#Resource> .
+}

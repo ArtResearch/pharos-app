@@ -4,41 +4,45 @@
       <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-ad1635ea357a4b28a02e9d40eead7cc9-k7eyl <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6234784e509a416c853ee8d9d600a146-yecyaa a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/1> <http://www.metaphacts.com/ontology/fields#range>
       <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the artist or creator of the documented object.";
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ad1635ea357a4b28a02e9d40eead7cc9-k7eyl;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ad1635ea357a4b28a02e9d40eead7cc9-t29szp;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti> .
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-ad1635ea357a4b28a02e9d40eead7cc9-k7eyl a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/1> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/khi> .
-  
-  _:genid-ad1635ea357a4b28a02e9d40eead7cc9-t29szp <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {  graph ?graph
+  _:genid-6234784e509a416c853ee8d9d600a146-oi54gy <http://spinrdf.org/sp#text> """SELECT ?value ?label ?qualifier ?graph WHERE {  graph ?graph
 {
   ?subject crm:P108i_was_produced_by ?production .
   ?production crm:P01i_is_domain_of ?carried .
   ?carried a crm:PC14_carried_out_by .
   ?carried crm:P02_has_range ?value
-  } }""" .
+  OPTIONAL
+  { 
+      ?carried crm:P14.1_in_the_role_of ?qualifier_uri.
+      ?qualifier_uri rdfs:label ?qualifier.
+   }
+  }
+ }""" .
   
   <https://pharos.artresearch.net/fieldDefinition/1> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6234784e509a416c853ee8d9d600a146-oi54gy;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
   
-  _:genid-ad1635ea357a4b28a02e9d40eead7cc9-t29szp a <http://spinrdf.org/sp#Query> .
+  _:genid-6234784e509a416c853ee8d9d600a146-yecyaa <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <https://pharos.artresearch.net/fieldDefinition/1> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-6234784e509a416c853ee8d9d600a146-oi54gy a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/1> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-6234784e509a416c853ee8d9d600a146-yecyaa;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:05:33.609Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T11:02:17.342Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/1> .
