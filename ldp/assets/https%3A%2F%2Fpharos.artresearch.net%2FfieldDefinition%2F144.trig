@@ -1,0 +1,41 @@
+
+<https://pharos.artresearch.net/fieldDefinition/144/context> {
+  <https://pharos.artresearch.net/fieldDefinition/144> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-f102e59006524e13885648183efdc8e7-wip2h7 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-f102e59006524e13885648183efdc8e7-p0afug <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/144> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-f102e59006524e13885648183efdc8e7-p0afug;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-f102e59006524e13885648183efdc8e7-p0afug a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/144> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Birth Date"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti> .
+  
+  _:genid-f102e59006524e13885648183efdc8e7-wip2h7 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P98i_was_born_by ?birth.
+  ?birth crm:P4_has_time-span ?tm.
+  ?tm crm:P82_at_some_time_within ?value .
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/144> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f102e59006524e13885648183efdc8e7-wip2h7;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T13:41:56.185Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/144> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/144> a <http://www.w3.org/ns/ldp#Resource> .
+}
