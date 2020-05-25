@@ -4,37 +4,39 @@
       <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-3mcopb <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-be95c719d603454296a01d259a497230-s8kf7l <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-eha7xa a <http://spinrdf.org/sp#Query> .
+  _:genid-be95c719d603454296a01d259a497230-9505v a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/135> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-3mcopb;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  <https://pharos.artresearch.net/fieldDefinition/135> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-be95c719d603454296a01d259a497230-s8kf7l;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi> .
   
-  _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-eha7xa <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
+  _:genid-be95c719d603454296a01d259a497230-9505v <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
 {
   $subject crm:P138i_is_represented_by ?visual_item.
   ?visual_item crm:P128i_is_carried_by ?value.
   ?value crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
   }}""" .
   
-  _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-3mcopb a <http://spinrdf.org/sp#Query> .
+  <https://pharos.artresearch.net/fieldDefinition/135> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to catalogue the photos of the documented object." .
+  
+  _:genid-be95c719d603454296a01d259a497230-s8kf7l a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/135> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to catalogue the photos of the documented object.";
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f04c583baeec4854b1b6dcbfb4ca0de3-eha7xa;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-be95c719d603454296a01d259a497230-9505v;
     <http://www.w3.org/2000/01/rdf-schema#label> "Photos"@en;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:05:40.969Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T09:22:49.173Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/135> .
