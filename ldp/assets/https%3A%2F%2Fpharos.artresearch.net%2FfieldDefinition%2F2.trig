@@ -1,26 +1,28 @@
 
 <https://pharos.artresearch.net/fieldDefinition/2/context> {
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-179886c80ca44c28b66beaa1461e8319-ld4vv6 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/2> a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-179886c80ca44c28b66beaa1461e8319-8liv89 a <http://spinrdf.org/sp#Query> .
+  _:genid-b20ea0afc389437384c5afcb182c73d7-ueezr <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/institution>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-179886c80ca44c28b66beaa1461e8319-ld4vv6;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+      <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/institution> .
+  
+  _:genid-b20ea0afc389437384c5afcb182c73d7-k7o3ew a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-b20ea0afc389437384c5afcb182c73d7-ueezr;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/person> .
   
-  _:genid-179886c80ca44c28b66beaa1461e8319-ld4vv6 a <http://spinrdf.org/sp#Query> .
+  _:genid-b20ea0afc389437384c5afcb182c73d7-ueezr a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/itatti>;
+      <https://pharos.artresearch.net/category/itatti>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E40_Group>;
     <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
@@ -28,9 +30,10 @@
       <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
     <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/place>,
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <https://pharos.artresearch.net/category/frick> .
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#order> "999" .
   
-  _:genid-179886c80ca44c28b66beaa1461e8319-8liv89 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
+  _:genid-b20ea0afc389437384c5afcb182c73d7-k7o3ew <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
 {
   graph ?graph
 {
@@ -40,11 +43,11 @@
 }""" .
   
   <https://pharos.artresearch.net/fieldDefinition/2> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-179886c80ca44c28b66beaa1461e8319-8liv89;
+      _:genid-b20ea0afc389437384c5afcb182c73d7-k7o3ew;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the preferred identifier attributed to the documented instance of the documented object.";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T07:23:22.754Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-29T12:19:37.313Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/2> .
