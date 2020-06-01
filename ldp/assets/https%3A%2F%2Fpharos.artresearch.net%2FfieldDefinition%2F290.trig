@@ -1,36 +1,35 @@
 
 <https://pharos.artresearch.net/fieldDefinition/290/context> {
   <https://pharos.artresearch.net/fieldDefinition/290> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Nationality"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-21559e8e0f73425fa3c41bd9859b3fa4-ssnl1;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-d56c1886dccc4e77815684ad1d8b598f-6rv2s a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-21559e8e0f73425fa3c41bd9859b3fa4-ssnl1 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-21559e8e0f73425fa3c41bd9859b3fa4-hmgqlh <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
   $subject crm:P107i_is_current_or_former_member_of ?gp.
   ?gp crm:P2_has_type ?value.
-}""" .
+  }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/290> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
+  <https://pharos.artresearch.net/fieldDefinition/290> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-21559e8e0f73425fa3c41bd9859b3fa4-hmgqlh;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
   
-  _:genid-d56c1886dccc4e77815684ad1d8b598f-t4uwq <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-21559e8e0f73425fa3c41bd9859b3fa4-hmgqlh a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/290> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Nationality"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d56c1886dccc4e77815684ad1d8b598f-t4uwq;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  _:genid-21559e8e0f73425fa3c41bd9859b3fa4-ssnl1 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-d56c1886dccc4e77815684ad1d8b598f-t4uwq a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/290> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d56c1886dccc4e77815684ad1d8b598f-6rv2s;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/290> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T13:59:38.438Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T11:14:25.638Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/290> .

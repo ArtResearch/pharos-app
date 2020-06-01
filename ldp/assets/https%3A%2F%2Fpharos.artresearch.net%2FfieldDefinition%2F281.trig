@@ -3,39 +3,38 @@
   <https://pharos.artresearch.net/fieldDefinition/281> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Photo Card"@en;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-07142fb3d2a94c5f9a4a7833dec34840-98kg;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
   
-  _:genid-55dac86cb89640d59ea07be8bf6ec40c-mv9orw a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-55dac86cb89640d59ea07be8bf6ec40c-u22mlw a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/281> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana> .
-  
-  _:genid-55dac86cb89640d59ea07be8bf6ec40c-mv9orw <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-07142fb3d2a94c5f9a4a7833dec34840-98kg a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/281> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-55dac86cb89640d59ea07be8bf6ec40c-u22mlw;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-55dac86cb89640d59ea07be8bf6ec40c-mv9orw .
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi> .
   
-  _:genid-55dac86cb89640d59ea07be8bf6ec40c-u22mlw <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-07142fb3d2a94c5f9a4a7833dec34840-tqrlfy <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/281> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-07142fb3d2a94c5f9a4a7833dec34840-tqrlfy;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-07142fb3d2a94c5f9a4a7833dec34840-tqrlfy a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-07142fb3d2a94c5f9a4a7833dec34840-98kg <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
   $subject crm:P128_carries ?vi.
   ?vi crm:P128i_is_carried_by ?value.
   ?value crm:P2_has_type ?type.
   ?type rdfs:label \"Photo Card\"
-}""" .
+  }}""" .
   
   <https://pharos.artresearch.net/fieldDefinition/281> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T12:48:27.050Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T11:14:05.595Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/281> .

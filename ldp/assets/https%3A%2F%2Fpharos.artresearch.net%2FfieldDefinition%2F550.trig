@@ -1,0 +1,50 @@
+
+<https://pharos.artresearch.net/fieldDefinition/550/context> {
+  <https://pharos.artresearch.net/fieldDefinition/550> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1170893f5ad84f94a11bb2988353f4ba-1nj3x;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
+  
+  _:genid-1170893f5ad84f94a11bb2988353f4ba-y0hjgp a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/550> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-1170893f5ad84f94a11bb2988353f4ba-1nj3x a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/550> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-1170893f5ad84f94a11bb2988353f4ba-1nj3x <http://spinrdf.org/sp#text> """SELECT distinct $value ?label ?qualifier ?graph
+WHERE {   graph ?graph
+{
+    $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value .
+    OPTIONAL
+  	{ 
+      ?value  <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?qualifier_uri . 
+      ?qualifier_uri rdfs:label ?qualifier .
+         
+    } 
+    }   }""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/550> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Work Types"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-1170893f5ad84f94a11bb2988353f4ba-y0hjgp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/550> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-1170893f5ad84f94a11bb2988353f4ba-y0hjgp;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T11:22:48.682Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/550> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/550> a <http://www.w3.org/ns/ldp#Resource> .
+}
