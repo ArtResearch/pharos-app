@@ -2,36 +2,35 @@
 <https://pharos.artresearch.net/fieldDefinition/34/context> {
   <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to provide a free text description of an exhibition." .
   
-  _:genid-a4601f04b532446cb425380f31410230-tc6v4 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-d63606f30b8f480d8c67655251bd1747-esujvr a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-d63606f30b8f480d8c67655251bd1747-7iyo1p <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Exhibition Description"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d63606f30b8f480d8c67655251bd1747-7iyo1p;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d63606f30b8f480d8c67655251bd1747-esujvr .
+  
+  _:genid-d63606f30b8f480d8c67655251bd1747-esujvr <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
   $subject crm:P67i_is_referred_to_by ?information_object.
   ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435424>.
   ?information_object crm:P190_has_symbolic_content ?value .
-}""" .
+  }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-a4601f04b532446cb425380f31410230-tc6v4 .
-  
-  _:genid-a4601f04b532446cb425380f31410230-da444d <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a4601f04b532446cb425380f31410230-da444d;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Exhibition Description"@en;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick> .
-  
-  _:genid-a4601f04b532446cb425380f31410230-tc6v4 a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-a4601f04b532446cb425380f31410230-da444d a <http://spinrdf.org/sp#Query> .
+  _:genid-d63606f30b8f480d8c67655251bd1747-7iyo1p a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/34> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-21T11:29:36.229Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T10:49:35.263Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/34> .

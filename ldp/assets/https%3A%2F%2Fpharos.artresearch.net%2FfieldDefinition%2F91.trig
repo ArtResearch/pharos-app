@@ -4,20 +4,25 @@
       <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-60564df897124fcbac9911faaf55ce6e-wxr4r <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-c81fd87e1ab64d79999c0ad295031a96-m7t5ng a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-c81fd87e1ab64d79999c0ad295031a96-dcsngo a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/91> <http://www.w3.org/2000/01/rdf-schema#label>
       "Has Part"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-60564df897124fcbac9911faaf55ce6e-wxr4r .
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg> .
   
-  _:genid-60564df897124fcbac9911faaf55ce6e-j9y8gw a <http://spinrdf.org/sp#Query> .
+  _:genid-c81fd87e1ab64d79999c0ad295031a96-m7t5ng <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <https://pharos.artresearch.net/fieldDefinition/91> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  <https://pharos.artresearch.net/fieldDefinition/91> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
   
-  _:genid-60564df897124fcbac9911faaf55ce6e-wxr4r a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-60564df897124fcbac9911faaf55ce6e-j9y8gw <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE 
+  _:genid-c81fd87e1ab64d79999c0ad295031a96-dcsngo <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
 { 
 	{
  	 $subject crm:P46_has_component ?value.
@@ -26,20 +31,15 @@
 	{
   	 ?value crm:P46i_forms_part_of $subject.
 	}
-}""" .
+      }}}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/91> <http://www.metaphacts.com/ontology/fields#range>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-60564df897124fcbac9911faaf55ce6e-j9y8gw;
+  <https://pharos.artresearch.net/fieldDefinition/91> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-c81fd87e1ab64d79999c0ad295031a96-dcsngo;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-c81fd87e1ab64d79999c0ad295031a96-m7t5ng;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate parts of the documented object.";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T10:51:27.244Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T10:53:46.421Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/91> .

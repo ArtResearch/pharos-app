@@ -4,11 +4,15 @@
   <div class='rs-page__summary' style='width:60%;'>
    
     [[#*inline "values"]]
+
+    
     <div class='rs-entity-fields'>
       <mp-panel collapsible=true default-expanded=true bs-style='[[#if asserted]]info[[else]]success[[/if]]'>
    
         <mp-panel-body>
           <div class="rs-page__summary-content table-responsive">
+              <p align="right"><a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a></p>
+            
             <table class='table'>
               <thead role="header">
               <tr>
@@ -104,6 +108,6 @@
     [[/inline]]  
 
     [[> values ]]
-    <a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a>
+    
   </div>
 </div>

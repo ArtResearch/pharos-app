@@ -2,35 +2,35 @@
 <https://pharos.artresearch.net/fieldDefinition/203/context> {
   <https://pharos.artresearch.net/fieldDefinition/203> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0a0b6244887e4d47a089530a2623498a-e1068e;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en .
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-0a0b6244887e4d47a089530a2623498a-e1068e a <http://spinrdf.org/sp#Query> .
+  _:genid-4f8826dc1bed48e6964ee0ef555486cb-15uxdq <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-0a0b6244887e4d47a089530a2623498a-7q8ndb <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  <https://pharos.artresearch.net/fieldDefinition/203> <http://www.w3.org/2000/01/rdf-schema#label>
+      "State of Preservation"@en;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4f8826dc1bed48e6964ee0ef555486cb-15uxdq;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-4f8826dc1bed48e6964ee0ef555486cb-15uxdq a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/203> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-4f8826dc1bed48e6964ee0ef555486cb-4ctxr;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the assessed state of preservation - using a specified typology of states - of the documented object.";
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State> .
+  
+  _:genid-4f8826dc1bed48e6964ee0ef555486cb-4ctxr a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE { graph ?graph {
   $subject crm:P34i_was_assessed_by ?condition_assessment.
   ?condition_assessment crm:P35_has_assigned ?value
-}""" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/203> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0a0b6244887e4d47a089530a2623498a-7q8ndb;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick> .
-  
-  _:genid-0a0b6244887e4d47a089530a2623498a-7q8ndb a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/203> <http://www.metaphacts.com/ontology/fields#range>
-      <http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State> .
-  
-  _:genid-0a0b6244887e4d47a089530a2623498a-e1068e <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  }}""" .
   
   <https://pharos.artresearch.net/fieldDefinition/203> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-21T12:37:54.432Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T10:50:53.485Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/203> .

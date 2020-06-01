@@ -1,9 +1,34 @@
 <div>
 {{#switch value.binding.graph.value}}
         
-  {{#case "http://itatti" break=true}}
+  {{#case "http://villaitatti" break=true}}
    <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
     <img src="/assets/images/tatti.jpg" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+    {{#case "http://frick" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/frick.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+    {{#case "http://khi" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/khi.jpg" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+    {{#case "http://zeri" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/zeri.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+    {{#case "http://marburg" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/marb.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
+     {{#case "http://hertziana" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/hertz.jpg" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
    </semantic-link> 
    {{/case}}
     {{#case "http://getty" break=true}}
