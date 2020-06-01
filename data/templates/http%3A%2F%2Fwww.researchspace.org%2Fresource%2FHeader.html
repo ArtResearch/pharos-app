@@ -13,13 +13,17 @@
   <h2 data-flex-layout='row center-left' class="page__header-tagline">
     <span class="icon-fc--header-title icon-fc--[[#if fc]][[fc]][[/if]]"></span>
     <small>
-      [[#if fcLabel]][[fcLabel]] record
+      [[#if fcLabel]]
       <semantic-query
         query='
                              SELECT ?dataset WHERE {
                                ?? <http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper> ?repo .
                                ?repo rdfs:label ?repo_label.
-                               BIND(IF(BOUND(?repo), concat("(Repository: ",str(?repo_label),")"), "(Repository: Unknown)") as ?dataset) .
+                                OPTIONAL {
+                               ?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type .
+                               ?type rdfs:label ?type_label.
+                               ?type <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>}
+                               BIND(IF(BOUND(?repo), concat(?type_label," (Repository: ",str(?repo_label),")"), "(Repository: Unknown)") as ?dataset) .
                              } LIMIT 1
                              '
         template='{{bindings.0.dataset.value}}'

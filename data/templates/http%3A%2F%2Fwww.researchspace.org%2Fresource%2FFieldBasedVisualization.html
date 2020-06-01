@@ -51,13 +51,13 @@
               </td>
               <td>
                 {{#ifCond (objectLength field.values) '>' 1}}
-          
+          					<ul>
                     {{#each field.values as |value|}}
-     
+     									<li>
                      {{> rsp:FieldValueVisualization field=field value=value guess=../../guess }}
-        
+                      </li>
                     {{/each}}
-             
+                    </ul>
                 {{/ifCond}}
                 {{#ifCond (objectLength field.values) '===' 1}}
                   {{#each field.values as |value|}}
