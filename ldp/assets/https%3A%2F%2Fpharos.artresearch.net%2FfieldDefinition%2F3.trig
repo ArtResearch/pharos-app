@@ -1,47 +1,49 @@
 
 <https://pharos.artresearch.net/fieldDefinition/3/context> {
   <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-4blnsi a <http://spinrdf.org/sp#Query> .
+  _:genid-daea4c4f03ef459691b7f6311f314230-rdkfim <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <https://pharos.artresearch.net/fieldDefinition/3> a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-08ncnr a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>,
-      <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
-  
-  _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-4blnsi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-4blnsi .
-  
-  _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-08ncnr <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
+  _:genid-daea4c4f03ef459691b7f6311f314230-e6ln5s <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
 {
+  { graph ?graph {?subject crm:P1_is_identified_by ?value.
+  ?value a crm:E41_Appellation.
+          ?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . }}
+  UNION {
 ?subject2 owl:sameAs ?subject . 
 graph ?graph {
   ?subject2 crm:P1_is_identified_by ?value.
   ?value a crm:E41_Appellation.
   ?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
   }
+}
     
 }""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-ed0855e7b0924e3c8d1c0e8c34bb4000-08ncnr;
+  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-daea4c4f03ef459691b7f6311f314230-e6ln5s;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-daea4c4f03ef459691b7f6311f314230-rdkfim;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
+  
+  _:genid-daea4c4f03ef459691b7f6311f314230-rdkfim a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-daea4c4f03ef459691b7f6311f314230-e6ln5s a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/frick>;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-02T13:41:46.448Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T14:17:25.413Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/3> .

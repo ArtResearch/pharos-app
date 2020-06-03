@@ -41,6 +41,11 @@
     <img src="http://viaf.org/viaf/images/flags/WKP.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
    </semantic-link> 
    {{/case}}
+  {{#case "http://matches" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/images/pharos.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
    {{#default}}
   <semantic-link uri="http://uknown" guess-repository=false></semantic-link> 
    {{/default}}

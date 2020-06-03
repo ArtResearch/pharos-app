@@ -3,12 +3,19 @@
   <https://pharos.artresearch.net/fieldDefinition/200> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9f6c33f781e1419b88222efc0ad39617-7u8act;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Original Records"@en .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-54585d415c0949b488d7513bf21c9182-zi0sbh;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-9f6c33f781e1419b88222efc0ad39617-7u8act a <http://spinrdf.org/sp#Query>;
+  _:genid-54585d415c0949b488d7513bf21c9182-68g5fg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/200> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Original Records"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-54585d415c0949b488d7513bf21c9182-68g5fg .
+  
+  _:genid-54585d415c0949b488d7513bf21c9182-zi0sbh a <http://spinrdf.org/sp#Query>;
     <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
     
    ?value  owl:sameAs $subject
@@ -16,23 +23,21 @@
     }""" .
   
   <https://pharos.artresearch.net/fieldDefinition/200> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/work> .
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
   
-  _:genid-9f6c33f781e1419b88222efc0ad39617-hz8l1r <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-54585d415c0949b488d7513bf21c9182-68g5fg a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/200> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9f6c33f781e1419b88222efc0ad39617-hz8l1r;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to link the documented object with the original record published from the data provider." .
-  
-  _:genid-9f6c33f781e1419b88222efc0ad39617-hz8l1r a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/200> a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/200> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to link the documented object with the original record published from the data provider.";
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:09:12.764Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T14:15:58.762Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/200> .
