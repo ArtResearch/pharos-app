@@ -1,0 +1,41 @@
+
+<http://www.researchspace.org/instances/fields/Title%20(Pharos)/context> {
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Title (Pharos)"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f .
+  
+  _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
+{
+
+  ?original owl:sameAs ?subject .
+        graph ?graph
+{
+  ?original crm:P1_is_identified_by ?value. 
+  ?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
+} 
+}""" .
+  
+  _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:15:48.293Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Title%20(Pharos)> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> a <http://www.w3.org/ns/ldp#Resource> .
+}

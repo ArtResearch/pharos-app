@@ -1,29 +1,13 @@
 
 <https://pharos.artresearch.net/fieldDefinition/75/context> {
-  _:genid-47a5802780fb41abb3af4eb0f12fae94-vn7yj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
   <https://pharos.artresearch.net/fieldDefinition/75> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate a bibliographic item which acts as a reference document for the documented object.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-47a5802780fb41abb3af4eb0f12fae94-vn7yj;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-47a5802780fb41abb3af4eb0f12fae94-1v0vyb;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate a bibliographic item which acts as a reference document for the documented object." .
   
-  _:genid-47a5802780fb41abb3af4eb0f12fae94-vn7yj a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/75> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work> .
-  
-  _:genid-47a5802780fb41abb3af4eb0f12fae94-1v0vyb a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/75> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography"@en .
-  
-  _:genid-47a5802780fb41abb3af4eb0f12fae94-1v0vyb <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
+  _:genid-2c92422bee134eaab407505673d161c0-p62hrb <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { 
+
+  graph ?graph {
 {
   $subject crm:P70i_is_documented_in ?bibliography.
   $bibliography rdfs:label ?value
@@ -51,9 +35,28 @@ UNION
 }
     }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/75> a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/75> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-2c92422bee134eaab407505673d161c0-kkkqmr <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/75> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-2c92422bee134eaab407505673d161c0-p62hrb;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2c92422bee134eaab407505673d161c0-kkkqmr;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-2c92422bee134eaab407505673d161c0-p62hrb a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-2c92422bee134eaab407505673d161c0-kkkqmr a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/75> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Bibliography"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T10:49:26.140Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:54:49.359Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/75> .

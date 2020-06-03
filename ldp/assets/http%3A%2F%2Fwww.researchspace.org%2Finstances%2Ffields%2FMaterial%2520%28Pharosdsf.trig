@@ -1,0 +1,41 @@
+
+<http://www.researchspace.org/instances/fields/Material%20(Pharosdsf/context> {
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-a2eaa2d09bb446228281ad9c79e54cad-9g0s7 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE {     ?original owl:sameAs ?subject 
+      graph ?graph {
+  $original crm:P45_consists_of ?value.
+  ?value a crm:E57_Material.
+  }
+
+}
+      
+     """ .
+  
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-a2eaa2d09bb446228281ad9c79e54cad-9g0s7;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Material (Pharos)"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-a2eaa2d09bb446228281ad9c79e54cad-oejl6 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-a2eaa2d09bb446228281ad9c79e54cad-9g0s7 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-a2eaa2d09bb446228281ad9c79e54cad-oejl6 .
+  
+  _:genid-a2eaa2d09bb446228281ad9c79e54cad-oejl6 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:58:16.852Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> .
+  
+  <http://www.researchspace.org/instances/fields/Material%20(Pharosdsf> a <http://www.w3.org/ns/ldp#Resource> .
+}

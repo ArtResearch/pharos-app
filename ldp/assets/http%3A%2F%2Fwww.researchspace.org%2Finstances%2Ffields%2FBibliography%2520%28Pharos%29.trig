@@ -1,0 +1,58 @@
+
+<http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)/context> {
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-e41d4c3ff1ab44adbc709c961b1da316-121cx <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-e41d4c3ff1ab44adbc709c961b1da316-03vtg;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography (Pharos)"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e41d4c3ff1ab44adbc709c961b1da316-121cx;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-e41d4c3ff1ab44adbc709c961b1da316-03vtg a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { 
+  ?original owl:sameAs ?subject 
+  
+  graph ?graph {
+{
+  $original crm:P70i_is_documented_in ?bibliography.
+  $bibliography rdfs:label ?value
+}
+UNION
+{
+  $original crm:P67i_is_referred_to_by ?bibliography .
+  ?bibliography crm:P2_has_type <http://vocab.getty.edu/aat/300435419>.
+  $bibliography rdfs:label ?value.
+  
+}
+UNION
+{
+  $original crm:P67i_is_referred_to_by ?bibliography .
+  ?bibliography crm:P2_has_type <http://vocab.getty.edu/aat/300435419>.
+  $bibliography rdfs:label ?biblio.
+  ?bibliography crm:P94i_was_created_by ?creation.
+  ?creation crm:P14_carried_out_by ?author_uri.
+  ?author_uri rdfs:label ?author.  
+  OPTIONAL {
+  ?page_uri crm:P106i_forms_part_of ?bibliography.
+  ?page_uri rdfs:label ?page.  
+  }
+  BIND(CONCAT(?biblio ,\" - Author: \",?author,\" - Page: \",?page) as ?value)
+}
+    }}""" .
+  
+  _:genid-e41d4c3ff1ab44adbc709c961b1da316-121cx a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:54:40.103Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> a <http://www.w3.org/ns/ldp#Resource> .
+}

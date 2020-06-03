@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/Subject%20(Pharos)/context> {
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-bb1b37b1564041fa9faae1345527ccf8-t7fyh;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-bb1b37b1564041fa9faae1345527ccf8-qmrprs .
+  
+  _:genid-bb1b37b1564041fa9faae1345527ccf8-t7fyh <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {    ?original owl:sameAs ?subject graph ?graph
+{
+  $original crm:P65_shows_visual_item ?value.
+  ?value crm:P2_has_type <http://vocab.getty.edu/aat/300404126>
+  }}""" .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-bb1b37b1564041fa9faae1345527ccf8-t7fyh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-bb1b37b1564041fa9faae1345527ccf8-qmrprs a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Subject (Pharos)"@en .
+  
+  _:genid-bb1b37b1564041fa9faae1345527ccf8-qmrprs <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:53:06.822Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> a <http://www.w3.org/ns/ldp#Resource> .
+}

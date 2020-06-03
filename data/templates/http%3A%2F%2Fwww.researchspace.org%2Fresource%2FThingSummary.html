@@ -11,7 +11,13 @@
    
         <mp-panel-body>
           <div class="rs-page__summary-content table-responsive">
-              <p align="right"><a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a></p>
+              
+               [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
+            OLE
+    [[/if]]
+      
+            <p align="right"><a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a></p>
+        
             
             <table class='table'>
               <thead role="header">
@@ -59,6 +65,19 @@
             [[/if]]
             
             
+            
+             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
+          
+            <mp-field-visualization
+              subject=[[this]]
+                                                   
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+
+             [[/if]]
+            
+
                 [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025> .}}')]]
             
             <mp-field-visualization
