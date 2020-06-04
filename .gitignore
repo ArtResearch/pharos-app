@@ -1,0 +1,5 @@
+#when connecting to remote repo in dev mode
+/config/repositories/default.ttl
+
+#tests generated in dev mode
+/data/repositories
