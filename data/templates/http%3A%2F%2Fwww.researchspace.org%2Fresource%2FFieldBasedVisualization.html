@@ -52,13 +52,13 @@
               <td>
                 {{#ifCond (objectLength field.values) '>' 1}}
 
-          				<ol class="rs-page__field-value">
+          				<ul class="rs-page__field-value">
                     {{#each field.values as |value|}}
      									 <li class="rs-page__field-value">
                      {{> rsp:FieldValueVisualization field=field value=value guess=../../guess }}
                       </li>
                     {{/each}}
-                     </ol>
+                     </ul>
                 
                 {{/ifCond}}
                 {{#ifCond (objectLength field.values) '===' 1}}
