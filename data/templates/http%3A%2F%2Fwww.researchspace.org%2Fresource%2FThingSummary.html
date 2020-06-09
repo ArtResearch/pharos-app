@@ -36,9 +36,9 @@
             
              [[/if]]
             
-           [[#if not (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
+        
             <p align="right"><a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a></p>
-            [[/if]]
+
             
             <table class='table'>
               <thead role="header">
