@@ -1,47 +1,9 @@
 <div>
 
   {{#each fields as |field|}}
-  {{log fileds}}
     {{#if field.values}}
 
-      {{#switch field.range.value}}
-        {{#case "http://www.cidoc-crm.org/cidoc-crm/E12_Production" break=true}}
-          {{#each field.values as |value|}}
-            {{#bind subj=value.value}}
-              <mp-field-visualization
-                subject='{{subj}}'
-                fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E12_Production. BIND(IF(?field = <http://www.researchspace.org/instances/fields/ManMadeObjectTitle>, 0, 1) as ?order)} ORDER BY ASC(?order) ?field"]]'
-                template='{{> rsp:FieldBasedVisualization subject=subj [[#if asserted]]guess="true"[[/if]]}}'
-              >
-              </mp-field-visualization>
-            {{/bind}}
-          {{/each}}
-        {{/case}}
-        {{#case "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition" break=true}}
-          {{#each field.values as |value|}}
-            {{#bind subj=value.value}}
-              <mp-field-visualization
-                subject='{{subj}}'
-                fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E8_Acquisition . BIND(IF(?field = <http://www.researchspace.org/instances/fields/ManMadeObjectTitle>, 0, 1) as ?order)} ORDER BY ASC(?order) ?field"]]'
-                template='{{> rsp:FieldBasedVisualization subject=subj [[#if asserted]]guess="true"[[/if]]}}'
-              >
-              </mp-field-visualization>
-            {{/bind}}
-          {{/each}}
-        {{/case}}
-        {{#case "http://www.cidoc-crm.org/cidoc-crm/E34_Inscription" break=true}}
-          {{#each field.values as |value|}}
-            {{#bind subj=value.value}}
-              <mp-field-visualization
-                subject='{{subj}}'
-                fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E34_Inscription . BIND(IF(?field = <http://www.researchspace.org/instances/fields/ManMadeObjectTitle>, 0, 1) as ?order)} ORDER BY ASC(?order) ?field"]]'
-                template='{{> rsp:FieldBasedVisualization subject=subj [[#if asserted]]guess="true"[[/if]]}}'
-              >
-              </mp-field-visualization>
-            {{/bind}}
-          {{/each}}
-        {{/case}}
-        {{#default}}
+      
           <table>
             <tbody>
             <tr class="rs-page__field">
@@ -125,8 +87,7 @@
             </tr>
             </tbody>
           </table>
-        {{/default}}
-      {{/switch}}
+
 
     {{/if}}
   {{/each}}
