@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/queryTemplateContainer/title-sameas/context> {
+  <https://pharos.artresearch.net/container/queryTemplateContainer/title-sameas> a <http://spinrdf.org/spin#Template>,
+      <http://spinrdf.org/spin#SelectTemplate>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "title sameas";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "title sameas";
+    <http://spinrdf.org/spin#body> <https://pharos.artresearch.net/container/queryContainer/title_sameas>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-12T09:20:10.120Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryTemplateContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/queryTemplateContainer/title-sameas> .
+  
+  <https://pharos.artresearch.net/container/queryTemplateContainer/title-sameas> a <http://www.w3.org/ns/ldp#Resource> .
+}

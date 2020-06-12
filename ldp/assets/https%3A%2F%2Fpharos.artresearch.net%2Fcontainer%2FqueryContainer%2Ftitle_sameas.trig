@@ -1,0 +1,27 @@
+
+<https://pharos.artresearch.net/container/queryContainer/title_sameas/context> {
+  <https://pharos.artresearch.net/container/queryContainer/title_sameas> a <http://spinrdf.org/sp#Query>,
+      <http://spinrdf.org/sp#Select>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "title sameas";
+    <http://spinrdf.org/sp#text> """PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+SELECT * WHERE { 
+
+  
+?s owl:sameAs <https://pharos.artresearch.net/resource/villaitatti/work/8000852664>  .
+?s crm:P1_is_identified_by ?value. 
+?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
+}
+
+
+
+""";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-12T09:20:09.914Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/queryContainer/title_sameas> .
+  
+  <https://pharos.artresearch.net/container/queryContainer/title_sameas> a <http://www.w3.org/ns/ldp#Resource> .
+}
