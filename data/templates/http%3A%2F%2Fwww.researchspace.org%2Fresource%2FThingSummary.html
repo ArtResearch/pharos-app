@@ -12,6 +12,10 @@
         <mp-panel-body>
           <div class="rs-page__summary-content table-responsive">
               
+            
+            
+            
+            
                [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
                      
             <semantic-table 
@@ -52,75 +56,14 @@
               </thead>
               <tbody></tbody>
             </table>
-      
-             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/pharos/type/pharosrecord> .}}')]]
-              
-            YOU ARE NOW ON THE PHAROS RECORD
-            
-  					<semantic-query
-                query='PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                    SELECT ?sameAsThis WHERE {
-                        { ?? owl:sameAs ?sameAsThis }
-                        UNION
-                        { ?sameAsThis owl:sameAs ?? }
-                        UNION
-                        { BIND(?? as ?sameAsThis) }
-                      }'
-                 template='{{> perSubject}}'
-                >
-              <template id="perSubject">
-                <div>
-                  {{#each bindings}}
-  									<mp-page-loader iri="http://www.researchspace.org/resource/FieldBasedVisualizationLazyLoader" [[#if asserted]]urlqueryparam-guess="true"[[/if]] urlqueryparam-subject='{{sameAsThis.value}}'></mp-page-loader>
-                  {{/each}}
-                </div>
-              </template>
-            </semantic-query>
-            
-            <mp-field-visualization
-                subject='[[this]]'
-                fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
-                template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
-             ></mp-field-visualization> 
-                  
-            [[/if]]
-            
-            
-            
-             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
-          
+
             <mp-field-visualization
               subject=[[this]]
                                                    
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
 
-             [[/if]]
-            
-
-                [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025> .}}')]]
-            
-            <mp-field-visualization
-              subject=[[this]]
-                                                   
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
-              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
-            ></mp-field-visualization>
-  
-       
-             
-            
-             [[/if]]
-
-           [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300046300> .}}')]]
-            <mp-field-visualization
-              subject=[[this]]
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.   ?field <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> . OPTIONAL {?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
-              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
-            ></mp-field-visualization>
-
-           [[/if]]
 
             <div style="margin-top:18px;margin-left:20px;">
               <mp-overlay-dialog title="All available fields for [[singleValueFromSelect 'SELECT ?label WHERE {?? (rdfs:label | rso:displayLabel) ?label}']]" bs-size='lg'>
