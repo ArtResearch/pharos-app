@@ -1,0 +1,39 @@
+
+<http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D/context> {
+  <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-dccc3dc191eb438a886493cf85705911-d1vdoj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-dccc3dc191eb438a886493cf85705911-pgoyy8 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-dccc3dc191eb438a886493cf85705911-d1vdoj;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-dccc3dc191eb438a886493cf85705911-d1vdoj a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Description [Wikidata]"@en .
+  
+  _:genid-dccc3dc191eb438a886493cf85705911-pgoyy8 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph
+WHERE{
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata_uri <http://schema.org/description> ?value.
+    filter(lang(?value)=\"en\")
+  } BIND(\"http://wikidata\" as ?graph) 
+}  """ .
+  
+  <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-dccc3dc191eb438a886493cf85705911-pgoyy8;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T13:52:53.571Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Description%20%5BWikidata%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}

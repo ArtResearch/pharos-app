@@ -1,0 +1,41 @@
+
+<http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D/context> {
+  _:genid-8eeb7821010b46fbabc0e762cf34d872-1rkorc <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE{ 
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+          ?wikidata_uri <http://www.wikidata.org/prop/direct/P20> 
+      ?place_of_death_uri.
+       ?place_of_death_uri rdfs:label ?value .
+    filter(lang(?value) =\"en\")
+      
+  } BIND(\"http://wikidata\" as ?graph) 
+           
+    }
+      """ .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8eeb7821010b46fbabc0e762cf34d872-1rkorc;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-8eeb7821010b46fbabc0e762cf34d872-1rkorc a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-8eeb7821010b46fbabc0e762cf34d872-bfuudi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Death Place [Wikidata]"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8eeb7821010b46fbabc0e762cf34d872-bfuudi;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-8eeb7821010b46fbabc0e762cf34d872-bfuudi a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T13:46:38.119Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Place%20%5BWikidata%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}
