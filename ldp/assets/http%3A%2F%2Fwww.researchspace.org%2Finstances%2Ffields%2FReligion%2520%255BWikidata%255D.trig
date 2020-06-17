@@ -1,0 +1,43 @@
+
+<http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D/context> {
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-1f324c3ecad24c28bb70953f7c0f7c94-g9ub1mg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Religion [Wikidata]"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1f324c3ecad24c28bb70953f7c0f7c94-g9ub1mg;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-1f324c3ecad24c28bb70953f7c0f7c94-g9ub1mg a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1f324c3ecad24c28bb70953f7c0f7c94-7lj4vc .
+  
+  _:genid-1f324c3ecad24c28bb70953f7c0f7c94-7lj4vc <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE{ 
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata_uri <http://www.wikidata.org/prop/direct/P140> ?inter.
+      ?inter rdfs:label ?value .
+          filter(lang(?value) =\"en\")
+  } BIND(\"http://wikidata\" as ?graph) 
+           
+    }
+      """ .
+  
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-1f324c3ecad24c28bb70953f7c0f7c94-7lj4vc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:10:24.046Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Religion%20%5BWikidata%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}

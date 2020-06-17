@@ -1,0 +1,38 @@
+
+<http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D/context> {
+  _:genid-0b076bc805c246ebab11e3ef333164f5-28z5n3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Spouse [Wikidata]"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0b076bc805c246ebab11e3ef333164f5-qunmq8 .
+  
+  _:genid-0b076bc805c246ebab11e3ef333164f5-28z5n3 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0b076bc805c246ebab11e3ef333164f5-28z5n3 .
+  
+  _:genid-0b076bc805c246ebab11e3ef333164f5-qunmq8 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE{ 
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata_uri <http://www.wikidata.org/prop/direct/P26> ?inter.
+      ?inter rdfs:label ?value .
+          filter(lang(?value) =\"en\")
+  } BIND(\"http://wikidata\" as ?graph) 
+           
+    }
+      """;
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:07:38.069Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Spouse%20%5BWikidata%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}

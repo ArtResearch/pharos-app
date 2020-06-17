@@ -1,0 +1,42 @@
+
+<http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D/context> {
+  <http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-333955756d7a44209ddd4a769a3ee9d0-hsc4qq5 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-333955756d7a44209ddd4a769a3ee9d0-9cuyio <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-333955756d7a44209ddd4a769a3ee9d0-hsc4qq5 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE{ 
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata_uri <http://www.wikidata.org/prop/direct/P611> ?inter.
+      ?inter rdfs:label ?value .
+          filter(lang(?value) =\"en\")
+  } BIND(\"http://wikidata\" as ?graph) 
+           
+    }
+      """ .
+  
+  <http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-333955756d7a44209ddd4a769a3ee9d0-9cuyio;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-333955756d7a44209ddd4a769a3ee9d0-9cuyio a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-333955756d7a44209ddd4a769a3ee9d0-hsc4qq5;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Religious order [Wikidata]"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:11:09.991Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Religious%20order%20%5BWikidata%5D>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
