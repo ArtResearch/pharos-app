@@ -2,37 +2,39 @@
 <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D/context> {
   <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-9050cbbeec8946e6a21fdf49120db6c4-mpjjm <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-663795b13f144b30afff5e23bc8f6f85-7ystgf a <http://spinrdf.org/sp#Query> .
   
   <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> <http://www.w3.org/2000/01/rdf-schema#label>
       "Death Date [Getty]"@en;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9050cbbeec8946e6a21fdf49120db6c4-ycfjfi;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9050cbbeec8946e6a21fdf49120db6c4-mpjjm;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>,
-      <https://pharos.artresearch.net/category/itatti> .
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
   
-  _:genid-9050cbbeec8946e6a21fdf49120db6c4-mpjjm a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-9050cbbeec8946e6a21fdf49120db6c4-ycfjfi a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph 
-WHERE{
+  _:genid-663795b13f144b30afff5e23bc8f6f85-7ystgf <http://spinrdf.org/sp#text> """  SELECT distinct ?value ?label ?graph WHERE {
   ?subject owl:sameAs ?getty_uri.
- SERVICE <http://vocab.getty.edu/sparql> {
+  SERVICE <http://vocab.getty.edu/sparql> {
     ?getty_uri <http://xmlns.com/foaf/0.1/focus> ?biography_agent_uri.
     ?biography_agent_uri  a <http://schema.org/Person>.
     ?biography_agent_uri <http://vocab.getty.edu/ontology#biographyPreferred> ?biography_uri.
     ?biography_uri a <http://vocab.getty.edu/ontology#Biography>.
       ?biography_uri <http://vocab.getty.edu/ontology#estEnd> ?value
   }  BIND(\"http://getty\" as ?graph)
-}
-""" .
+}""" .
   
-  <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti> .
+  
+  _:genid-663795b13f144b30afff5e23bc8f6f85-z16on <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-663795b13f144b30afff5e23bc8f6f85-z16on;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-663795b13f144b30afff5e23bc8f6f85-7ystgf .
+  
+  _:genid-663795b13f144b30afff5e23bc8f6f85-z16on a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:39:49.451Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T10:00:44.041Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Death%20Date%20%5BGetty%5D> .

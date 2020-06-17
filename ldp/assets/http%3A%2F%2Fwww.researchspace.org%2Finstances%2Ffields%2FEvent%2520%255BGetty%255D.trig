@@ -1,0 +1,44 @@
+
+<http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D/context> {
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9425dc28a9314bff827e8b9304ec1a83-sq368q;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event [Getty]"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-9425dc28a9314bff827e8b9304ec1a83-sq368q a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-9425dc28a9314bff827e8b9304ec1a83-tktr7n <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-9425dc28a9314bff827e8b9304ec1a83-tktr7n;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-9425dc28a9314bff827e8b9304ec1a83-tktr7n a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-9425dc28a9314bff827e8b9304ec1a83-sq368q <http://spinrdf.org/sp#text> """  SELECT distinct ?value ?label ?graph WHERE {
+  ?subject owl:sameAs ?getty_uri.
+ SERVICE <http://vocab.getty.edu/sparql> {
+      ?getty_uri <http://xmlns.com/foaf/0.1/focus> ?agent_uri.
+      ?agent_uri <http://vocab.getty.edu/ontology#eventPreferred> ?event_uri.
+  ?event_uri  <http://purl.org/dc/terms/type> ?event_type .
+      ?event_type rdfs:label ?value1.
+      ?event_uri <http://schema.org/location>  ?location.
+      ?place_uri  <http://xmlns.com/foaf/0.1/focus> ?location .
+      ?place_uri  rdfs:label ?value2.
+} 
+       BIND(CONCAT(\"Type: \",?value1,\" - Location: \",?value2) as ?value)
+      BIND(\"http://getty\" as ?graph)
+} limit 1""" .
+  
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T10:35:31.915Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}

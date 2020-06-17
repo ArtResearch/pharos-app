@@ -1,0 +1,42 @@
+
+<http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D/context> {
+  _:genid-daf343a12e934aa892db294e1ce3dfb1-hd9y8 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Relations [Getty]"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+  
+  _:genid-daf343a12e934aa892db294e1ce3dfb1-hd9y8 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?graph WHERE {
+  ?subject owl:sameAs ?getty_uri.
+ SERVICE <http://vocab.getty.edu/sparql> {
+    ?getty_uri ?p ?person .
+    ?person <http://www.w3.org/2008/05/skos-xl#prefLabel> ?pref_label.
+    ?pref_label <http://vocab.getty.edu/ontology#term> ?value1.
+    ?p a owl:ObjectProperty.
+    ?p rdfs:subPropertyOf skos:related .
+    ?p skos:prefLabel ?o
+     filter (regex(?o, \"ulan\"))
+  }  BIND(\"http://getty\" as ?graph)
+     BIND(CONCAT(?value1,\" (\",?o,\")\") as ?value)
+}
+      """ .
+  
+  _:genid-daf343a12e934aa892db294e1ce3dfb1-ngxein <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-daf343a12e934aa892db294e1ce3dfb1-ngxein;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-daf343a12e934aa892db294e1ce3dfb1-hd9y8;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-daf343a12e934aa892db294e1ce3dfb1-ngxein a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T10:55:17.376Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D> .
+  
+  <http://www.researchspace.org/instances/fields/Relations%20%5BGetty%5D> a <http://www.w3.org/ns/ldp#Resource> .
+}
