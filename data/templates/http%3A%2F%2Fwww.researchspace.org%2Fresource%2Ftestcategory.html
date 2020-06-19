@@ -63,26 +63,11 @@
                           "label": "Label",
                           "description": "The name of the category",
                           "xsdDatatype": "xsd:string",
-                          "minOccurs": "1",
+                          "minOccurs": "0",
                           "maxOccurs": "unbound",
                           "selectPattern": "SELECT $value WHERE { $subject rdfs:label $value }",
                           "insertPattern": "INSERT { $subject rdfs:label $value } WHERE {}",
-                          "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
-                        },
-                        {
-                          "id": "parent",
-                          "label": "Parent Category",
-                          "description": "This will become the parent category",
-                          "xsdDatatype": "xsd:anyURI",
-                          "minOccurs": "0",
-                          "maxOccurs": "1",
-                          "selectPattern": "SELECT $subject WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
-                          "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $value } WHERE {}",
-                          "deletePattern": "DELETE { $category <http://www.w3.org/2004/02/skos/core#broader> $subject } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
-                          "treePatterns": {
-                            "type": "simple",
-                            "schemePattern": "?item <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>"
-                          }
+                          "deletePattern": "DELETE { $subject rdfs:label $value. $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>} WHERE {}"
                         },                
                         {
                           "id": "type",
@@ -98,7 +83,6 @@
                     <bs-panel>
                       <semantic-form-recover-notification></semantic-form-recover-notification>
                       <semantic-form-text-input for="label"></semantic-form-text-input>
-                      <semantic-form-tree-picker-input for="parent"></semantic-form-tree-picker-input>
                       <semantic-form-hidden-input for="type"
                         default-value="http://www.metaphacts.com/ontologies/platform/FieldCategories">
                       </semantic-form-hidden-input>
