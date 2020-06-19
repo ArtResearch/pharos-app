@@ -1,24 +1,18 @@
 
 <https://pharos.artresearch.net/fieldDefinition/9/context> {
   <https://pharos.artresearch.net/fieldDefinition/9> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
-  
-  _:genid-50db581912e64a32be0a6710fac70297-eu25zt <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
-    $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
-    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
-    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> $value .
-  }}""" .
-  
-  _:genid-50db581912e64a32be0a6710fac70297-8w9atr a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/9> a <http://www.metaphacts.com/ontology/fields#Field>;
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-c770b40299fd42eea1a19b60066fcf61-2el4rr;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the latest date for the creation of the documented artwork.";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-50db581912e64a32be0a6710fac70297-eu25zt;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/khi>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-c770b40299fd42eea1a19b60066fcf61-crkd9b .
   
-  _:genid-50db581912e64a32be0a6710fac70297-8w9atr <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-c770b40299fd42eea1a19b60066fcf61-2el4rr a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/9> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi> .
+  
+  _:genid-c770b40299fd42eea1a19b60066fcf61-crkd9b a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/fieldDefinition/9> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
@@ -26,13 +20,17 @@
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Latest"@en .
   
-  _:genid-50db581912e64a32be0a6710fac70297-eu25zt a <http://spinrdf.org/sp#Query> .
+  _:genid-c770b40299fd42eea1a19b60066fcf61-crkd9b <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
+    $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> $value .
+  }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/9> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-50db581912e64a32be0a6710fac70297-8w9atr;
-    a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-c770b40299fd42eea1a19b60066fcf61-2el4rr <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/9> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-22T08:52:46.120Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T13:32:19.063Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/9> .

@@ -1,0 +1,187 @@
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="/">Home</mp-link>
+  </li>
+  <li>
+    <semantic-link title="Assets" data-uri="http://www.metaphacts.com/resource/assets/">Assets</semantic-link>
+  </li>
+  <li class="active">Field Categories</li>
+</ol>
+
+<div class="page">
+  <div class="page__header">
+    <div class="page__header-thumbnail">
+      <h2><i class="fa fa-tag fa-2x"></i></h2>
+    </div>
+    <div class="page__header-body">
+      <h2>
+        Field Categories
+      </h2>
+    </div>
+  </div>
+  <div class="page__body">
+    <bs-tabs class="page__body-navtabs-" unmount-on-exit=true>
+      <bs-tab event-key="1" title="Tree View">
+
+
+
+
+        <h3>List of Categories</h3>
+        <semantic-tree query="
+        SELECT ?node ?parent WHERE {
+          ?node <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> .
+          optional { ?node <http://www.w3.org/2004/02/skos/core#broader> ?parent }
+
+        }" tuple-template='{{> node}}' no-result-template='{{> empty-tree}}'>
+          <template id='node'>
+            <div>
+              <semantic-link uri="{{node.value}}"></semantic-link> {{> actions}}
+            </div>
+          </template>
+
+          <template id='empty-tree'>
+            <div><strong>No categories found</strong></div>
+          </template>
+
+          <template id="actions">
+            <span>
+              <!-- Modal dialog -->
+              <mp-overlay-dialog title="Are you sure?">
+
+                <mp-overlay-dialog-trigger>
+                  <button style="margin-right:8px;"><i aria-hidden="true"></i> Edit</button>
+                </mp-overlay-dialog-trigger>
+
+                <mp-overlay-dialog-content>
+                  {{node.value}}
+                  <p><strong>You will not be able to recover this category</strong> (and all of its children) again!</p>
+
+                  <semantic-form subject="{{node.value}}" post-action="reload" persistence="sparql"
+                    browser-persistence="false" form-id="edit category" fields='[
+                        {
+                          "id": "label",
+                          "label": "Label",
+                          "description": "The name of the category",
+                          "xsdDatatype": "xsd:string",
+                          "minOccurs": "1",
+                          "maxOccurs": "unbound",
+                          "selectPattern": "SELECT $value WHERE { $subject rdfs:label $value }",
+                          "insertPattern": "INSERT { $subject rdfs:label $value } WHERE {}",
+                          "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
+                        },
+                        {
+                          "id": "parent",
+                          "label": "Parent Category",
+                          "description": "This will become the parent category",
+                          "xsdDatatype": "xsd:anyURI",
+                          "minOccurs": "0",
+                          "maxOccurs": "1",
+                          "selectPattern": "SELECT $subject WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+                          "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $value } WHERE {}",
+                          "deletePattern": "DELETE { $category <http://www.w3.org/2004/02/skos/core#broader> $subject } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
+                          "treePatterns": {
+                            "type": "simple",
+                            "schemePattern": "?item <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>"
+                          }
+                        },                
+                        {
+                          "id": "type",
+                          "label": "Type",
+                          "description": "The type of the created instance",
+                          "xsdDatatype": "xsd:anyURI",
+                          "selectPattern": "SELECT $value WHERE { $subject a $value }",
+                          "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value } WHERE {}",
+                          "deletePattern": "DELETE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value } WHERE {}"
+                        }
+                      ]'>
+                    <h3>Create a new Category</h3>
+                    <bs-panel>
+                      <semantic-form-recover-notification></semantic-form-recover-notification>
+                      <semantic-form-text-input for="label"></semantic-form-text-input>
+                      <semantic-form-tree-picker-input for="parent"></semantic-form-tree-picker-input>
+                      <semantic-form-hidden-input for="type"
+                        default-value="http://www.metaphacts.com/ontologies/platform/FieldCategories">
+                      </semantic-form-hidden-input>
+                      <semantic-form-errors></semantic-form-errors>
+
+                      <button name="submit" class="btn btn-default">Save</button>
+                      <button name="reset" class="btn btn-default">Reset</button>
+                    </bs-panel>
+
+
+
+
+
+
+
+
+                </mp-overlay-dialog-content>
+
+              </mp-overlay-dialog>
+
+            </span>
+          </template>
+        </semantic-tree>
+
+      </bs-tab>
+      <bs-tab event-key="2" title="Table View">
+        Tab 2
+      </bs-tab>
+    </bs-tabs>
+
+
+
+    <semantic-form new-subject-template="http://www.metaphacts.com/ontologies/platform/formContainer/category/{{label}}"
+      post-action="reload" persistence="sparql" browser-persistence="false" form-id="category" fields='[
+            {
+              "id": "label",
+              "label": "Label",
+              "description": "The name of the category",
+              "xsdDatatype": "xsd:string",
+              "minOccurs": "1",
+              "maxOccurs": "unbound",
+              "selectPattern": "SELECT $value WHERE { $subject rdfs:label $value }",
+              "insertPattern": "INSERT { $subject rdfs:label $value } WHERE {}",
+              "deletePattern": "DELETE { $subject rdfs:label $value } WHERE {}"
+            },
+            {
+              "id": "parent",
+              "label": "Parent Category",
+              "description": "This will become the parent category",
+              "xsdDatatype": "xsd:anyURI",
+              "minOccurs": "0",
+              "maxOccurs": "1",
+              "selectPattern": "SELECT $subject WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+              "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $value } WHERE {}",
+              "deletePattern": "DELETE { $category <http://www.w3.org/2004/02/skos/core#broader> $subject } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
+              "treePatterns": {
+                "type": "simple",
+                "schemePattern": "?item <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>"
+              }
+            },                
+            {
+              "id": "type",
+              "label": "Type",
+              "description": "The type of the created instance",
+              "xsdDatatype": "xsd:anyURI",
+              "selectPattern": "SELECT $value WHERE { $subject a $value }",
+              "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value } WHERE {}",
+              "deletePattern": "DELETE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> $value } WHERE {}"
+            }
+          ]'>
+      <h3>Create a new Category</h3>
+      <bs-panel>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <semantic-form-text-input for="label"></semantic-form-text-input>
+        <semantic-form-tree-picker-input for="parent"></semantic-form-tree-picker-input>
+        <semantic-form-hidden-input for="type"
+          default-value="http://www.metaphacts.com/ontologies/platform/FieldCategories"></semantic-form-hidden-input>
+        <semantic-form-errors></semantic-form-errors>
+
+        <button name="submit" class="btn btn-default">Save</button>
+        <button name="reset" class="btn btn-default">Reset</button>
+      </bs-panel>
+    </semantic-form>
+  </div>
+  <div class="clearfix"></div>
+</div>
