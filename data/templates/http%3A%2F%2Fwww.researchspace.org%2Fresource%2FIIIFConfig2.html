@@ -1,0 +1,4 @@
+
+image-or-region="[[#if record]][[record]][[else]]{{record}}[[/if]]" 
+image-id-pattern='BIND("image" AS ?type). BIND(?__iri__ AS ?imageIRI). ?__iri__ <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image. BIND(REPLACE(STR(?image), "(^.*)\\/(.*)$", "$2") AS ?imageID)' 
+iiif-server-url="/Scaler/IIIF" 
