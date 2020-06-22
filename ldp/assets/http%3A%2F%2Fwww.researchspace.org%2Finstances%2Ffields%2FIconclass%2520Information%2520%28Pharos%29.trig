@@ -1,11 +1,22 @@
 
 <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)/context> {
-  _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-3bbv0r a <http://spinrdf.org/sp#Query> .
-  
   <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-d36bkw <http://spinrdf.org/sp#text> """SELECT ?value ?qualifier  ?graph WHERE { 
+  _:genid-290b212345cc4d51b995af9506a4a3f8-4kz25i a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-290b212345cc4d51b995af9506a4a3f8-r9b4rk .
+  
+  _:genid-290b212345cc4d51b995af9506a4a3f8-r9b4rk a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Iconclass Information (Pharos)"@en .
+  
+  _:genid-290b212345cc4d51b995af9506a4a3f8-4kz25i <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-290b212345cc4d51b995af9506a4a3f8-r9b4rk <http://spinrdf.org/sp#text> """SELECT ?value ?qualifier  ?graph WHERE { 
     ?original owl:sameAs ?subject
   
   graph ?graph {
@@ -16,22 +27,10 @@
   }}""" .
   
   <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-3bbv0r <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
-    <http://www.w3.org/2000/01/rdf-schema#label> "Iconclass Information (Pharos)"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-d36bkw;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-3bbv0r .
-  
-  _:genid-0f1f75c90bbc4505ae81281b8fd63e8d-d36bkw a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-290b212345cc4d51b995af9506a4a3f8-4kz25i;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:45:30.106Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T12:34:33.582Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Iconclass%20Information%20(Pharos)> .

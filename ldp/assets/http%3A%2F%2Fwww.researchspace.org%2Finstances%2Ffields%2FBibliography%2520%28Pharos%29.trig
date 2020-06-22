@@ -2,24 +2,15 @@
 <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)/context> {
   <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-52c373db9a794e518baa9a4267c5db3e-j1o3zs a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-52c373db9a794e518baa9a4267c5db3e-pydv4 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Bibliography (Pharos)"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-52c373db9a794e518baa9a4267c5db3e-pydv4 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { 
+  _:genid-aab5da3117304c99b51b36df093d4894-04n42v <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { 
   ?original owl:sameAs ?subject 
   
   graph ?graph {
 {
   $original crm:P70i_is_documented_in ?bibliography.
   $bibliography rdfs:label ?value
-}
-UNION
+  
+}UNION
 {
   $original crm:P67i_is_referred_to_by ?bibliography .
   ?bibliography crm:P2_has_type <http://vocab.getty.edu/aat/300435419>.
@@ -34,23 +25,32 @@ UNION
   ?bibliography crm:P94i_was_created_by ?creation.
   ?creation crm:P14_carried_out_by ?author_uri.
   ?author_uri rdfs:label ?author.  
-  OPTIONAL {
-  ?page_uri crm:P106i_forms_part_of ?bibliography.
-  ?page_uri rdfs:label ?page.  
-  }
-  BIND(CONCAT(?biblio ,\" - Author: \",?author,\" - Page: \",?page) as ?value)
+
+  BIND(CONCAT(?biblio ,\" - Author: \",?author) as ?value)
 }
-    }} limit 20""" .
+    }}""" .
   
-  _:genid-52c373db9a794e518baa9a4267c5db3e-j1o3zs <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Bibliography (Pharos)"@en .
+  
+  _:genid-aab5da3117304c99b51b36df093d4894-lq9sc <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-aab5da3117304c99b51b36df093d4894-04n42v;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-aab5da3117304c99b51b36df093d4894-lq9sc;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-aab5da3117304c99b51b36df093d4894-04n42v a <http://spinrdf.org/sp#Query> .
   
   <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-52c373db9a794e518baa9a4267c5db3e-pydv4;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-52c373db9a794e518baa9a4267c5db3e-j1o3zs;
-    a <http://www.w3.org/ns/prov#Entity>;
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-aab5da3117304c99b51b36df093d4894-lq9sc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-05T13:55:47.601Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T12:49:50.347Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Bibliography%20(Pharos)> .
