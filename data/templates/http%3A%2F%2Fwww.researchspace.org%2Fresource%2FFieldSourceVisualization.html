@@ -6,6 +6,11 @@
     <img src="/assets/itatti.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
    </semantic-link> 
    {{/case}}
+    {{#case "http://fotoindex" break=true}}
+   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
+    <img src="/assets/itatti.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+   {{/case}}
     {{#case "http://frick/" break=true}}
    <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
     <img src="/assets/frick.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
