@@ -76,7 +76,7 @@
               "xsdDatatype": "xsd:anyURI",
               "minOccurs": "0",
               "maxOccurs": "1",
-              "selectPattern": "SELECT $value WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+              "selectPattern": "SELECT $category WHERE { $parent <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
               "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $value } WHERE {}",
               "deletePattern": "DELETE { $category <http://www.w3.org/2004/02/skos/core#broader> $subject } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
               "treePatterns": {
@@ -139,12 +139,12 @@
               "xsdDatatype": "xsd:anyURI",
               "minOccurs": "0",
               "maxOccurs": "1",
-              "selectPattern": "SELECT $subject WHERE { $subject <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
-              "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $value } WHERE {}",
-              "deletePattern": "DELETE { $category <http://www.w3.org/2004/02/skos/core#broader> $subject } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
+              "selectPattern": "SELECT $parent WHERE { $parent <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories> }",
+              "insertPattern": "INSERT { $subject <http://www.w3.org/2004/02/skos/core#broader> $parent } WHERE {}",
+              "deletePattern": "DELETE { $subject <http://www.w3.org/2004/02/skos/core#broader> $parent } WHERE { ?category <http://www.w3.org/2004/02/skos/core#broader> ?subject}",
               "treePatterns": {
                 "type": "simple",
-                "schemePattern": "?item <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>"
+                "schemePattern": "?value <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.metaphacts.com/ontologies/platform/FieldCategories>"
               }
             },                
             {
