@@ -13,37 +13,39 @@
           <div class="rs-page__summary-content table-responsive">
               
             
-            
-            
-            
-               [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/type/pharos> .}}')]]
-                     
-            <semantic-table 
-      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-											SELECT ?record ?image WHERE {?s owl:sameAs ?? . ?s <https://pharos.artresearch.net/custom/has_original_record> ?record . ?s <https://pharos.artresearch.net/custom/has_provider> ?provider . ?provider crm:image ?image .}' 
-                            options='{"showFilter": false, "showTableHeading": false}'
+       <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+					 	 SELECT distinct ?record ?image WHERE 
+						{
+              {
+              ?s owl:sameAs ?? . 
+              ?s <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+              ?s <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider crm:image ?image.
+              }
+              UNION
+              {
+              ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+              ?? <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider crm:image ?image.
+              }
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
       tuple-template='{{> tupleTemplate}}'
 >
   <template id='tupleTemplate'>
 
-        <p align="right"> <a href={{record.value}} style="margin-top:18px;margin-right:20px;">  
+        <p align="right"><a href={{record.value}} style="margin-top:18px;margin-right:20px;">  
           <img src={{image.value}} style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
           </a> </p>
     
   </template>
 </semantic-table>
-            
-            
-            
-             [[/if]]
-            
-        
-            <p align="right"><a href=[[singleValueFromSelect 'SELECT ?record WHERE {?? <https://pharos.artresearch.net/custom/has_original_record> ?record}']] style="margin-top:18px;margin-left:20px;">Source Record</a></p>
 
-            
             <table class='table'>
               <thead role="header">
               <tr>
