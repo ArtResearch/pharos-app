@@ -1,3 +1,71 @@
+     <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+					 	 SELECT distinct ?photo ?photo_label ?keeper ?keeper_label ?photographer ?photographer_label ?verso ?recto ?json WHERE 
+						{
+  							?? crm:P138i_is_represented_by ?visual_item.
+  							?visual_item crm:P128i_is_carried_by ?photo.
+  							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+                ?photo rdfs:label ?photo_label.
+                ?photo crm:P50_has_current_keeper ?keeper.
+                ?keeper rdfs:label ?keeper_label.
+                ?photo crm:P108i_was_produced_by ?production .
+                ?production crm:P14_carried_out_by ?photographer.
+                ?photographer rdfs:label ?phototographer_label.
+   
+                ?photo crm:P138i_has_representation ?recto.
+                ?recto crm:P2_has_type <http://iiif.io/api/image> .
+  							?recto crm:P2_has_type ?typer .
+                ?typer rdfs:label "recto".
+ 								?recto crm:P129i_is_subject_of ?json .
+        			
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+            tuple-template='{{> photos}}'
+>
+ <template id='photos'>
+				<table class='table'>
+              <tr>
+                <td>
+       
+                <a href={{json.value}} style="margin-top:18px;margin-right:20px;">  
+          				 <img src={{recto.value}} style="max-height:70px; max-width:70px; margin: 0 auto;" class="img-rounded">
+         				</a>
+                </td>
+                <td>
+                   Photograph:
+                 	<semantic-link iri="{{photo.value}}"> 
+          				 {{photo.value}}
+                  </semantic-link> <br>
+                  Photographer:
+                 	<semantic-link iri="{{photographer.value}}"> 
+          				 {{photographer_label.value}}
+                  </semantic-link> <br>
+                  IIIF Image:
+                  <a href={{recto.value}} style="margin-top:18px;margin-right:20px;">  
+          			  {{recto.value}}
+         				  </a>
+                  <br>
+                  IIIF Image Json:
+                  <a href={{json.value}} style="margin-top:18px;margin-right:20px;">  
+          			  {{json.value}}
+         				  </a>
+ 
+         				
+                 </td>
+              </tr>
+            </table>
+        
+  </template>    
+</semantic-table>
+               
+
+
+
+
+
 <bs-tab-container id="vertical-tab-container" class="vertical-tabs" default-active-key="images">
   <div style='height: 65vh;'>
 
