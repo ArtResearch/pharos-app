@@ -66,7 +66,32 @@
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
 
+            
+                     <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
+					 	 SELECT distinct ?photo  WHERE 
+						{
+  							?? crm:P138i_is_represented_by ?visual_item.
+  							?visual_item crm:P128i_is_carried_by ?photo.
+  							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+              
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+      tuple-template='{{> photos}}'
+>
+ <template id='photos'>
+
+        <p align="right"><a href={{record.value}} style="margin-top:18px;margin-right:20px;"> {{photo.value}}
+          <img src={{image.value}} style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+          </a> </p>
+    
+  </template>    
+</semantic-table>
+               
+               
             <div style="margin-top:18px;margin-left:20px;">
               <mp-overlay-dialog title="All available fields for [[singleValueFromSelect 'SELECT ?label WHERE {?? (rdfs:label | rso:displayLabel) ?label}']]" bs-size='lg'>
                 <mp-overlay-dialog-trigger>
