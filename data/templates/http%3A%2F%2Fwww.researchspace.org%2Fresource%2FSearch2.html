@@ -411,8 +411,7 @@
                     query='
                     SELECT DISTINCT ?subject ?iri WHERE {
                       FILTER EXISTS { ?subject (rdfs:label | rso:displayLabel) ?label }
-                      OPTIONAL {?subject (rs:PX_has_main_representation | crm:P138i_has_representation) ?image}
-                      OPTIONAL {?subject crm:P138i_is_represented_by ?vi . ?vi  crm:P128i_is_carried_by ?ph . ?ph crm:P138i_has_representation ?image}
+                        OPTIONAL {?subject (rs:PX_has_main_representation | crm:P138i_has_representation) ?image}
                       BIND(?subject as ?iri) .
                     } ORDER BY DESC(?image)
                   '
