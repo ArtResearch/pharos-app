@@ -17,7 +17,8 @@
   							?visual_item crm:P128i_is_carried_by ?photo.
   							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
                 ?photo crm:P138i_has_representation ?recto.
-
+								?recto crm:P2_has_type ?type.
+                ?type rdfs:label "recto".
         			
             }' 
             options='{"showFilter": false, "showTableHeading": false}'
@@ -25,14 +26,14 @@
 >
 
           <template id='photos'>
-				<table class='table'>
+				<table class='table' >
               <tr>
-                <td>
+                <td style="text-align:left">
                  	<semantic-link iri="{{artwork.value}}"> 
-          				 <img src={{recto.value}} style="max-height:70px; max-width:70px; margin: 0 auto;" class="img-rounded">
+          				 <img src={{recto.value}} style="max-height:100px; max-width:100px" class="img-rounded">
          					</semantic-link>
                 </td>
-                <td>
+                <td style="width:1500px;text-align:left" >
                    Title:
                  	<semantic-link iri="{{photo.value}}"> 
           				 {{label.value}}
