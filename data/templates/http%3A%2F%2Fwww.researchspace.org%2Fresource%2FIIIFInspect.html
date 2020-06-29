@@ -1,4 +1,9 @@
-     <semantic-table 
+    
+<div data-flex-layout="row center-stretch">
+        
+  	<div class="grid-demo">
+  
+  <semantic-table 
       query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
@@ -31,13 +36,13 @@
                 <td>
        
                 <a href={{json.value}} style="margin-top:18px;margin-right:20px;">  
-          				 <img src={{recto.value}} style="max-height:70px; max-width:70px; margin: 0 auto;" class="img-rounded">
+          				 <img src={{recto.value}} style="max-height:170px; max-width:170px; margin: 0 auto;" class="img-rounded">
          				</a>
                 </td>
                 <td>
                    Photograph:
                  	<semantic-link iri="{{photo.value}}"> 
-          				 {{photo.value}}
+          				 {{photo_label.value}}
                   </semantic-link> <br>
                   Photographer:
                  	<semantic-link iri="{{photographer.value}}"> 
@@ -60,13 +65,14 @@
         
   </template>    
 </semantic-table>
-               
-
-
-
-
-
-<bs-tab-container id="vertical-tab-container" class="vertical-tabs" default-active-key="images">
+  
+  
+  
+  </div>
+        
+  	<div class="grid-demo">
+      
+   
   <div style='height: 65vh;'>
 
    <rs-iiif-mirador
@@ -81,4 +87,27 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
   />
     
   </div>
-</bs-tab-container>
+
+  </div>
+       
+   
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
