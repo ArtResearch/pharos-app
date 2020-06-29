@@ -1,6 +1,18 @@
 
-      <div data-flex-layout="row center-stretch">
-        <div class="grid-demo">1</div>
-        <div class="grid-demo">2</div>
-        <div class="grid-demo">3</div>
-      </div>
+          <semantic-chart provider='chartjs' type='bar'
+            query='
+							SELECT   ?label (count(distinct ?subject) as ?count) 
+											 WHERE {
+                        $subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300133025>.  
+                        $subject <https://pharos.artresearch.net/custom/has_provider> ?provider.
+                        ?provider rdfs:label ?label
+											 } 
+						 GROUP BY ?label
+						 ORDER BY ?label
+            '
+            sets='[{"dataSetName": "Renown", "category": "label", "value": "count"}]'
+          ></semantic-chart>
+
+
+
+
