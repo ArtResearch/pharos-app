@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/Uncategorized/a9829d96-2e61-4201-9b00-80ad06ff976b/context> {
+  <https://pharos.artresearch.net/container/Uncategorized/a9829d96-2e61-4201-9b00-80ad06ff976b>
+    <http://www.metaphacts.com/ontologies/platform#setItem> <https://pharos.artresearch.net/resource/villaitatti/work/8000791750>;
+    a <http://www.metaphacts.com/ontologies/platform#SetItem>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "George Santayana";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-30T12:25:00.032Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer/Uncategorized>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/container/Uncategorized/a9829d96-2e61-4201-9b00-80ad06ff976b> .
+  
+  <https://pharos.artresearch.net/container/Uncategorized/a9829d96-2e61-4201-9b00-80ad06ff976b>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

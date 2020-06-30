@@ -1,0 +1,14 @@
+
+<http://www.metaphacts.com/ontologies/platform/user/admin/setContainer/context> {
+  <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Set container of user 'admin'";
+    a <http://www.w3.org/ns/ldp#Container>, <http://www.metaphacts.com/ontologies/platform#setContainer>,
+      <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-30T12:24:59.580Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#userSetContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer> .
+  
+  <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer> a <http://www.w3.org/ns/ldp#Resource> .
+}

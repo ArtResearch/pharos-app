@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/Uncategorized/ec997158-0912-4989-ab12-dcebb6494eb0/context> {
+  <https://pharos.artresearch.net/container/Uncategorized/ec997158-0912-4989-ab12-dcebb6494eb0>
+    <http://www.metaphacts.com/ontologies/platform#setItem> <https://pharos.artresearch.net/resource/villaitatti/work/8000841968>;
+    a <http://www.metaphacts.com/ontologies/platform#SetItem>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Prophet";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-30T12:26:06.923Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer/Uncategorized>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/container/Uncategorized/ec997158-0912-4989-ab12-dcebb6494eb0> .
+  
+  <https://pharos.artresearch.net/container/Uncategorized/ec997158-0912-4989-ab12-dcebb6494eb0>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
