@@ -1,0 +1,17 @@
+<mp-overlay-dialog title="My Dialog">
+  <mp-overlay-dialog-trigger>
+    <a>
+      [[!-- thumbnail --]]
+      <img src='https://fundit.fr/sites/default/files/actors/876-villa-i-tatti.jpg' />
+    </a>
+  </mp-overlay-dialog-trigger>
+  <mp-overlay-dialog-content>
+    <div style='height: 500px;'>
+      [[!-- IIIF viewer --]]
+      <rs-iiif-mirador image-or-region='...'
+        image-id-pattern='...'
+        iiif-server-url='...'>
+      </rs-iiif-mirador>
+  	</div>
+  </mp-overlay-dialog-content>
+</mp-overlay-dialog>

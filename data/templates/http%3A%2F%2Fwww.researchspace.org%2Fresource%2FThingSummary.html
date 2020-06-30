@@ -1,6 +1,33 @@
 <div data-flex-layout='row'>
-  [[> rsp:RecordImage]]
 
+  <mp-overlay-dialog title="My Dialog">
+  <mp-overlay-dialog-trigger>
+    <a>
+         [[> rsp:RecordImage]]
+    </a>
+  </mp-overlay-dialog-trigger>
+  <mp-overlay-dialog-content>
+    <div style='height: 500px;'>
+      [[!-- IIIF viewer --]]
+
+   <rs-iiif-mirador
+  
+ image-or-region = "[[this]]"
+image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image . 
+  
+BIND(REPLACE(STR(REPLACE(STR(?image),"/full/200%2C/0/native.jpg","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
+  
+iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"       
+  />
+    
+  </div>
+      
+
+  </mp-overlay-dialog-content>
+</mp-overlay-dialog>
+  
+  
+  
   <div class='rs-page__summary' style='width:60%;'>
    
     [[#*inline "values"]]
