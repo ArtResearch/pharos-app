@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/Uncategorized/1d83a2de-3f10-47bc-ace0-1a09369a43a2/context> {
+  <https://pharos.artresearch.net/container/Uncategorized/1d83a2de-3f10-47bc-ace0-1a09369a43a2>
+    <http://www.metaphacts.com/ontologies/platform#setItem> <https://pharos.artresearch.net/resource/work/2063746346>;
+    a <http://www.metaphacts.com/ontologies/platform#SetItem>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "2063746346";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-02T09:52:57.002Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform/user/admin/setContainer/Uncategorized>
+    <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/container/Uncategorized/1d83a2de-3f10-47bc-ace0-1a09369a43a2> .
+  
+  <https://pharos.artresearch.net/container/Uncategorized/1d83a2de-3f10-47bc-ace0-1a09369a43a2>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
