@@ -91,7 +91,7 @@
   </template>
 </semantic-table>
 
-                                            <mp-field-visualization subject='[[this]]'
+                                            <mp-field-visualization subject='[[this]]' additional-subjects='[[jsonArrayFromSelect (setQueryBindings "SELECT ?s WHERE { ?s owl:sameAs ?resource }" resource=this.iri)]]'
                                                                     fields='[[fieldDefinitionsFromQuery  "SELECT DISTINCT ?field WHERE {?field <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>. } ORDER BY DESC(?field)"]]'
                                                                     template='{{> template}}'>
                                                 <template id="template">{{> rsp:FieldBasedVisualization subject="[[this]]"}}</template>
