@@ -1,8 +1,213 @@
-[[#> rsp:Resource fc='things' fcLabel='Object']]
-  [[#*inline "summary"]]
-    [[> rsp:ThingSummary]]
-  [[/inline]]
-  [[#*inline "wikidata"]]
-    [[> rsp:ThingRelated]]
-  [[/inline]]
-[[/ rsp:Resource]]
+[[#partial "imageContent"]]
+[[#if (ask 'ASK {{?? rso:PX_has_main_representation ?mainImage .} UNION {?? crm:P138i_has_representation ?representationImage .} UNION {?? <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation .}  UNION {?? <http://www.cidoc-crm.org/cidoc-crm/P138i_is_represented_by> ?vi .} UNION {?source owl:sameAs ?? . ?source crm:P138i_is_represented_by ?vi. } BIND(COALESCE(?mainImage, ?representationImage) AS ?image) .}')]]
+<div class="rs-page__summary-image">
+  <rs-object-representations query='SELECT distinct ?label (bound(?mainRepresentationImage) AS ?isMainRep) (STR(COALESCE(?mainRepresentationImage,?representationImage)) AS ?imgURL)
+                   WHERE {
+                     {
+                        ?? rso:displayLabel ?label .
+                     }
+                     UNION {
+                       ?? crm:P138i_has_representation ?representationImage .
+                       ?representationImage a crm:E38_Image
+                     }
+                     UNION {
+                        ?? rso:PX_has_main_representation ?mainRepresentationImage .
+                     }
+                     UNION 
+                     {
+                        ?? crm:P138i_is_represented_by ?vi.
+     										?vi crm:P128i_is_carried_by ?subject .
+      									?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
+                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+                        ?mainRepresentationImage a crm:E38_Image.
+                     }
+                     
+                     UNION 
+                     {
+                        ?source owl:sameAs ?? .
+                        ?source crm:P138i_is_represented_by ?vi.
+     										?vi crm:P128i_is_carried_by ?subject .
+      									?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
+                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+                        ?mainRepresentationImage a crm:E38_Image.
+                     }
+                     
+                     
+                      UNION 
+                     {
+                        ?? crm:P138i_is_represented_by ?vi.
+     									  ?vi crm:P165i_is_incorported_in 	?subject.
+ 												?subject crm:P2_has_type <http://vocab.getty.edu/aat/300417379>.
+                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+                         ?mainRepresentationImage a crm:E38_Image.
+                     }
+                     UNION 
+                     {
+                        ?? crm:P138i_is_represented_by ?vi.
+     										 ?vi crm:P128i_is_carried_by ?subject .
+      										?subject crm:P2_has_type ?type .
+      										?type rdfs:label "Photograph" .
+                       	 ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
+                          ?mainRepresentationImage a crm:E38_Image.
+                     }
+                   }'
+                  >
+  </rs-object-representations>
+</div>
+[[/if]]
+[[/partial]]
+
+[[#partial "summary"]]
+<div>
+       <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+					 	 SELECT distinct ?record ?image WHERE 
+						{
+              {
+              ?s owl:sameAs ?? . 
+              ?s <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+              ?s <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider crm:image ?image.
+              }
+              UNION
+              {
+              ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+              ?? <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider crm:image ?image.
+              }
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+      tuple-template='{{> tupleTemplate}}'
+>
+  <template id='tupleTemplate'>
+
+        <p align="right"><a href={{record.value}} style="margin-top:18px;margin-right:20px;">  
+          <img src={{image.value}} style="max-height:16px; max-width:16px; margin: 0 auto;" class="img-rounded">
+          </a> </p>
+    
+  </template>
+</semantic-table>
+
+                                            <mp-field-visualization subject='[[this]]'
+                                                                    fields='[[fieldDefinitionsFromQuery  "SELECT DISTINCT ?field WHERE {?field <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>. } ORDER BY DESC(?field)"]]'
+                                                                    template='{{> template}}'>
+                                                <template id="template">{{> rsp:FieldBasedVisualization subject="[[this]]"}}</template>
+
+                                            </mp-field-visualization>
+
+            
+            <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+					 	 SELECT distinct ?photo ?photo_label ?keeper ?keeper_label ?photographer ?photographer_label ?verso ?recto WHERE 
+						{
+  							?? crm:P138i_is_represented_by ?visual_item.
+  							?visual_item crm:P128i_is_carried_by ?photo.
+  							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+                ?photo rdfs:label ?photo_label.
+                ?photo crm:P50_has_current_keeper ?keeper.
+                ?keeper rdfs:label ?keeper_label.
+                ?photo crm:P108i_was_produced_by ?production .
+                ?production crm:P14_carried_out_by ?photographer.
+                ?photographer rdfs:label ?phototographer_label.
+   
+                ?photo crm:P138i_has_representation ?recto.
+  							?recto crm:P2_has_type ?typer .
+                ?typer rdfs:label "recto".
+              
+                ?photo crm:P138i_has_representation ?verso.
+  							?verso crm:P2_has_type ?typev .
+                ?typev rdfs:label "verso".
+        			
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+            tuple-template='{{> photos}}'
+>
+ <template id='photos'>
+				<table class='table'>
+              <tr>
+                <td>
+                 	<semantic-link iri="{{photo.value}}"> 
+          				 <img src={{recto.value}} style="max-height:70px; max-width:70px; margin: 0 auto;" class="img-rounded">
+         					</semantic-link>
+                </td>
+                <td>
+                 	<semantic-link iri="{{photo.value}}"> 
+           					<img src={{verso.value}} style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+         					</semantic-link>
+                </td>
+                <td>
+                   Photograph:
+                 	<semantic-link iri="{{photo.value}}"> 
+          				 {{photo_label.value}}
+                  </semantic-link> <br>
+                  Photographer:
+                 	<semantic-link iri="{{photographer.value}}"> 
+          				 {{photographer_label.value}}
+                  </semantic-link> <br>
+                  Keeper:
+                  <semantic-link iri="{{keeper.value}}"> 
+          				{{keeper_label.value}}
+         					</semantic-link>
+                 </td>
+              </tr>
+            </table>
+        
+  </template>    
+</semantic-table>
+               
+            
+     [[#if (ask "ASK {?? crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos> }") ]]         
+     <semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+					 	 SELECT distinct ?photo ?photo_label ?keeper ?keeper_label ?photographer ?photographer_label ?recto ?verso WHERE 
+						{
+  							?original owl:sameAs ??.
+                ?original crm:P138i_is_represented_by ?visual_item.
+  							?visual_item crm:P128i_is_carried_by ?photo.
+  							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+
+                ?photo crm:P108i_was_produced_by ?production .
+                ?production crm:P14_carried_out_by ?photographer.
+                ?photographer rdfs:label ?phototographer_label.
+                ?photo crm:P138i_has_representation ?recto.
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+            tuple-template='{{> photos}}'
+>
+ <template id='photos'>
+				<table class='table'>
+              <tr>
+                <td style="text-align:left">
+                 	<semantic-link iri="{{photo.value}}"> 
+          				 <img src={{recto.value}} style="max-height:100px; max-width:100px; margin: 0 auto;" class="img-rounded">
+         					</semantic-link>
+                </td>
+                 <td style="width:1000px;text-align:left">
+                  Photograph:
+                 	<semantic-link iri="{{photo.value}}"> 
+          				 {{photo_label.value}}
+                  </semantic-link> <br>
+                  Photographer:
+                 	<semantic-link iri="{{photographer.value}}"> 
+          				 {{photographer_label.value}}
+                  </semantic-link> <br>
+                 </td>
+              </tr>
+            </table>
+        
+  	</template>    
+	</semantic-table>
+				[[/if]]
+</div>
+[[/partial]]
+
+[[> rsp:ResourceTemplate type="Artwork" withSummary=true]]

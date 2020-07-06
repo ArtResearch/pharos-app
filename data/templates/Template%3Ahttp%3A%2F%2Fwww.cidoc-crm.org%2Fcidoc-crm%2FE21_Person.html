@@ -1,0 +1,15 @@
+[[#partial "summary"]]
+<div>
+
+
+                                            <mp-field-visualization subject='[[this]]'
+                                                                    fields='[[fieldDefinitionsFromQuery  "SELECT DISTINCT ?field WHERE {?field <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>. } ORDER BY DESC(?field)"]]'
+                                                                    template='{{> template}}'>
+                                                <template id="template">{{> rsp:FieldBasedVisualization subject="[[this]]"}}</template>
+
+                                            </mp-field-visualization>
+
+</div>
+[[/partial]]
+
+[[> rsp:ResourceTemplate type="Actor" withSummary=true]]
