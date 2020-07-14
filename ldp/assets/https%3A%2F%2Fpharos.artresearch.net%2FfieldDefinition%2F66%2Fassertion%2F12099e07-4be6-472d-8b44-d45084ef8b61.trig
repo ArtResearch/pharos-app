@@ -1,0 +1,49 @@
+
+<https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61/context> {
+  <http://researchspace.org/instances/belief/3723b37f-d58f-4d64-9075-ae8d3608fa8a> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Belief" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    <http://www.w3.org/2000/01/rdf-schema#label> "not true" .
+  
+  <http://researchspace.org/instances/belief/3723b37f-d58f-4d64-9075-ae8d3608fa8a> <http://www.researchspace.org/ontology/PX_asserts_value>
+      "1340 x 2890 mm." .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/3723b37f-d58f-4d64-9075-ae8d3608fa8a> .
+  
+  <https://pharos.artresearch.net/time/49c2f273-7638-44b2-ada2-0bd23c8f5d17> <http://www.researchspace.org/ontology/displayLabel>
+      "July 14, 2020";
+    <http://www.w3.org/2000/01/rdf-schema#label> "July 14, 2020" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> "this is smaller!";
+    <http://www.researchspace.org/ontology/targetsField> <https://pharos.artresearch.net/fieldDefinition/66>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://pharos.artresearch.net/time/49c2f273-7638-44b2-ada2-0bd23c8f5d17>;
+    <http://www.researchspace.org/ontology/targetsRecord> <https://pharos.artresearch.net/resource/villaitatti/work/8000606605> .
+  
+  <http://researchspace.org/instances/belief/3723b37f-d58f-4d64-9075-ae8d3608fa8a> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief>;
+    <http://www.ics.forth.gr/isl/CRMinf/J4_that> <http://researchspace.org/instances/belief/3723b37f-d58f-4d64-9075-ae8d3608fa8a/proposition>;
+    <http://www.researchspace.org/ontology/PX_is_canonical_value> true;
+    <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be> "Disagree" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    a <http://www.researchspace.org/ontology/EX_Assertion> .
+  
+  <https://pharos.artresearch.net/time/49c2f273-7638-44b2-ada2-0bd23c8f5d17> <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end>
+      "2020-07-14T11:44:17.732Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-07-14T11:44:17.732Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:44:17.873Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Assertions.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/12099e07-4be6-472d-8b44-d45084ef8b61>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

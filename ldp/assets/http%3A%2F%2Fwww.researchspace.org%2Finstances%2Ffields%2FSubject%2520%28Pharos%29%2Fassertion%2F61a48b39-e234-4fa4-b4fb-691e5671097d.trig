@@ -1,0 +1,51 @@
+
+<http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d/context> {
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> "subject is different!" .
+  
+  <http://researchspace.org/instances/belief/e093ca77-4dea-4adf-9110-12b2f60aed86> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Belief" .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    <http://www.researchspace.org/ontology/targetsRecord> <https://pharos.artresearch.net/resource/work/2063746346>;
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/e093ca77-4dea-4adf-9110-12b2f60aed86>;
+    <http://www.researchspace.org/ontology/targetsField> <http://www.researchspace.org/instances/fields/Subject%20(Pharos)> .
+  
+  <http://www.researchspace.org/time/9eada306-7a73-43d9-b609-183304d745f4> <http://www.researchspace.org/ontology/displayLabel>
+      "July 14, 2020";
+    <http://www.w3.org/2000/01/rdf-schema#label> "July 14, 2020" .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <http://www.researchspace.org/time/9eada306-7a73-43d9-b609-183304d745f4> .
+  
+  <http://researchspace.org/instances/belief/e093ca77-4dea-4adf-9110-12b2f60aed86> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief>;
+    <http://www.researchspace.org/ontology/PX_asserts_value> <https://pharos.artresearch.net/resource/villaitatti/work/8000852664/subject/1B9CDEFB-8B3F-33B6-98C0-8C448AE55F3F>;
+    <http://www.ics.forth.gr/isl/CRMinf/J4_that> <http://researchspace.org/instances/belief/e093ca77-4dea-4adf-9110-12b2f60aed86/proposition>;
+    <http://www.researchspace.org/ontology/PX_is_canonical_value> true .
+  
+  <http://www.researchspace.org/time/9eada306-7a73-43d9-b609-183304d745f4> <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end>
+      "2020-07-14T11:51:34.034Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    <http://www.w3.org/2000/01/rdf-schema#label> "not about kissing" .
+  
+  <http://www.researchspace.org/time/9eada306-7a73-43d9-b609-183304d745f4> <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin>
+      "2020-07-14T11:51:34.034Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://researchspace.org/instances/belief/e093ca77-4dea-4adf-9110-12b2f60aed86> <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be>
+      "Disagree" .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    a <http://www.researchspace.org/ontology/EX_Assertion>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:51:34.110Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Assertions.Container> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d> .
+  
+  <http://www.researchspace.org/instances/fields/Subject%20(Pharos)/assertion/61a48b39-e234-4fa4-b4fb-691e5671097d>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

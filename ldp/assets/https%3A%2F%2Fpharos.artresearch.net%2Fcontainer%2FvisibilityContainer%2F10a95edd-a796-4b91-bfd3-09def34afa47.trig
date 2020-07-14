@@ -1,0 +1,19 @@
+
+<https://pharos.artresearch.net/container/visibilityContainer/10a95edd-a796-4b91-bfd3-09def34afa47/context> {
+  <https://pharos.artresearch.net/container/visibilityContainer/10a95edd-a796-4b91-bfd3-09def34afa47>
+    <http://www.metaphacts.com/ontologies/platform#visibilityItem> <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306>
+    <http://www.metaphacts.com/ontologies/platform#visibility> <http://www.metaphacts.com/ontologies/platform#visibilityPublic> .
+  
+  <https://pharos.artresearch.net/container/visibilityContainer/10a95edd-a796-4b91-bfd3-09def34afa47>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:53:29.387Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#visibilityContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/visibilityContainer/10a95edd-a796-4b91-bfd3-09def34afa47> .
+  
+  <https://pharos.artresearch.net/container/visibilityContainer/10a95edd-a796-4b91-bfd3-09def34afa47>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

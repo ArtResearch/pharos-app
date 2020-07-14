@@ -1,0 +1,99 @@
+
+<http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f/context> {
+  <http://www.researchspace.org/time/69181a3f-8afe-4f17-a438-9f5d2ab1435d> <http://www.researchspace.org/ontology/displayLabel>
+      "July 14, 2020" .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief> .
+  
+  <http://www.researchspace.org/time/69181a3f-8afe-4f17-a438-9f5d2ab1435d> <http://www.w3.org/2000/01/rdf-schema#label>
+      "July 14, 2020" .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> <http://www.ics.forth.gr/isl/CRMinf/J4_that>
+      <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3/proposition> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.researchspace.org/ontology/targetsRecord> <https://pharos.artresearch.net/resource/work/2063746346> .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> <http://www.researchspace.org/ontology/PX_is_canonical_value>
+      true .
+  
+  <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> <http://www.researchspace.org/ontology/PX_asserts_value>
+      <https://pharos.artresearch.net/resource/frick/work/.b11574367/appellation/A3669404-146E-3E14-A197-5CE4201F95D8>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Belief" .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <http://www.researchspace.org/time/69181a3f-8afe-4f17-a438-9f5d2ab1435d> .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> <http://www.researchspace.org/ontology/PX_asserts_value>
+      <https://pharos.artresearch.net/resource/villaitatti/work/8000852664/appellation/A3669404-146E-3E14-A197-5CE4201F95D8> .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> <http://www.researchspace.org/ontology/PX_is_canonical_value>
+      true .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Belief" .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be>
+      "Disagree" .
+  
+  <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be>
+      "Agree" .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> <http://www.ics.forth.gr/isl/CRMinf/J4_that>
+      <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc/proposition> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> .
+  
+  <http://www.researchspace.org/time/69181a3f-8afe-4f17-a438-9f5d2ab1435d> <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end>
+      "2020-07-14T11:49:46.616Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-07-14T11:49:46.616Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.researchspace.org/ontology/targetsField> <http://www.researchspace.org/instances/fields/Title%20(Pharos)> .
+  
+  <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief> .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Belief" .
+  
+  <http://researchspace.org/instances/belief/d978a70f-27a8-4ff9-9e47-0b2e4641a1cc> <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be>
+      "Agree" .
+  
+  <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> <http://www.researchspace.org/ontology/PX_is_canonical_value>
+      true .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3>;
+    a <http://www.researchspace.org/ontology/EX_Assertion>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin> .
+  
+  <http://researchspace.org/instances/belief/a2f3ab83-e11f-437a-bcdb-551f122a1ac3> <http://www.researchspace.org/ontology/PX_asserts_value>
+      <https://pharos.artresearch.net/resource/zeri/work/21776/appellation/A17C2236-8D45-32BB-B90B-615D6E83DD10> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> "includes the artist" .
+  
+  <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0> <http://www.ics.forth.gr/isl/CRMinf/J4_that>
+      <http://researchspace.org/instances/belief/a678eb60-7b26-4682-97cd-1a5160347bc0/proposition> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    <http://www.w3.org/2000/01/rdf-schema#label> "italian title is wrong";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:49:46.706Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Assertions.Container> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f> .
+  
+  <http://www.researchspace.org/instances/fields/Title%20(Pharos)/assertion/bcf4de35-a818-4327-bb1e-b39050a5d71f>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

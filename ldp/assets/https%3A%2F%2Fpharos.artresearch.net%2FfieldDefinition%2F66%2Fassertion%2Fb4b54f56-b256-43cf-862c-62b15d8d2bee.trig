@@ -1,0 +1,53 @@
+
+<https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee/context> {
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> "I checked it!" .
+  
+  <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Belief";
+    <http://www.researchspace.org/ontology/PX_asserts_value> "1340 x 2890 mm." .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    <http://www.researchspace.org/ontology/PX_asserts> <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde>;
+    <http://www.researchspace.org/ontology/targetsField> <https://pharos.artresearch.net/fieldDefinition/66> .
+  
+  <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde> <http://www.ics.forth.gr/isl/CRMinf/J5_holds_to_be>
+      "Agree" .
+  
+  <https://pharos.artresearch.net/time/14204506-19b4-4d8b-b58e-362308cdff14> <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end>
+      "2020-07-14T11:47:09.846Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-07-14T11:47:09.846Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    <http://www.researchspace.org/ontology/targetsRecord> <https://pharos.artresearch.net/resource/villaitatti/work/8000606605> .
+  
+  <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde> a
+      <http://www.ics.forth.gr/isl/CRMinf/I2_Belief> .
+  
+  <https://pharos.artresearch.net/time/14204506-19b4-4d8b-b58e-362308cdff14> <http://www.researchspace.org/ontology/displayLabel>
+      "July 14, 2020";
+    <http://www.w3.org/2000/01/rdf-schema#label> "July 14, 2020" .
+  
+  <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde> <http://www.researchspace.org/ontology/PX_is_canonical_value>
+      true .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    <http://www.w3.org/2000/01/rdf-schema#label> "this is true" .
+  
+  <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde> <http://www.ics.forth.gr/isl/CRMinf/J4_that>
+      <http://researchspace.org/instances/belief/1ed30315-ae57-49f9-a70b-e99a40c4ebde/proposition> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    a <http://www.researchspace.org/ontology/EX_Assertion>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://pharos.artresearch.net/time/14204506-19b4-4d8b-b58e-362308cdff14>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:47:09.929Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Assertions.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/66/assertion/b4b54f56-b256-43cf-862c-62b15d8d2bee>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

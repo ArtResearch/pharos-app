@@ -1,0 +1,36 @@
+
+<https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/context> {
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306>
+    a <http://www.researchspace.org/ontology/Annotation>, <http://www.w3.org/ns/oa#Annotation>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "title is more complex";
+    <http://www.w3.org/ns/oa#hasTarget> <http://www.researchspace.org/instances/fields/Title%20(Pharos)>;
+    a <http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object>;
+    <http://www.ics.forth.gr/isl/CRMdig/L43_annotates> <http://www.researchspace.org/instances/fields/Title%20(Pharos)> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/event>
+    <http://www.ics.forth.gr/isl/CRMdig/L48_created_annotation> <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/event/timespan> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/event/timespan>
+    a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-07-14T11:53:20.983Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end> "2020-07-14T11:53:20.983Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/body>
+    a <http://www.w3.org/ns/oa#TextualBody>;
+    <http://www.w3.org/ns/oa#text> "{\"id\":\"fe06bb4f-141b-4268-b4e3-dbd127772c35\",\"cells\":[{\"id\":\"25024d15-2f57-45d8-89c3-4320590c83bd\",\"inline\":null,\"size\":12,\"content\":{\"plugin\":{\"name\":\"ory/editor/core/content/slate\",\"version\":\"0.0.1\"},\"state\":{\"serialized\":{\"nodes\":[{\"kind\":\"block\",\"type\":\"PARAGRAPH/PARAGRAPH\",\"nodes\":[{\"kind\":\"text\",\"text\":\"I read a book about the adoration....\"}]}]}}}}]}";
+    <http://purl.org/dc/elements/1.1/format> "text/html" .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306>
+    <http://www.w3.org/ns/oa#hasBody> <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306/body>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T11:53:20.984Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Annotations.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306> .
+  
+  <https://pharos.artresearch.net/container/Annotations.Container/3517905b-a92b-4ab3-ac86-624778003306>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
