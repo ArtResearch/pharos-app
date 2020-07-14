@@ -1,0 +1,16 @@
+
+<https://pharos.artresearch.net/container/queryTemplateContainer/categories/context> {
+  <https://pharos.artresearch.net/container/queryTemplateContainer/categories> a <http://spinrdf.org/spin#Template>,
+      <http://spinrdf.org/spin#ConstructTemplate>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "categories";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "categories";
+    <http://spinrdf.org/spin#body> <https://pharos.artresearch.net/container/queryContainer/categories>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-14T07:51:06.595Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryTemplateContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/container/queryTemplateContainer/categories> .
+  
+  <https://pharos.artresearch.net/container/queryTemplateContainer/categories> a <http://www.w3.org/ns/ldp#Resource> .
+}
