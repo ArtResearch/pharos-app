@@ -1,0 +1,42 @@
+
+<https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date/context> {
+  _:genid-d8bc0d3b5cde4fd1a8ccd215a9cb76af-9ptpxk a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d8bc0d3b5cde4fd1a8ccd215a9cb76af-rzrgm;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Photo Production End Date (fcrs)"@en .
+  
+  _:genid-d8bc0d3b5cde4fd1a8ccd215a9cb76af-rzrgm a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+PREFIX fr: <https://pharos.net/resource/fr/>
+SELECT ?value ?label ?graph WHERE {  graph ?graph {
+    ?subject a fc:photo.
+	?subject fr:Photo_to_Date ?date.
+	?date a fc:date.
+	?date rdfs:label ?value.
+  }
+}""" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-d8bc0d3b5cde4fd1a8ccd215a9cb76af-9ptpxk <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d8bc0d3b5cde4fd1a8ccd215a9cb76af-9ptpxk;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T12:38:05.383Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Photo_Production_End_Date> a <http://www.w3.org/ns/ldp#Resource> .
+}

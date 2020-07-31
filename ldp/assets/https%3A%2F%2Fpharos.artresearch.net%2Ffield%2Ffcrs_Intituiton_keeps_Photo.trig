@@ -1,0 +1,47 @@
+
+<https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo/context> {
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick> .
+  
+  _:genid-95242c7661844d05b89e0493e964277b-lg3zuu a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-95242c7661844d05b89e0493e964277b-h2jvno;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-95242c7661844d05b89e0493e964277b-h2jvno <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+PREFIX fr: <https://pharos.net/resource/fr/>
+SELECT ?value ?label ?graph WHERE {  graph ?graph {
+    ?subject a fc:photo.
+  	?subject fr:Photo_kept_by_Institution ?value.
+	?value a fc:institution.
+  }	
+}""" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-95242c7661844d05b89e0493e964277b-h2jvno a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Institution keeps Photo (fcrs)"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri> .
+  
+  _:genid-95242c7661844d05b89e0493e964277b-lg3zuu <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-95242c7661844d05b89e0493e964277b-lg3zuu;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T12:41:35.518Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Intituiton_keeps_Photo> a <http://www.w3.org/ns/ldp#Resource> .
+}

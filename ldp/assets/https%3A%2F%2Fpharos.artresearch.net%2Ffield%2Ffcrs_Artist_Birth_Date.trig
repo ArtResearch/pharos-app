@@ -1,0 +1,45 @@
+
+<https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date/context> {
+  <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artist Birth Date (fcrs)"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti> .
+  
+  _:genid-6a9fcbece6654206827913729f50d0e5-gmal8u <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+PREFIX fr: <https://pharos.net/resource/fr/>
+SELECT ?value ?label ?graph WHERE {  graph ?graph {
+  	?subject a fc:artist.
+	?subject fr:Artist_from_Date ?date.
+	?date a fc:date.
+	?date rdfs:label ?value.
+  }
+}""" .
+  
+  _:genid-6a9fcbece6654206827913729f50d0e5-rbbrj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-6a9fcbece6654206827913729f50d0e5-rbbrj;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6a9fcbece6654206827913729f50d0e5-gmal8u;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-6a9fcbece6654206827913729f50d0e5-rbbrj a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri> .
+  
+  _:genid-6a9fcbece6654206827913729f50d0e5-gmal8u a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T11:08:43.353Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Artist_Birth_Date> a <http://www.w3.org/ns/ldp#Resource> .
+}

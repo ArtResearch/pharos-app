@@ -1,0 +1,46 @@
+
+<http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)/context> {
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Artist in Place (fcrs)"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e50b68c9842f442d9e91717856ba3cbf-fgzqos;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e50b68c9842f442d9e91717856ba3cbf-ex6lgt .
+  
+  _:genid-e50b68c9842f442d9e91717856ba3cbf-ex6lgt <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+PREFIX fr: <https://pharos.net/resource/fr/>
+SELECT ?value ?label ?graph WHERE {  graph ?graph {
+  	?subject a fc:place.
+	?subject fr:Place_of_Artist ?value.
+	?value a fc:artist.
+  }
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-e50b68c9842f442d9e91717856ba3cbf-fgzqos a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-e50b68c9842f442d9e91717856ba3cbf-ex6lgt a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi> .
+  
+  _:genid-e50b68c9842f442d9e91717856ba3cbf-fgzqos <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T11:32:56.761Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> .
+  
+  <http://www.researchspace.org/instances/fields/Artist%20in%20Place%20(fcrs)> a <http://www.w3.org/ns/ldp#Resource> .
+}
