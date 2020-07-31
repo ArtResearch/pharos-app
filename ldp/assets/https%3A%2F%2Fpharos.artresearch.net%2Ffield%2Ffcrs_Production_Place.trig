@@ -1,0 +1,41 @@
+
+<https://pharos.artresearch.net/field/fcrs_Production_Place/context> {
+  <https://pharos.artresearch.net/field/fcrs_Production_Place> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-18f71c91b31a4a57af1f06086ebdb5bc-x22zc9 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Production_Place> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-18f71c91b31a4a57af1f06086ebdb5bc-yepd1h;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/work>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-18f71c91b31a4a57af1f06086ebdb5bc-x22zc9;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://collection.itatti.harvard.edu/resource/fc/Photo> .
+  
+  _:genid-18f71c91b31a4a57af1f06086ebdb5bc-x22zc9 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-18f71c91b31a4a57af1f06086ebdb5bc-yepd1h a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+PREFIX fr: <https://pharos.net/resource/fr/>
+SELECT ?value ?label ?graph WHERE { graph ?graph {
+  ?subject fr:Work_from_Place ?value.
+  ?subject a fc:work.
+  ?value a fc:place.
+  ?value fr:Place_of_Work ?subject.
+  }}""" .
+  
+  <https://pharos.artresearch.net/field/fcrs_Production_Place> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Place (fcrs)"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T10:03:12.426Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/field/fcrs_Production_Place> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Production_Place> a <http://www.w3.org/ns/ldp#Resource> .
+}
