@@ -53,10 +53,13 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
               ?provider crm:image ?image.
               }
               UNION
-              {
-              ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
-              ?? <https://pharos.artresearch.net/custom/has_provider> ?provider . 
-              ?provider crm:image ?image.
+              { 
+              graph ?graph 
+                    {
+            			  ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+           			    ?graph <https://pharos.artresearch.net/custom/has_source> ?source . 
+              			} 
+                ?source crm:image ?image.
               }
             }' 
             options='{"showFilter": false, "showTableHeading": false}'

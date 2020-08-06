@@ -1,4 +1,4 @@
-[[#if (ask 'ASK {{?? rso:PX_has_main_representation ?mainImage .} UNION {?? crm:P138i_has_representation ?representationImage .} UNION {?? <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation .}  UNION {?? <http://www.cidoc-crm.org/cidoc-crm/P138i_is_represented_by> ?vi .} UNION {?source owl:sameAs ?? . ?source crm:P138i_is_represented_by ?vi. } BIND(COALESCE(?mainImage, ?representationImage) AS ?image) .}')]]
+[[#if (ask 'ASK {{?? rso:PX_has_main_representation ?mainImage .} UNION {?? crm:P138i_has_representation ?representationImage .} UNION {?? crm:P138i_has_representation ?representationImage .} UNION {?? <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation .} UNION {?source owl:sameAs ?? . ?source crm:P138i_is_represented_by ?vi. } BIND(COALESCE(?mainImage, ?representationImage) AS ?image) .}')]]
 <div class="rs-page__summary-image">
   <rs-object-representations query='SELECT distinct ?label (bound(?mainRepresentationImage) AS ?isMainRep) (STR(COALESCE(?mainRepresentationImage,?representationImage)) AS ?imgURL)
                    WHERE {
@@ -17,8 +17,8 @@
                         ?? crm:P138i_is_represented_by ?vi.
      										?vi crm:P128i_is_carried_by ?subject .
       									?subject crm:P2_has_type <http://vocab.getty.edu/aat/300046300> .
-                       	?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?mainRepresentationImage.
-                        ?mainRepresentationImage a crm:E38_Image.
+                       	?subject crm:P129i_is_subject_of ?mainRepresentationImage.
+                        ?mainRepresentationImage a <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/D1_Digital_Object>.
                      }
                      
                      UNION 
