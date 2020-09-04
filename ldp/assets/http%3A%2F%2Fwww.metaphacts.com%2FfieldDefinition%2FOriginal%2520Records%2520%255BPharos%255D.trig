@@ -1,20 +1,14 @@
 
 <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D/context> {
-  <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1c9d981567cd4effb04c60b926727ec6-vu5xk .
-  
-  _:genid-1c9d981567cd4effb04c60b926727ec6-0rbgdi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-1c9d981567cd4effb04c60b926727ec6-0rbgdi .
-  
-  _:genid-1c9d981567cd4effb04c60b926727ec6-vu5xk a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078012;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078011;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Original Records [Pharos]"@en .
   
-  _:genid-1c9d981567cd4effb04c60b926727ec6-vu5xk <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label  ?graph WHERE { 
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078011 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label  ?graph WHERE { 
     
    ?value  owl:sameAs $subject.
         graph ?graph {
@@ -23,13 +17,15 @@
   
     }""" .
   
-  _:genid-1c9d981567cd4effb04c60b926727ec6-0rbgdi a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078012 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Original Records [Pharos]"@en;
-    a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078011 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26078012 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-23T09:15:46.064Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:15.004Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Original%20Records%20%5BPharos%5D> .

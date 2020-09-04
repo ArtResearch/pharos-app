@@ -1,24 +1,21 @@
 
 <https://pharos.artresearch.net/fieldDefinition/8/context> {
   <https://pharos.artresearch.net/fieldDefinition/8> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-kydtjl a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/8> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Production Date"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-wkqnr;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the timespan for the creation of the documented object. ";
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/zeri>,
+      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/hertziana>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177878;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177879;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the timespan for the creation of the documented object. ";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date"@en .
   
-  _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-wkqnr <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph ?qualifier WHERE {   graph ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177878 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177879 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph ?qualifier WHERE {   graph ?graph
 {
     $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
     ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
@@ -31,15 +28,13 @@
         
   }}""" .
   
-  _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-kydtjl <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177878 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-wkqnr a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177879 a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/8> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-9a72f476f38b4f33a4f8ddbf06bd9579-kydtjl;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/8> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T11:09:53.324Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:07.768Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/8> .

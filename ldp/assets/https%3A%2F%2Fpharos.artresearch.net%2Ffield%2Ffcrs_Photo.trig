@@ -1,40 +1,34 @@
 
 <https://pharos.artresearch.net/field/fcrs_Photo/context> {
-  _:genid-973d917d271d4f0087e8f831c6c8af7f-i1edc a <http://spinrdf.org/sp#Query> .
-  
   <https://pharos.artresearch.net/field/fcrs_Photo> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick> .
-  
-  _:genid-973d917d271d4f0087e8f831c6c8af7f-7fycu2 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/field/fcrs_Photo> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127392;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127393;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-973d917d271d4f0087e8f831c6c8af7f-7fycu2;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Photo (fcrs)"@en;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Photo (fcrs)"@en .
   
-  _:genid-973d917d271d4f0087e8f831c6c8af7f-7fycu2 a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127392 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-973d917d271d4f0087e8f831c6c8af7f-i1edc <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127393 <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph {
     ?subject fr:Work_depicted_by_Photo ?value.
 	?value a fc:photo.
 	?subject a fc:work.
   }
-}""" .
+}""";
+    a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Photo> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-973d917d271d4f0087e8f831c6c8af7f-i1edc;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
-    a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127392 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/field/fcrs_Photo> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T11:39:42.799Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:14.906Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Photo> .

@@ -1,12 +1,21 @@
 
 <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist/context> {
   <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127434;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127435;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>,
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Work influenced by artist (fcrs)"@en .
   
-  _:genid-0f42e2b734224ad38bc6200d198512f3-x8eyg <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127434 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127435 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph {
   	?subject a fc:artist.
@@ -15,30 +24,11 @@ SELECT ?value ?label ?graph WHERE {  graph ?graph {
   }
 }""" .
   
-  <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127434 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-0f42e2b734224ad38bc6200d198512f3-x8eyg a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Work influenced by artist (fcrs)"@en .
-  
-  _:genid-0f42e2b734224ad38bc6200d198512f3-e59725 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-0f42e2b734224ad38bc6200d198512f3-e59725;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri> .
-  
-  _:genid-0f42e2b734224ad38bc6200d198512f3-e59725 a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0f42e2b734224ad38bc6200d198512f3-x8eyg;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T12:01:29.550Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:13.880Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Work_incluenced_by_Artist> .

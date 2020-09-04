@@ -1,42 +1,33 @@
 
 <https://pharos.artresearch.net/fieldDefinition/301/context> {
   <https://pharos.artresearch.net/fieldDefinition/301> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177775;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177774;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork"@en .
   
-  _:genid-149e4c3a1a144e3fb8141f4387e526bc-zuc90d a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/301> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-149e4c3a1a144e3fb8141f4387e526bc-m2j7e;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-  
-  _:genid-149e4c3a1a144e3fb8141f4387e526bc-m2j7e a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/301> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Artwork"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
-  
-  _:genid-149e4c3a1a144e3fb8141f4387e526bc-zuc90d <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177774 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
 {
   
   ?visual_item crm:P128i_is_carried_by $subject .
 ?value crm:P138i_is_represented_by ?visual_item.
   }
-  }""" .
+  }""";
+    a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/301> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-149e4c3a1a144e3fb8141f4387e526bc-zuc90d .
-  
-  _:genid-149e4c3a1a144e3fb8141f4387e526bc-m2j7e <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t177775 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <https://pharos.artresearch.net/fieldDefinition/301> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-25T09:25:48.030Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:16.683Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/301> .

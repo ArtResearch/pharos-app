@@ -1,18 +1,17 @@
 
 <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D/context> {
-  _:genid-40c946b851704a1fbda9452cae33550e-i3lmz <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-40c946b851704a1fbda9452cae33550e-i3lmz;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
-  
-  _:genid-40c946b851704a1fbda9452cae33550e-i3lmz a <http://spinrdf.org/sp#Query> .
-  
   <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/person>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-40c946b851704a1fbda9452cae33550e-o5ef58 .
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926885;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926886;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Sibling [Wikidata]"@en .
   
-  _:genid-40c946b851704a1fbda9452cae33550e-o5ef58 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926885 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926886 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -22,17 +21,14 @@ WHERE{
   } BIND(\"http://wikidata\" as ?graph) 
            
     }
-      """ .
+      """;
+    a <http://spinrdf.org/sp#Query> .
   
-  <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Sibling [Wikidata]"@en .
-  
-  _:genid-40c946b851704a1fbda9452cae33550e-o5ef58 a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926885 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:07:42.664Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:09.367Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Sibling%20%5BWikidata%5D> .

@@ -1,23 +1,15 @@
 
 <http://www.researchspace.org/instances/fields/Title%20(Pharos)/context> {
-  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Title (Pharos)"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f .
-  
-  _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
-  
-  _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f a <http://spinrdf.org/sp#Query> .
-  
   <http://www.researchspace.org/instances/fields/Title%20(Pharos)> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247904;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247903;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Title (Pharos)"@en .
   
-  _:genid-38de341f2ce24fe1b18fd3d09860416f-rt1y8f <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247903 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?qualifier ?graph WHERE 
 {
 
   ?original owl:sameAs ?subject .
@@ -28,11 +20,15 @@
 } 
 }""" .
   
-  _:genid-38de341f2ce24fe1b18fd3d09860416f-bl49xg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247904 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247903 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t5247904 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <http://www.researchspace.org/instances/fields/Title%20(Pharos)> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-03T13:15:48.293Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:05.170Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Title%20(Pharos)> .

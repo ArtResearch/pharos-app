@@ -1,38 +1,34 @@
 
 <https://pharos.artresearch.net/fieldDefinition/46/context> {
-  <https://pharos.artresearch.net/fieldDefinition/46> a <http://www.metaphacts.com/ontology/fields#Field>;
+  <https://pharos.artresearch.net/fieldDefinition/46> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7059;
     <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7058;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the subject of representation of the documented artwork. ";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en .
   
-  _:genid-43dcef725a9d42de9c641ead8d461dc5-2o15is <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7059 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7058 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7059 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7058 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph
 {
   $subject crm:P65_shows_visual_item ?value.
   ?value crm:P2_has_type <http://vocab.getty.edu/aat/300404126>
   }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/46> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/photo> .
-  
-  _:genid-43dcef725a9d42de9c641ead8d461dc5-wj5feo <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/46> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-43dcef725a9d42de9c641ead8d461dc5-2o15is;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-43dcef725a9d42de9c641ead8d461dc5-wj5feo;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the subject of representation of the documented artwork. ";
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
-  
-  _:genid-43dcef725a9d42de9c641ead8d461dc5-wj5feo a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-43dcef725a9d42de9c641ead8d461dc5-2o15is a <http://spinrdf.org/sp#Query> .
-  
   <https://pharos.artresearch.net/fieldDefinition/46> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T11:06:49.082Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:08.594Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/46> .

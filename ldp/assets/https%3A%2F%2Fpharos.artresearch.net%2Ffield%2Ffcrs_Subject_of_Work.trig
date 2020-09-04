@@ -1,44 +1,34 @@
 
 <https://pharos.artresearch.net/field/fcrs_Subject_of_Work/context> {
   <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Subject of Work (fcrs)"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127451;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127452;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>,
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Subject of Work (fcrs)"@en .
   
-  _:genid-94fb582992d743169b88918fd36bf768-wj63v <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127451 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127452 <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph {
   	?subject a fc:work.
 	?subject fr:Work_shows_Subject ?value.
 	?value a fc:subject.
   }
-}""" .
+}""";
+    a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-94fb582992d743169b88918fd36bf768-wj63v;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> .
-  
-  _:genid-94fb582992d743169b88918fd36bf768-zp6unb <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-94fb582992d743169b88918fd36bf768-zp6unb .
-  
-  _:genid-94fb582992d743169b88918fd36bf768-wj63v a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi> .
-  
-  _:genid-94fb582992d743169b88918fd36bf768-zp6unb a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127451 a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T12:33:45.991Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:06.162Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Subject_of_Work> .

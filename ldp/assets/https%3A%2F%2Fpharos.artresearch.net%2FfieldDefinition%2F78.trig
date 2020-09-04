@@ -1,18 +1,21 @@
 
 <https://pharos.artresearch.net/fieldDefinition/78/context> {
   <https://pharos.artresearch.net/fieldDefinition/78> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri> .
-  
-  _:genid-6835d1cdd1aa48928c76412dc7954e40-gw1q4i a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/78> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the century in which the creation of the documented object took place.";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6835d1cdd1aa48928c76412dc7954e40-2e0in7;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Century"@en;
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/zeri>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214757;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214758;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the century in which the creation of the documented object took place.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Century"@en .
   
-  _:genid-6835d1cdd1aa48928c76412dc7954e40-2e0in7 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE { graph ?graph {
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214757 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214758 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE { graph ?graph {
     $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
     ?production crm:P4_has_time-span ?tm.
     ?tm crm:P10_falls_within $timespan .
@@ -22,18 +25,9 @@
   }}""";
     a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/78> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-6835d1cdd1aa48928c76412dc7954e40-gw1q4i <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/78> <http://www.metaphacts.com/ontology/fields#range>
-      <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6835d1cdd1aa48928c76412dc7954e40-gw1q4i;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/78> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-01T10:50:40.617Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:10.444Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/78> .

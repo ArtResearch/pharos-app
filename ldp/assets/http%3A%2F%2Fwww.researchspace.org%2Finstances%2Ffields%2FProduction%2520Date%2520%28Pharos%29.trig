@@ -1,10 +1,18 @@
 
 <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)/context> {
-  _:genid-216c35d0544c446a9bd1cef39176241e-fjaipi a <http://spinrdf.org/sp#Query> .
+  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077895;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077896;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date (Pharos)"@en .
   
-  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> a <http://www.metaphacts.com/ontology/fields#Field> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077895 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
   
-  _:genid-216c35d0544c446a9bd1cef39176241e-yuquq9 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph  WHERE {   
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077896 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph  WHERE {   
   
       ?original owl:sameAs ?subject
   graph ?graph
@@ -15,23 +23,9 @@
         
   }}""" .
   
-  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-216c35d0544c446a9bd1cef39176241e-yuquq9 .
-  
-  _:genid-216c35d0544c446a9bd1cef39176241e-fjaipi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-216c35d0544c446a9bd1cef39176241e-fjaipi .
-  
-  _:genid-216c35d0544c446a9bd1cef39176241e-yuquq9 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Production Date (Pharos)"@en;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T12:34:52.811Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:09.442Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Production%20Date%20(Pharos)> .

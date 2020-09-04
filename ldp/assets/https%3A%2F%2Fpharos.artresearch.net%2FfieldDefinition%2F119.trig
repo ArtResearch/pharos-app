@@ -1,43 +1,32 @@
 
 <https://pharos.artresearch.net/fieldDefinition/119/context> {
   <https://pharos.artresearch.net/fieldDefinition/119> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-ccb3a05d6cc142ff925b241125aac6df-1sotwe <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/119> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "This field is used to document the front side of the documented 2 dimensional visual image object.";
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/zeri>,
+      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7010;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E25_Man-Made_Feature>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7011;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ccb3a05d6cc142ff925b241125aac6df-1sotwe;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/work> .
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document the front side of the documented 2 dimensional visual image object.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Recto"@en .
   
-  _:genid-ccb3a05d6cc142ff925b241125aac6df-1sotwe a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7010 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <https://pharos.artresearch.net/fieldDefinition/119> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Recto"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ccb3a05d6cc142ff925b241125aac6df-5r9pmb;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-ccb3a05d6cc142ff925b241125aac6df-5r9pmb <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t7011 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {
   graph ?graph{
   $subject crm:P56_bears_feature ?value.
   ?value crm:P2_has_type <http://vocab.getty.edu/aat/300078817> .
-  }}""" .
+  }}""";
+    a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/119> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <https://pharos.artresearch.net/category/frick> .
-  
-  _:genid-ccb3a05d6cc142ff925b241125aac6df-5r9pmb a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/119> <http://www.metaphacts.com/ontology/fields#range>
-      <http://www.cidoc-crm.org/cidoc-crm/E25_Man-Made_Feature>;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/119> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-05T10:41:32.063Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:11.571Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/119> .

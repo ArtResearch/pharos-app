@@ -1,17 +1,17 @@
 
 <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D/context> {
-  <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-0445ccb68efa49dbbe3f2fd978d85ba3-au4ngw;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926929;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926930;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Residence [Wikidata]"@en .
   
-  _:genid-0445ccb68efa49dbbe3f2fd978d85ba3-au4ngw a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926929 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0445ccb68efa49dbbe3f2fd978d85ba3-cjtgnd;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-0445ccb68efa49dbbe3f2fd978d85ba3-cjtgnd a <http://spinrdf.org/sp#Query>;
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926930 a <http://spinrdf.org/sp#Query>;
     <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
@@ -24,15 +24,11 @@ WHERE{
     }
       """ .
   
-  <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Residence [Wikidata]"@en .
-  
-  _:genid-0445ccb68efa49dbbe3f2fd978d85ba3-au4ngw <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926929 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:10:12.476Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:05.092Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Residence%20%5BWikidata%5D> .

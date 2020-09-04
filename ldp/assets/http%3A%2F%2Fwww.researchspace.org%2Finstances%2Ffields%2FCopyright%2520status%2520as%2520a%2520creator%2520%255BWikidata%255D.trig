@@ -1,21 +1,15 @@
 
 <http://www.researchspace.org/instances/fields/Copyright%20status%20as%20a%20creator%20%5BWikidata%5D/context> {
-  _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-1ic0i8p a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-c8otam a <http://spinrdf.org/sp#Query> .
-  
   <http://www.researchspace.org/instances/fields/Copyright%20status%20as%20a%20creator%20%5BWikidata%5D>
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Copyright status as a creator [Wikidata]"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926971;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926970;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Copyright status as a creator [Wikidata]"@en .
   
-  _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-c8otam <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Copyright%20status%20as%20a%20creator%20%5BWikidata%5D>
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-1ic0i8p .
-  
-  _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-1ic0i8p <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926970 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -27,12 +21,16 @@ WHERE{
     }
       """ .
   
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926971 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926970 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926971 a <http://spinrdf.org/sp#Query> .
+  
   <http://www.researchspace.org/instances/fields/Copyright%20status%20as%20a%20creator%20%5BWikidata%5D>
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9a62d9610d5347f3aa4c3fcfeaddb2b7-c8otam;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:11:37.749Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:14.333Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Copyright%20status%20as%20a%20creator%20%5BWikidata%5D> .

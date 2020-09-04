@@ -1,12 +1,15 @@
 
 <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D/context> {
   <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D>
-    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-254fe5efde97479480b526f58c4774ac-wq6qv2;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926878;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926877;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Sex or gender [Wikidata]"@en .
   
-  _:genid-254fe5efde97479480b526f58c4774ac-wq6qv2 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926877 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -18,23 +21,15 @@ WHERE{
     }
       """ .
   
-  _:genid-254fe5efde97479480b526f58c4774ac-qrppgp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926878 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-254fe5efde97479480b526f58c4774ac-qrppgp .
-  
-  _:genid-254fe5efde97479480b526f58c4774ac-wq6qv2 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D>
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Sex or gender [Wikidata]"@en .
-  
-  _:genid-254fe5efde97479480b526f58c4774ac-qrppgp a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926877 a <http://spinrdf.org/sp#Query> .
   
   <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D>
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:06:20.332Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:11.173Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Sex%20or%20gender%20%5BWikidata%5D> .

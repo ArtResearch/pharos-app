@@ -1,13 +1,15 @@
 
 <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D/context> {
-  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926920;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926919;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Student of [Wikidata]"@en .
   
-  _:genid-ec2b3af7809e44f3a56e09650d949ae1-bjmpy <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-ec2b3af7809e44f3a56e09650d949ae1-rx7nfc .
-  
-  _:genid-ec2b3af7809e44f3a56e09650d949ae1-rx7nfc <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926919 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -19,23 +21,14 @@ WHERE{
     }
       """ .
   
-  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-ec2b3af7809e44f3a56e09650d949ae1-bjmpy;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926920 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
   
-  _:genid-ec2b3af7809e44f3a56e09650d949ae1-rx7nfc a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926919 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-ec2b3af7809e44f3a56e09650d949ae1-bjmpy a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Student of [Wikidata]"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:09:28.200Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:08.514Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Student%20of%20%5BWikidata%5D> .

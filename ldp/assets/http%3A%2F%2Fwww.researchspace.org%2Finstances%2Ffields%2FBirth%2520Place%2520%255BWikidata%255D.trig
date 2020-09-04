@@ -1,8 +1,20 @@
 
 <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D/context> {
-  <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926817;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926816;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place [Wikidata]"@en .
   
-  _:genid-75bbacdfcbbd41fbac47827112da2bf5-tufzs9n <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926816 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926817 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926816 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -15,24 +27,9 @@ WHERE{
            
     }""" .
   
-  _:genid-75bbacdfcbbd41fbac47827112da2bf5-lljoer <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:genid-75bbacdfcbbd41fbac47827112da2bf5-tufzs9n a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-75bbacdfcbbd41fbac47827112da2bf5-lljoer;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-75bbacdfcbbd41fbac47827112da2bf5-lljoer a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place [Wikidata]"@en;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-75bbacdfcbbd41fbac47827112da2bf5-tufzs9n;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T13:46:28.055Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:07.173Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Birth%20Place%20%5BWikidata%5D> .

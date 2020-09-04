@@ -1,22 +1,19 @@
 
 <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D/context> {
-  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-15882d19064e4f91a5e14202440faa13-an3gtm;
+  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926826;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926825;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Event [Getty]"@en .
   
-  _:genid-15882d19064e4f91a5e14202440faa13-3wdmim <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926826 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-15882d19064e4f91a5e14202440faa13-an3gtm a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926825 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-15882d19064e4f91a5e14202440faa13-3wdmim .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926826 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-15882d19064e4f91a5e14202440faa13-3wdmim a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-15882d19064e4f91a5e14202440faa13-an3gtm <http://spinrdf.org/sp#text> """  SELECT distinct ?value ?label ?graph WHERE {
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926825 <http://spinrdf.org/sp#text> """  SELECT distinct ?value ?label ?graph WHERE {
   ?subject owl:sameAs ?getty_uri.
  SERVICE <http://vocab.getty.edu/sparql> {
       ?getty_uri <http://xmlns.com/foaf/0.1/focus> ?agent_uri.
@@ -33,7 +30,7 @@
   
   <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T13:49:51.614Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:07.324Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Event%20%5BGetty%5D> .

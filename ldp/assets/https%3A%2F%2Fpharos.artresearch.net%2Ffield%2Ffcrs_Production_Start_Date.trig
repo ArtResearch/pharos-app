@@ -1,11 +1,19 @@
 
 <https://pharos.artresearch.net/field/fcrs_Production_Start_Date/context> {
   <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127309;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127308;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Start Date (fcrs)"@en .
   
-  _:genid-1a78eab1758842269e8d54f468dae1ab-a6sy7m <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127309 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127308 <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph {
   	?subject fr:Work_from_Date ?date.
@@ -15,30 +23,13 @@ SELECT ?value ?label ?graph WHERE {  graph ?graph {
   }
 }""" .
   
-  <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1a78eab1758842269e8d54f468dae1ab-a6sy7m .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127309 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-1a78eab1758842269e8d54f468dae1ab-xlnloj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127308 a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Production Start Date (fcrs)"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1a78eab1758842269e8d54f468dae1ab-xlnloj;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
-  
-  _:genid-1a78eab1758842269e8d54f468dae1ab-a6sy7m a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-1a78eab1758842269e8d54f468dae1ab-xlnloj a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T10:34:48.696Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:13.437Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Production_Start_Date> .

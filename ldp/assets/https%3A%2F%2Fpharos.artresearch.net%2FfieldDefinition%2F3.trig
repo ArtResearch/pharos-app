@@ -1,32 +1,24 @@
 
 <https://pharos.artresearch.net/fieldDefinition/3/context> {
   <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/zeri>;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-d4a5f6bf136f447a9abf672815e65809-vmvigt <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:genid-d4a5f6bf136f447a9abf672815e65809-vmgfan a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-d4a5f6bf136f447a9abf672815e65809-vmvigt;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-d4a5f6bf136f447a9abf672815e65809-vmvigt a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/3> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>,
+      <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077888;
     <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d4a5f6bf136f447a9abf672815e65809-vmgfan .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077887;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
   
-  _:genid-d4a5f6bf136f447a9abf672815e65809-vmgfan <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?graph WHERE 
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077887 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077888 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077887 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label ?graph WHERE 
 {  { graph ?graph {
   ?subject crm:P1_is_identified_by ?value.
   ?value a crm:E41_Appellation.
@@ -48,9 +40,11 @@ graph ?graph {
 
 }""" .
   
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077888 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
   <https://pharos.artresearch.net/fieldDefinition/3> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T12:24:40.144Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:09.611Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/3> .

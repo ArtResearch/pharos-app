@@ -1,14 +1,18 @@
 
 <https://pharos.artresearch.net/field/fcrs_Creator/context> {
-  <https://pharos.artresearch.net/field/fcrs_Creator> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-22423a00b6f34446b4bd1e92d17ca2b9-h5ccxj;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>,
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+  <https://pharos.artresearch.net/field/fcrs_Creator> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/work>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127399;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127398;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Creator (fcrs)"@en .
   
-  _:genid-22423a00b6f34446b4bd1e92d17ca2b9-fe6ve <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127398 <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph
 {
@@ -18,28 +22,15 @@ SELECT ?value ?label ?graph WHERE {  graph ?graph
   }
  }""" .
   
-  <https://pharos.artresearch.net/field/fcrs_Creator> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/work> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127399 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-22423a00b6f34446b4bd1e92d17ca2b9-h5ccxj a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127398 a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Creator> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Creator (fcrs)"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-22423a00b6f34446b4bd1e92d17ca2b9-fe6ve;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri> .
-  
-  _:genid-22423a00b6f34446b4bd1e92d17ca2b9-fe6ve a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Creator> <http://www.metaphacts.com/ontology/fields#category>
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi> .
-  
-  _:genid-22423a00b6f34446b4bd1e92d17ca2b9-h5ccxj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127399 a <http://spinrdf.org/sp#Query> .
   
   <https://pharos.artresearch.net/field/fcrs_Creator> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T11:44:12.429Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:14.753Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Creator> .

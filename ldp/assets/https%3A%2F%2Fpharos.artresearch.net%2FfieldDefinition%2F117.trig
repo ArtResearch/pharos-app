@@ -1,30 +1,28 @@
 
 <https://pharos.artresearch.net/fieldDefinition/117/context> {
-  <https://pharos.artresearch.net/fieldDefinition/117> a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-f7d01625491946ef8545f7142f2bd3f9-cmfkuf a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-f7d01625491946ef8545f7142f2bd3f9-jdtws5 a <http://spinrdf.org/sp#Query> .
-  
   <https://pharos.artresearch.net/fieldDefinition/117> <http://www.metaphacts.com/ontology/fields#category>
       <https://pharos.artresearch.net/category/itatti>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077977;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077976;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "IIIF File"@en .
   
-  _:genid-f7d01625491946ef8545f7142f2bd3f9-cmfkuf <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077976 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-f7d01625491946ef8545f7142f2bd3f9-jdtws5 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077977 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077976 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
  ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image. 
  ?image crm:P2_has_type <http://iiif.io/api/image>.
  ?image crm:P129i_is_subject_of ?value
   }}""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/117> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-f7d01625491946ef8545f7142f2bd3f9-jdtws5;
-    <http://www.w3.org/2000/01/rdf-schema#label> "IIIF File"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f7d01625491946ef8545f7142f2bd3f9-cmfkuf;
-    a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077977 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/117> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T16:39:25.078Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:11.729Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/117> .

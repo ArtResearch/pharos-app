@@ -1,13 +1,12 @@
 
 <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer/context> {
-  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> a <http://www.w3.org/ns/ldp#Container>,
-      <http://www.w3.org/ns/ldp#Resource>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Field Definition Container";
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Field Definition Container";
+    a <http://www.w3.org/ns/ldp#Container>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Container to store field definitions.";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-16T11:09:32.914Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-  
-  <http://www.metaphacts.com/ontologies/platform#rootContainer> <http://www.w3.org/ns/ldp#contains>
-      <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:03.983Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.w3.org/ns/ldp#contains> <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer>;
+    a <http://www.w3.org/ns/ldp#Resource> .
 }

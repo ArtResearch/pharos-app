@@ -1,43 +1,33 @@
 
 <https://pharos.artresearch.net/field/fcrs_Institution_Location/context> {
-  <https://pharos.artresearch.net/field/fcrs_Institution_Location> <http://www.metaphacts.com/ontology/fields#range>
-      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>,
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>;
+  <https://pharos.artresearch.net/field/fcrs_Institution_Location> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/marburg>,
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi>, <http://www.metaphacts.com/ontologies/platform/FieldCategories/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127369;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127370;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/frick>,
-      <http://www.metaphacts.com/ontologies/platform/FieldCategories/itatti> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Institution Location (fcrs)"@en .
   
-  _:genid-ec5b23f41ae345f1aa2f91610098eb84-4otjr7 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127369 a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Institution_Location> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ec5b23f41ae345f1aa2f91610098eb84-4otjr7;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
-  
-  _:genid-ec5b23f41ae345f1aa2f91610098eb84-4otjr7 a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/field/fcrs_Institution_Location> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-ec5b23f41ae345f1aa2f91610098eb84-svobvi;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/zeri> .
-  
-  _:genid-ec5b23f41ae345f1aa2f91610098eb84-svobvi <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127370 <http://spinrdf.org/sp#text> """PREFIX fc: <https://pharos.net/resource/fc/>
 PREFIX fr: <https://pharos.net/resource/fr/>
 SELECT ?value ?label ?graph WHERE {  graph ?graph {
   	?subject a fc:institution.
   	?subject fr:Institution_from_Place ?value.
   }
-}""" .
+}""";
+    a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/field/fcrs_Institution_Location> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Institution Location (fcrs)"@en;
-    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/khi> .
-  
-  _:genid-ec5b23f41ae345f1aa2f91610098eb84-svobvi a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26127369 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <https://pharos.artresearch.net/field/fcrs_Institution_Location> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-07-31T11:15:05.275Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:04.941Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/field/fcrs_Institution_Location> .

@@ -1,25 +1,18 @@
 
 <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D/context> {
   <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D>
-    a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-gwpkzr a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D>
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-pwk3lg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-pwk3lg;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926966;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926965;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-gwpkzr;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Has works in the collection [Wikidata]"@en .
   
-  _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-pwk3lg a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926966 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-d72fcfc3ab0740d5ab12e726dc5d64f6-gwpkzr <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926965 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -31,10 +24,12 @@ WHERE{
     }
       """ .
   
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926966 a <http://spinrdf.org/sp#Query> .
+  
   <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D>
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:11:31.760Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:13.531Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Has%20works%20in%20the%20collection%20%5BWikidata%5D> .

@@ -1,32 +1,26 @@
 
 <https://pharos.artresearch.net/fieldDefinition/118/context> {
-  <https://pharos.artresearch.net/fieldDefinition/118> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077979;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077978;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "IIIF Image"@en .
   
-  _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-ci5m6 a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077978 a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.w3.org/2000/01/rdf-schema#label>
-      "IIIF Image"@en .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077979 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-y2kuve <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-y2kuve;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti> .
-  
-  _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-y2kuve a <http://spinrdf.org/sp#Query> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/118> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-ci5m6 .
-  
-  _:genid-5d8a94e84c734936afe8e9ed2cd66cd8-ci5m6 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t26077978 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE {   graph ?graph{
  ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?value. 
  ?value crm:P2_has_type <http://iiif.io/api/image>
   }}""" .
   
   <https://pharos.artresearch.net/fieldDefinition/118> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-22T16:39:28.916Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:11.416Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/118> .

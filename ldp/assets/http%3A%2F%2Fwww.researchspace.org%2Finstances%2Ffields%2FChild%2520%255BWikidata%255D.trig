@@ -1,13 +1,21 @@
 
 <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D/context> {
-  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926881;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926882;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Child [Wikidata]"@en .
   
-  _:genid-3921c71a1dbd4b609a95aad509b3809a-mpp8vl a <http://spinrdf.org/sp#Query> .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926881 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-3921c71a1dbd4b609a95aad509b3809a-6gcrsj .
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926882 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-3921c71a1dbd4b609a95aad509b3809a-6gcrsj <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926881 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t25926882 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
 WHERE{ 
   ?subject owl:sameAs ?wikidata_uri.
  SERVICE <https://query.wikidata.org/sparql> {
@@ -19,23 +27,9 @@ WHERE{
     }
       """ .
   
-  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/person> .
-  
-  _:genid-3921c71a1dbd4b609a95aad509b3809a-6gcrsj a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Child [Wikidata]"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
-  
-  _:genid-3921c71a1dbd4b609a95aad509b3809a-mpp8vl <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-3921c71a1dbd4b609a95aad509b3809a-mpp8vl;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T14:07:33.736Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:09.966Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Child%20%5BWikidata%5D> .
