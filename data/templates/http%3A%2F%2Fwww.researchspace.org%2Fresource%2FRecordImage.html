@@ -1,4 +1,4 @@
-[[#if (ask 'ASK {{?? rso:PX_has_main_representation ?mainImage .} UNION {?? crm:P138i_has_representation ?representationImage .} UNION {?? crm:P129i_is_subject_of  ?representationImage .}  UNION {?? crm:138i_is_represented_by ?vi .?vi crm:P128i_is_carried_by ?subject . 	?subject crm:P129i_is_subject_of ?mainRepresentationImage.} UNION {?source owl:sameAs ?? . ?source crm:138i_is_represented_by  ?vi. } BIND(COALESCE(?mainImage, ?representationImage) AS ?image) .}')]]
+[[#if (ask 'ASK {{?? rso:PX_has_main_representation ?mainImage .} UNION {?? crm:P138i_has_representation ?representationImage .}  UNION {?? crm:P138i_is_represented_by ?vi .?vi crm:P128i_is_carried_by ?subject . 	?subject crm:P129i_is_subject_of ?mainRepresentationImage.} UNION {?source owl:sameAs ?? . ?source crm:138i_is_represented_by  ?vi. } BIND(COALESCE(?mainImage, ?representationImage) AS ?image) .}')]]
 
 <div class="rs-page__summary-image">
   <rs-object-representations query='SELECT distinct ?label (bound(?mainRepresentationImage) AS ?isMainRep) (STR(COALESCE(?mainRepresentationImage,?representationImage)) AS ?imgURL)
