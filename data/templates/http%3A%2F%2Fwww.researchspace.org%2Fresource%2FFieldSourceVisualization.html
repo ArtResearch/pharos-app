@@ -1,9 +1,9 @@
 <div>
-{{#switch value.binding.graph.value}}
+{{#switch value.binding.provider.value}}
         
-  {{#case "http://itatti/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/itatti.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+  {{#case "https://pharos.artresearch.net/resource/itatti/source/ITatti" break=true}}
+   <semantic-link uri="{{value.binding.provider.value}}" guess-repository=false>
+    <img src="{{value.binding.image.value}}" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
    </semantic-link> 
    {{/case}}
     {{#case "http://fotoindex" break=true}}

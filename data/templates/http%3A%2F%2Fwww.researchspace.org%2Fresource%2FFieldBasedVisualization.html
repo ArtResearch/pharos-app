@@ -39,7 +39,9 @@
                  
                     {{#each field.values as |value|}}
                  <li  class="rs-page__field-value">
-                    {{> rsp:FieldSourceVisualization field=field value=value guess=../../guess }}
+                      
+                   {{> rsp:FieldSourceVisualization field=field value=value guess=../../guess }}
+                    
                     </li>
                   {{/each}}
                      </ul>
@@ -48,7 +50,12 @@
                 
                 {{#ifCond (objectLength field.values) '===' 1}}
                  {{#each field.values as |value|}}
-                    <span class="rs-page__field-value">{{> rsp:FieldSourceVisualization field=field value=value guess=../../guess }}</span>
+                    <span class="rs-page__field-value">
+                      
+                      {{> rsp:FieldSourceVisualization field=field value=value guess=../../guess }}
+                
+                
+                </span>
                   {{/each}}
                 {{/ifCond}}
               </td>

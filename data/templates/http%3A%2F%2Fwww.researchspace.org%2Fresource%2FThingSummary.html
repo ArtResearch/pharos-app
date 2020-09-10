@@ -47,19 +47,16 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
 					 	 SELECT distinct ?record ?image WHERE 
 						{
               {
+              ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
+              ?? <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider <https://pharos.artresearch.net/custom/has_image> ?image.
+              }
+              UNION
+              {
               ?s owl:sameAs ?? . 
               ?s <https://pharos.artresearch.net/custom/has_original_record> ?record . 
               ?s <https://pharos.artresearch.net/custom/has_provider> ?provider . 
-              ?provider crm:image ?image.
-              }
-              UNION
-              { 
-              graph ?graph 
-                    {
-            			  ?? <https://pharos.artresearch.net/custom/has_original_record> ?record . 
-           			    ?graph <https://pharos.artresearch.net/custom/has_source> ?source . 
-              			} 
-                ?source crm:image ?image.
+              ?provider <https://pharos.artresearch.net/custom/has_image> ?image.
               }
             }' 
             options='{"showFilter": false, "showTableHeading": false}'
