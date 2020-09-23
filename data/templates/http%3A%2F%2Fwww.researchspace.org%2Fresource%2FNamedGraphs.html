@@ -41,7 +41,7 @@
 
     <h2>Data Export &amp; Deletion</h2>
     <hr/>
-   	<semantic-query query='SELECT (COUNT(*) as ?number) WHERE { { SELECT DISTINCT ?g WHERE{ GRAPH ?g {?s ?p ?o} } LIMIT 1000 } }'
+   	<semantic-query query='SELECT (COUNT(*) as ?number) WHERE { { SELECT DISTINCT ?g WHERE{ ?g a <https://pharos.artresearch.net/custom/Namedgraph> } LIMIT 1000 } }'
                           template='{{#each bindings}}{{#ifCond number.value ">=" 1000}}<bs-alert bs-style="warning"> The following table is limited to show only <strong>1000</strong> named graphs.</bs-alert> {{else}} <bs-alert bs-style="info"> The repository contains <strong>{{number.value}}</strong> distinct named graphs.</bs-alert> {{/ifCond}}{{/each}}'
           >
     </semantic-query>
