@@ -1,90 +1,23 @@
-<div>
-{{#switch value.binding.provider.value}}
-        
-  {{#case "https://pharos.artresearch.net/resource/itatti/source/ITatti" break=true}}
-   <semantic-link uri="{{value.binding.provider.value}}" guess-repository=false>
-    <img src="{{value.binding.image.value}}" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://fotoindex" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/itatti.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://frick/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/frick.ico" style="max-height:16px; max-width:16px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://khi/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/khi.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://federicozeri/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/zeri.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://marburg/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/images/marb.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-     {{#case "http://hertziana/" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/hertz.ico" style="max-height:16px; max-width:16px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://getty" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="http://viaf.org/viaf/images/flags/JPG.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-     {{#case "http://wikidata" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="http://viaf.org/viaf/images/flags/WKP.png" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-  {{#case "http://matches" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-  {{#case "http://matches2" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-  {{#case "http://matches3" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://artists_itatti" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://artists_frick" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-    {{#case "http://artists_zeri" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-  {{#case "http://artists_midas" break=true}}
-   <semantic-link uri="{{value.binding.graph.value}}" guess-repository=false>
-    <img src="/assets/pharos.ico" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
-   </semantic-link> 
-   {{/case}}
-   {{#default}}
-  <semantic-link uri="http://uknown" guess-repository=false></semantic-link> 
-   {{/default}}
+<div> 
+<semantic-table 
+      query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+						 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 				 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-{{/switch}}
-   
+					 	 SELECT distinct ?provider ?image  WHERE 
+						{
+              
+              <{{value.binding.graph.value}}> <https://pharos.artresearch.net/custom/has_provider> ?provider . 
+              ?provider <https://pharos.artresearch.net/custom/has_image> ?image
+             
+            }' 
+            options='{"showFilter": false, "showTableHeading": false}'
+      tuple-template='{{> tupleTemplate}}'
+>
+  <template id='tupleTemplate'>
+    <semantic-link uri="{{provider.value}}" guess-repository=false>
+    <img src="{{image.value}}" style="max-height:50px; max-width:50px; margin: 0 auto;" class="img-rounded">
+   </semantic-link> 
+  </template>
+</semantic-table> 
 </div>
