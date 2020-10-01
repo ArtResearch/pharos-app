@@ -14,7 +14,6 @@
                 proxy-event-type='Component.Refresh' proxy-targets='["clipboard-sidebar"]'
 ></mp-event-proxy>
 
-[[>rsp:SearchTourSteps]]
 <mp-event-proxy id='guided-tour-run' on-event-type='Component.Loaded' on-event-source='semantic-search'
   proxy-event-type='GuidedTour.RunIfNotSeen' proxy-targets='["guided-tour-search"]'>
 </mp-event-proxy>
@@ -340,31 +339,7 @@
      "
    }'
       >
-        <div class='QueryBuilder--guideHolder'>
-          <div class='QueryBuilder--guidePanel'>
-            <div class='QueryBuilder--panelHeader'>Getting Started</div>
-            <ul class='QueryBuilder--guideLinks'>
-              <li>
-                <semantic-link uri='http://www.researchspace.org/resource/Features'>Explore ResearchSpace features</semantic-link>
-              </li>
-              <li>
-                <mp-event-trigger id='guided-tour-search-start' type='GuidedTour.Start' targets='["guided-tour-search"]'>
-                  <a>Take a guided tour of search</a>
-                </mp-event-trigger>
-              </li>
-            </ul>
-          </div>
-          <div class='QueryBuilder--guidePanel'>
-            <div class='QueryBuilder--panelHeader'>Example Searches</div>
-            <ul class='QueryBuilder--guideLinks'>
-              <li>
-                <mp-event-trigger id='guided-tour-actor-search-start' type='GuidedTour.Start' targets='["guided-tour-actor-search"]'>
-                  <a>Actor Search</a>
-                </mp-event-trigger>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
       </semantic-search-query-builder>
       <div data-flex-layout="row stretch-stretch">
         <div data-flex-self="size-1of3" style="flex: 0 0 0;">
