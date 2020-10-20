@@ -1,0 +1,37 @@
+
+<https://florentinedrawings.itatti.harvard.edu/resource/field/Location/context> {
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Location> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-88AF67E46D2EFA4B2BAE0338FC798C84;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-B48DBD26176BA737776E3C0EB8381CDC;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-88AF67E46D2EFA4B2BAE0338FC798C84 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-B48DBD26176BA737776E3C0EB8381CDC a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  ?subject crm:P30_custody_transferred_through ?s_0L1P0.
+	?s_0L1P0 a crm:E10_Transfer_of_Custody.
+	?s_0L1P0 crm:P29_custody_recieved_by ?value.
+	?value a crm:E40_Legal_Body.
+	?value rdfs:label ?label_0L1R.
+	?s_0L1R crm:P2_has_type ?s_0L1RE0.
+	?s_0L1RE0 a crm:E55_Type.
+	?s_0L1RE0 rdfs:label \"Collection\".
+    ?s_0L1R crm:P74_has_current_or_former_resindence ?s_0L1RE1.
+	?s_0L1RE1 a crm:E53_Place.
+	?s_0L1RE1 rdfs:label ?location.
+}""" .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Location> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T13:28:56.045Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/rootContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://florentinedrawings.itatti.harvard.edu/resource/field/Location> .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Location> a <http://www.w3.org/ns/ldp#Resource> .
+}

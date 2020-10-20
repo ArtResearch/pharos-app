@@ -1,0 +1,33 @@
+
+<https://florentinedrawings.itatti.harvard.edu/resource/field/1961_Edition_Artist_Attribution/context> {
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/1961_Edition_Artist_Attribution>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "1961 Edition | Artist Attribution"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-6048F306E46971869A97DD7F67A03C72;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-8CF43A2EA2A1EBE1333E9F0725243FCB;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-8CF43A2EA2A1EBE1333E9F0725243FCB a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+   # Artist Attribution
+  $subject crm:P108i_was_produced_by ?production.
+  ?production crm:P14_was_carried_out_by ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-6048F306E46971869A97DD7F67A03C72 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/1961_Edition_Artist_Attribution>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T13:28:53.567Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/rootContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://florentinedrawings.itatti.harvard.edu/resource/field/1961_Edition_Artist_Attribution> .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/1961_Edition_Artist_Attribution>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

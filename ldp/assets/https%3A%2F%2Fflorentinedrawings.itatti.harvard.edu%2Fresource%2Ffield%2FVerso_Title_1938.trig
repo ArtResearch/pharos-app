@@ -1,0 +1,37 @@
+
+<https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Title_1938/context> {
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Title_1938> a
+      <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Verso Title (1938)"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-7B3FC8C81BFE0EEC50032406CAA8F2E9;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-D9E54EC883EAEC2705221BE3B09E7E61;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-D9E54EC883EAEC2705221BE3B09E7E61 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P56_bears_feature ?feature.
+  ?feature crm:P2_has_type <http://vocab.getty.edu/aat/300010292>. #versos
+  ?feature a crm:E25_Man-Made_Feature.
+  ?feature crm:P138_has_representation ?visual_item.
+  ?visual_item a crm:E36_Visual_Item.
+  ?visual_item crm:P102_has_title ?value_uri.
+  ?value_uri a crm:E35_Title.
+  ?value_uri rdfs:label ?value.
+  ?value_uri crm:P141i_was_assigned_by <https://florentinedrawings.itatti.harvard.edu/resource/work/1938/attribute_assignment>. #1938
+}""" .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-7B3FC8C81BFE0EEC50032406CAA8F2E9 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Title_1938> a
+      <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T13:28:56.166Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/rootContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Title_1938> .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Title_1938> a
+      <http://www.w3.org/ns/ldp#Resource> .
+}

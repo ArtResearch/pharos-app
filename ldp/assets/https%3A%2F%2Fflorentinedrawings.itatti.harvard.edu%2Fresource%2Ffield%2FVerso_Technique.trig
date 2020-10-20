@@ -1,0 +1,32 @@
+
+<https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Technique/context> {
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Technique> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Verso Technique"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-D1CDF47F772E04AE03101EFAAD74FCC5;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e9bd156d29bb47659d29ed163800a4f7-D2F1C2885473017B1CD2D47984A53953;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-D2F1C2885473017B1CD2D47984A53953 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  $subject crm:P56_bears_feature ?feature.
+  ?feature crm:P2_has_type <http://vocab.getty.edu/aat/300010292>. #versos
+  ?feature a crm:E25_Man-Made_Feature.
+  ?feature crm:P81_was_modified_by ?modification.
+  ?modification a crm:E11_Modification.
+  ?modification crm:P32_used_general_technique ?value.
+}""" .
+  
+  _:genid-e9bd156d29bb47659d29ed163800a4f7-D1CDF47F772E04AE03101EFAAD74FCC5 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Technique> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T13:28:52.930Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://pharos.artresearch.net/container/rootContainer/Field_Definition_Container>
+    <http://www.w3.org/ns/ldp#contains> <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Technique> .
+  
+  <https://florentinedrawings.itatti.harvard.edu/resource/field/Verso_Technique> a <http://www.w3.org/ns/ldp#Resource> .
+}
