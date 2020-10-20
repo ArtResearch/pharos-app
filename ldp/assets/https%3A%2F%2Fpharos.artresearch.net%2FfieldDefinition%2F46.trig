@@ -1,0 +1,45 @@
+
+<https://pharos.artresearch.net/fieldDefinition/46/context> {
+  _:genid-84372e77914e4b5fb14bc602e5a89e39-5rjfdp a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-84372e77914e4b5fb14bc602e5a89e39-qb3a9r <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE 
+{ 
+	graph ?graph
+	{
+ 		$subject crm:P65_shows_visual_item ?value.
+  		?value crm:P2_has_type <http://vocab.getty.edu/aat/300404126>
+	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/46> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.metaphacts.com/ontology/fields#order> "560";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-84372e77914e4b5fb14bc602e5a89e39-qb3a9r;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-84372e77914e4b5fb14bc602e5a89e39-qb3a9r a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/46> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the subject of representation of the documented artwork. " .
+  
+  _:genid-84372e77914e4b5fb14bc602e5a89e39-5rjfdp <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/46> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-84372e77914e4b5fb14bc602e5a89e39-5rjfdp;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T11:18:35.489Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/46> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/46> a <http://www.w3.org/ns/ldp#Resource> .
+}
