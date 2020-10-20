@@ -1,30 +1,42 @@
 
 <https://pharos.artresearch.net/fieldDefinition/68/context> {
   <https://pharos.artresearch.net/fieldDefinition/68> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214740;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214739;
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-e1b381be12804d78b94f5a1a78a80217-bph4a <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-e1b381be12804d78b94f5a1a78a80217-rgf69d <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P67i_is_referred_to_by ?information_object.
+  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435425>.
+  		?information_object crm:P190_has_symbolic_content ?value .
+   }
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/68> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e1b381be12804d78b94f5a1a78a80217-rgf69d;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e1b381be12804d78b94f5a1a78a80217-bph4a;
+    <http://www.metaphacts.com/ontology/fields#order> "1300";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-e1b381be12804d78b94f5a1a78a80217-bph4a a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e1b381be12804d78b94f5a1a78a80217-rgf69d a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/68> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/frick>;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to provide a free text description of the conservation status of the documented object.";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Condition Assessment Description"@en .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214740 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214739 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE { graph ?graph {
-  $subject crm:P67i_is_referred_to_by ?information_object.
-  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435425>.
-  ?information_object crm:P190_has_symbolic_content ?value .
-  }}""" .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214740 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/68> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Condition Assessment Description"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:11.897Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T12:40:20.797Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/68> .

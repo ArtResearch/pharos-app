@@ -1,31 +1,45 @@
 
 <https://pharos.artresearch.net/fieldDefinition/73/context> {
   <https://pharos.artresearch.net/fieldDefinition/73> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214723;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214722;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+      <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate a participant in the creation of the documented object.";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Production Participant"@en .
+    <http://www.metaphacts.com/ontology/fields#order> "230";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-5b849600f5db4a4dbf45ec2fc52eda32-zd21w .
   
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214722 a <http://spinrdf.org/sp#Query> .
+  _:genid-5b849600f5db4a4dbf45ec2fc52eda32-dwr9z5 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214723 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  <https://pharos.artresearch.net/fieldDefinition/73> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5b849600f5db4a4dbf45ec2fc52eda32-dwr9z5;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
   
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214722 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
-  $subject crm:P108i_was_produced_by ?production.
-  ?production crm:P11_had_participant ?value
-  }}""" .
+  _:genid-5b849600f5db4a4dbf45ec2fc52eda32-zd21w a <http://spinrdf.org/sp#Query> .
   
-  <https://pharos.artresearch.net/fieldDefinition/73> a <http://www.w3.org/ns/prov#Entity>;
+  <https://pharos.artresearch.net/fieldDefinition/73> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti> .
+  
+  _:genid-5b849600f5db4a4dbf45ec2fc52eda32-zd21w <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+    {
+		$subject crm:P108i_was_produced_by ?production.
+		?production crm:P11_had_participant ?value
+	}
+}""" .
+  
+  _:genid-5b849600f5db4a4dbf45ec2fc52eda32-dwr9z5 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/73> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Participant"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:10.804Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T12:28:31.967Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/73> .

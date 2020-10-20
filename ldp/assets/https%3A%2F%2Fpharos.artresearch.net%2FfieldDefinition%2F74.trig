@@ -1,30 +1,45 @@
 
 <https://pharos.artresearch.net/fieldDefinition/74/context> {
   <https://pharos.artresearch.net/fieldDefinition/74> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214747;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214748;
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-611045f32f8b4b13adb6c3a8053f2354-d0py02 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+  graph ?graph 
+  {
+  	$subject crm:P67i_is_referred_to_by ?information_object.
+  	?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300015640>.
+ 	?information_object crm:P190_has_symbolic_content ?value .
+  }
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/74> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-611045f32f8b4b13adb6c3a8053f2354-d0py02;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document a description of the related works that can be considered or interest relative to the documented object." .
+  
+  _:genid-611045f32f8b4b13adb6c3a8053f2354-0p7c18 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/74> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-611045f32f8b4b13adb6c3a8053f2354-0p7c18 .
+  
+  _:genid-611045f32f8b4b13adb6c3a8053f2354-d0py02 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/74> <http://www.metaphacts.com/ontology/fields#order>
+      "2300";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-611045f32f8b4b13adb6c3a8053f2354-0p7c18 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/74> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Related Works Description"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document a description of the related works that can be considered or interest relative to the documented object.";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Related Works Description"@en .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214748 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214747 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:genid-6eea9915050d409cbdca2fbcf19a3bf2-t214748 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
-  $subject crm:P67i_is_referred_to_by ?information_object.
-  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300015640>.
-  ?information_object crm:P190_has_symbolic_content ?value .
-  }}""" .
-  
-  <https://pharos.artresearch.net/fieldDefinition/74> a <http://www.w3.org/ns/prov#Entity>;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-09-04T15:11:10.615Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-20T12:22:02.292Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/74> .
