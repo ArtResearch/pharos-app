@@ -8,7 +8,7 @@
    <rs-iiif-mirador
   image-or-region="[[#if record]][[record]][[else]]{{record}}[[/if]]" 
 
-image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . ?image  crm:P2_has_type <http://iiif.io/api/image> .
+image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . ?image crm:P2_has_type <http://iiif.io/api/image> .
   
 BIND(REPLACE(STR(REPLACE(STR(?image),"/full/full/0/native.jpg","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
   
