@@ -8,14 +8,14 @@
    <rs-iiif-mirador
   image-or-region="[[#if record]][[record]][[else]]{{record}}[[/if]]" 
 
-image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image . 
+image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . ?image  crm:P2_has_type <http://iiif.io/api/image> .
   
-BIND(REPLACE(STR(REPLACE(STR(?image),"/full/200%2C/0/native.jpg","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
+BIND(REPLACE(STR(REPLACE(STR(?image),"/full/full/0/native.jpg","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
   
 iiif-server-url="https://ids.lib.harvard.edu/ids/iiif" 
        
   />
-    
+
   </div>
 
   </div> 
@@ -38,7 +38,7 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
                 ?production crm:P14_carried_out_by ?photographer.
                 ?photographer rdfs:label ?phototographer_label.
    
-                ?photo crm:P138i_has_representation ?recto.
+                ?photo crm:P129i_is_subject_of ?recto.
                 ?recto crm:P2_has_type <http://iiif.io/api/image> .
   							?recto crm:P2_has_type ?typer .
                 ?typer rdfs:label "recto".
