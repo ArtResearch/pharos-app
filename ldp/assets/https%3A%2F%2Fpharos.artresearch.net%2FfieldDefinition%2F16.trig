@@ -1,0 +1,47 @@
+
+<https://pharos.artresearch.net/fieldDefinition/16/context> {
+  <https://pharos.artresearch.net/fieldDefinition/16> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-rji55p;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-rji55p a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/16> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-5x8e7q .
+  
+  _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-5x8e7q <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+    	?subject crm:P24i_changed_ownership_through ?acquisition.
+		?acquisition crm:P4_has_time-span ?timespan .
+		?timespan crm:P82_at_some_time_within ?value
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/16> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Acquisition Timespan"@en;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the timespan for an ownership period of the documented object. ";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#order> "810" .
+  
+  _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-rji55p <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-a5f26d06877f4f1e907c52d71ccb2b0c-5x8e7q a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/16> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T11:33:57.276Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/16> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/16> a <http://www.w3.org/ns/ldp#Resource> .
+}

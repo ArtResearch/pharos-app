@@ -1,0 +1,59 @@
+
+<https://pharos.artresearch.net/fieldDefinition/93/context> {
+  <https://pharos.artresearch.net/fieldDefinition/93> <http://www.metaphacts.com/ontology/fields#order>
+      "650" .
+  
+  _:genid-3ce63f14ae164de189d4510474c97811-54fw9o a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/93> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Current Location"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/collection>,
+      <https://pharos.artresearch.net/category/institution>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/resource/fc/work> .
+  
+  _:genid-3ce63f14ae164de189d4510474c97811-54fw9o <http://spinrdf.org/sp#text> """SELECT distinct ?value ?qualifier ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P55_has_current_location ?value.
+ 		OPTIONAL 
+        {
+ 			?value crm:P2_has_type ?qualifier_uri.
+    		?qualifier_uri rdfs:label ?qualifier
+		}      
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/93> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-3ce63f14ae164de189d4510474c97811-y3sdgi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/93> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E40_Group>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-3ce63f14ae164de189d4510474c97811-y3sdgi;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding>,
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/hertziana>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-3ce63f14ae164de189d4510474c97811-54fw9o;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-3ce63f14ae164de189d4510474c97811-y3sdgi a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/93> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "The current location of the documented object.";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T12:30:51.880Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/93> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/93> a <http://www.w3.org/ns/ldp#Resource> .
+}

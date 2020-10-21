@@ -1,0 +1,47 @@
+
+<https://pharos.artresearch.net/fieldDefinition/301/context> {
+  <https://pharos.artresearch.net/fieldDefinition/301> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-c4e32b37260545c789ed7b00764cd1ba-ka2jsg <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+  	graph ?graph
+	{
+  		?visual_item crm:P128i_is_carried_by $subject .
+		?value crm:P138i_is_represented_by ?visual_item.
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/301> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-c4e32b37260545c789ed7b00764cd1ba-zazmdb <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-c4e32b37260545c789ed7b00764cd1ba-ka2jsg a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/301> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-c4e32b37260545c789ed7b00764cd1ba-zazmdb;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#order> "3700" .
+  
+  _:genid-c4e32b37260545c789ed7b00764cd1ba-zazmdb a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/301> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-c4e32b37260545c789ed7b00764cd1ba-ka2jsg;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T11:37:56.017Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/301> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/301> a <http://www.w3.org/ns/ldp#Resource> .
+}

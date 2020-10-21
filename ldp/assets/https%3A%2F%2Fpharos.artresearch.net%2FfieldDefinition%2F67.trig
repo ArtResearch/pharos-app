@@ -1,0 +1,53 @@
+
+<https://pharos.artresearch.net/fieldDefinition/67/context> {
+  <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-9a49544a89c74af79bb2f438327b1c49-zpv71o <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-9a49544a89c74af79bb2f438327b1c49-c1pvi5 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/67> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-9a49544a89c74af79bb2f438327b1c49-zpv71o;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document a description of the colour of a documented object.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Color Information"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-9a49544a89c74af79bb2f438327b1c49-zpv71o a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/67> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#order> "710";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9a49544a89c74af79bb2f438327b1c49-c1pvi5 .
+  
+  _:genid-9a49544a89c74af79bb2f438327b1c49-c1pvi5 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE 
+{
+	graph ?graph 
+  	{ 
+    	{
+  			$subject crm:P67i_is_referred_to_by ?information_object.
+  			?information_object crm:P2_has_type ?type.
+  			?type rdfs:label \"Color Description\".
+  			?information_object crm:P190_has_symbolic_content ?value .
+		}
+        UNION
+   		{  
+         	$subject crm:P43_has_dimension ?dimension .
+        	?dimension crm:P2_has_type <http://vocab.getty.edu/aat/300127013> .
+        	?dimension crm:P90_has_value ?value
+    	}
+    }
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T12:27:08.545Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/67> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.w3.org/ns/ldp#Resource> .
+}

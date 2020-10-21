@@ -1,0 +1,50 @@
+
+<https://pharos.artresearch.net/fieldDefinition/6/context> {
+  <https://pharos.artresearch.net/fieldDefinition/6> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-a7437e5be14d42c29d353a2cca5cfcfd-kw6gwo <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-a7437e5be14d42c29d353a2cca5cfcfd-qs74t a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label ?qualifier ?graph 
+WHERE 
+{ 
+	graph ?graph
+  	{
+  		$subject crm:P43_has_dimension ?dimension.
+ 		?dimension crm:P2_has_type ?type.
+  		?type rdfs:label ?qualifier.
+  		?dimension crm:P90_has_value ?dvalue .
+  		?dimension crm:P91_has_unit ?unit_uri .
+  		?unit_uri rdfs:label ?unit.
+    	BIND(CONCAT(STR(?dvalue),\" \",?unit,\" \",\"(\",?qualifier,\")\") as ?value)
+  	}
+}
+  """ .
+  
+  <https://pharos.artresearch.net/fieldDefinition/6> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-a7437e5be14d42c29d353a2cca5cfcfd-kw6gwo;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/khi>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dimensions"@en .
+  
+  _:genid-a7437e5be14d42c29d353a2cca5cfcfd-kw6gwo a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/6> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to indicate a dimension of an object.";
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#order> "700";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a7437e5be14d42c29d353a2cca5cfcfd-qs74t;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T12:37:00.170Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/6> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/6> a <http://www.w3.org/ns/ldp#Resource> .
+}
