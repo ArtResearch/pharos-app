@@ -1,0 +1,50 @@
+
+<https://pharos.artresearch.net/fieldDefinition/286/context> {
+  <https://pharos.artresearch.net/fieldDefinition/286> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-8463569ffbf84f9f874de115e0af6ffd-1n0jr a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/286> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-8463569ffbf84f9f874de115e0af6ffd-htisj;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/collection>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Institution"@en;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The affiliation of the documented person" .
+  
+  _:genid-8463569ffbf84f9f874de115e0af6ffd-htisj a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/286> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  
+  _:genid-8463569ffbf84f9f874de115e0af6ffd-1n0jr <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P107_is_current_or_former_member_of ?value.
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/286> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/itatti>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#order> "3400";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8463569ffbf84f9f874de115e0af6ffd-1n0jr .
+  
+  _:genid-8463569ffbf84f9f874de115e0af6ffd-htisj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/286> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T15:03:50.526Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/286> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/286> a <http://www.w3.org/ns/ldp#Resource> .
+}

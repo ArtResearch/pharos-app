@@ -1,0 +1,48 @@
+
+<https://pharos.artresearch.net/fieldDefinition/201/context> {
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-rhsg61 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-y8m3jh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-rhsg61 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{   
+	graph ?graph
+  	{
+  		$subject crm:P104_is_subject_to ?right.
+  		?right rdfs:label ?value
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to indicate, in a free text form, information regarding the use restrictions pertinent to the documented object.";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#order> "1100";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana> .
+  
+  _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-y8m3jh <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-rhsg61;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2aab3da3fe93489999e5ef8d0bd5e13d-y8m3jh;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Use Restrictions"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T16:15:50.229Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/201> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/201> a <http://www.w3.org/ns/ldp#Resource> .
+}

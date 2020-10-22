@@ -1,0 +1,50 @@
+
+<https://pharos.artresearch.net/fieldDefinition/94/context> {
+  <https://pharos.artresearch.net/fieldDefinition/94> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-cbf19d75236e4555a3db398e32489932-5rttl .
+  
+  _:genid-cbf19d75236e4555a3db398e32489932-r36rmc <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/94> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.metaphacts.com/ontology/fields#order> "2800";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cbf19d75236e4555a3db398e32489932-r36rmc .
+  
+  _:genid-cbf19d75236e4555a3db398e32489932-5rttl a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/94> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Is Part Of"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate whether an object is part of another or not.";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work> .
+  
+  _:genid-cbf19d75236e4555a3db398e32489932-r36rmc a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/94> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana> .
+  
+  _:genid-cbf19d75236e4555a3db398e32489932-5rttl <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P46i_forms_part_of ?value.
+  		?value a crm:E22_Man-Made_Object .
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/94> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T15:05:57.437Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/94> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/94> a <http://www.w3.org/ns/ldp#Resource> .
+}

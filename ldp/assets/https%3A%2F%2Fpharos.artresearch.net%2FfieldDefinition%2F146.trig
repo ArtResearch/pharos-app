@@ -1,0 +1,52 @@
+
+<https://pharos.artresearch.net/fieldDefinition/146/context> {
+  <https://pharos.artresearch.net/fieldDefinition/146> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1df7323f33194d359aed72ee0b27bca3-ag8eco;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#order> "340" .
+  
+  _:genid-1df7323f33194d359aed72ee0b27bca3-81c36c <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+    	$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    	?production crm:P4_has_time-span ?tm.
+    	?tm crm:P2_has_type ?type .
+    	?type rdfs:label \"Alternative Date\".
+    	?tm crm:P82_at_some_time_within ?value
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/146> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1df7323f33194d359aed72ee0b27bca3-81c36c .
+  
+  _:genid-1df7323f33194d359aed72ee0b27bca3-ag8eco a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/146> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "This field is used to indicate an alternative timespan for the creation of the documented object. ";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Production Date - Alternative"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi> .
+  
+  _:genid-1df7323f33194d359aed72ee0b27bca3-81c36c a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/146> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-1df7323f33194d359aed72ee0b27bca3-ag8eco <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/146> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T15:58:15.919Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/146> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/146> a <http://www.w3.org/ns/ldp#Resource> .
+}

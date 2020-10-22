@@ -1,31 +1,46 @@
 
 <https://pharos.artresearch.net/fieldDefinition/280/context> {
   <https://pharos.artresearch.net/fieldDefinition/280> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/hertziana>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9f9cace068a3472f93f74d51cfd26e90-t273247;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9f9cace068a3472f93f74d51cfd26e90-t273246;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+      <https://pharos.artresearch.net/category/zeri>;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en .
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d9abc958d1a249e88fdea90285fc927e-p8s84b;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
   
-  _:genid-9f9cace068a3472f93f74d51cfd26e90-t273247 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-d9abc958d1a249e88fdea90285fc927e-p8s84b a <http://spinrdf.org/sp#Query> .
   
-  _:genid-9f9cace068a3472f93f74d51cfd26e90-t273246 <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph WHERE { graph ?graph {
-  $subject crm:P108i_was_produced_by ?production.
-  ?production crm:P125_used_object_of_type ?value.
-  }}""";
-    a <http://spinrdf.org/sp#Query> .
+  <https://pharos.artresearch.net/fieldDefinition/280> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Equipment used for the production of the documented object";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/itatti>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/khi>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d9abc958d1a249e88fdea90285fc927e-kax9x;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
   
-  _:genid-9f9cace068a3472f93f74d51cfd26e90-t273247 a <http://spinrdf.org/sp#Query> .
+  _:genid-d9abc958d1a249e88fdea90285fc927e-kax9x <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P108i_was_produced_by ?production.
+  		?production crm:P125_used_object_of_type ?value.
+  	}
+ }""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/280> <http://www.metaphacts.com/ontology/fields#order>
+      "4000";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/frick> .
+  
+  _:genid-d9abc958d1a249e88fdea90285fc927e-kax9x a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d9abc958d1a249e88fdea90285fc927e-p8s84b <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <https://pharos.artresearch.net/fieldDefinition/280> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T12:32:07.138Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T15:00:04.168Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/280> .

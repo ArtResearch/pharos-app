@@ -1,0 +1,48 @@
+
+<https://pharos.artresearch.net/fieldDefinition/213/context> {
+  <https://pharos.artresearch.net/fieldDefinition/213> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-a16f39370a0f4358a7e411738f148aa7-wng8mi a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/213> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Shot Date"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-a16f39370a0f4358a7e411738f148aa7-7mz15w <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/213> <http://www.metaphacts.com/ontology/fields#order>
+      "2700" .
+  
+  _:genid-a16f39370a0f4358a7e411738f148aa7-wng8mi <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P128_carries ?visual_item.
+  		?visual_item crm:P128_is_carried_by ?negative.
+  		?negative crm:P108i_was_produced_by ?production.
+  		?production crm:P4_has_time-span ?tm.
+  		?tm crm:P82_at_some_time_within ?value
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/213> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-a16f39370a0f4358a7e411738f148aa7-7mz15w;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-a16f39370a0f4358a7e411738f148aa7-7mz15w a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/213> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-a16f39370a0f4358a7e411738f148aa7-wng8mi;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T16:06:52.548Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/213> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/213> a <http://www.w3.org/ns/ldp#Resource> .
+}

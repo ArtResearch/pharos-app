@@ -1,0 +1,42 @@
+
+<https://pharos.artresearch.net/fieldDefinition/150/context> {
+  _:genid-ede5a9014bcf43dbb50d4b5ca4e733ae-cu83h <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph
+  	{
+  		$subject crm:P67i_is_referred_to_by ?information_object.
+  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435418>.
+  		?information_object crm:P190_has_symbolic_content ?value .
+  	}
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#order>
+      "660";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-ede5a9014bcf43dbb50d4b5ca4e733ae-h6futi <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-ede5a9014bcf43dbb50d4b5ca4e733ae-h6futi;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Museum Credit Line"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-ede5a9014bcf43dbb50d4b5ca4e733ae-h6futi a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-ede5a9014bcf43dbb50d4b5ca4e733ae-cu83h;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document the credit line that should be used in relation to the documented object.";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T15:26:41.231Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/150> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/150> a <http://www.w3.org/ns/ldp#Resource> .
+}

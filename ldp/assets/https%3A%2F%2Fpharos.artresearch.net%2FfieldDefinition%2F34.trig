@@ -1,31 +1,44 @@
 
 <https://pharos.artresearch.net/fieldDefinition/34/context> {
   <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/frick>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214736;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214737;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-271310ec63014e98a827723be4973eb5-ufci2t <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/34> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to provide a free text description of an exhibition.";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Exhibition Description"@en .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-271310ec63014e98a827723be4973eb5-ufci2t;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-271310ec63014e98a827723be4973eb5-ndp19s .
   
-  _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214737 <http://spinrdf.org/sp#text> """SELECT ?value ?label  ?graph WHERE { graph ?graph {
-  $subject crm:P67i_is_referred_to_by ?information_object.
-  ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435424>.
-  ?information_object crm:P190_has_symbolic_content ?value .
-  }}""" .
+  _:genid-271310ec63014e98a827723be4973eb5-ufci2t a <http://spinrdf.org/sp#Query> .
   
-  _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214736 a <http://spinrdf.org/sp#Query> .
+  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/work> .
   
-  _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214737 a <http://spinrdf.org/sp#Query> .
+  _:genid-271310ec63014e98a827723be4973eb5-ndp19s <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P67i_is_referred_to_by ?information_object.
+  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435424>.
+  		?information_object crm:P190_has_symbolic_content ?value .
+  	}
+}""" .
   
-  _:genid-658b69f0a8ce4977807cfdb549b8b1c5-t214736 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Exhibition Description"@en;
+    <http://www.metaphacts.com/ontology/fields#order> "905";
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
   
-  <https://pharos.artresearch.net/fieldDefinition/34> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-271310ec63014e98a827723be4973eb5-ndp19s a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/34> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/frick>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-21T12:32:14.018Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T16:14:43.583Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://pharos.artresearch.net/fieldDefinition/34> .

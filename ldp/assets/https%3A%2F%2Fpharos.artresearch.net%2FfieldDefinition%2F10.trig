@@ -1,0 +1,45 @@
+
+<https://pharos.artresearch.net/fieldDefinition/10/context> {
+  <https://pharos.artresearch.net/fieldDefinition/10> <http://www.metaphacts.com/ontology/fields#category>
+      <https://pharos.artresearch.net/category/zeri> .
+  
+  _:genid-406866394d8c44e48ce18b8e9be56228-qv9f1e a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/10> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-406866394d8c44e48ce18b8e9be56228-8tv5x5 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-406866394d8c44e48ce18b8e9be56228-qv9f1e <http://spinrdf.org/sp#text> """SELECT ?value ?label ?graph 
+WHERE 
+{ 
+  	graph ?graph 
+  	{
+    	$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    	?production crm:P4_has_time-span ?tm.
+    	?tm crm:P79_begin_is_qualified_by ?value
+  	}
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/10> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-406866394d8c44e48ce18b8e9be56228-8tv5x5;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to denote qualifying information related to the exactness and means of determination of the start point of the production date of the documented object.";
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/photo> .
+  
+  _:genid-406866394d8c44e48ce18b8e9be56228-8tv5x5 a <http://spinrdf.org/sp#Query> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/10> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Production Date - Start Qualifier"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <https://pharos.artresearch.net/category/work>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-406866394d8c44e48ce18b8e9be56228-qv9f1e;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#order> "305";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-22T16:02:12.042Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://pharos.artresearch.net/fieldDefinition/10> .
+  
+  <https://pharos.artresearch.net/fieldDefinition/10> a <http://www.w3.org/ns/ldp#Resource> .
+}

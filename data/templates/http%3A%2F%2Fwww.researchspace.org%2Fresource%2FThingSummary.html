@@ -87,7 +87,7 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
             <mp-field-visualization
               subject=[[this]]
                                                    
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. OPTIONAL 							{?field <https://pharos.artresearch.net/field/order> ?w}} ORDER BY ASC(?w) "]]'
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object. OPTIONAL 							{?field <http://www.metaphacts.com/ontology/fields#order> ?w}} ORDER BY ASC(?w) "]]'
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
 
