@@ -9,17 +9,37 @@
   <mp-overlay-dialog-content>
     <div style='height: 500px;'>
       [[!-- IIIF viewer --]]
-
+     [[#if (ask "ASK {?? crm:P2_has_type <http://vocab.getty.edu/aat/300133025> }") ]]      
+  [[this]]
+  <rs-iiif-mirador
+  
+image-or-region = "[[this]]"
+image-id-pattern='BIND("image" AS ?type). BIND(?? AS ?imageIRI). 
+                  
+?? crm:P138i_is_represented_by ?visual_item.
+?visual_item crm:P128i_is_carried_by ?value.
+?value  <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . 
+  
+BIND("zeri!138800%21138695_g.jpg" AS ?imageID)'
+  
+iiif-server-url="https://iiif.artresearch.net/iiif/2"       
+  />
+    
+   
+    
+    [[else]]   
    <rs-iiif-mirador
   
 image-or-region = "[[this]]"
-image-id-pattern='BIND("image" AS ?type). BIND( ?? AS ?imageIRI). ?? <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . 
+image-id-pattern='BIND("image" AS ?type). BIND(?? AS ?imageIRI). 
+                  
+?? <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . 
   
 BIND(REPLACE(STR(REPLACE(STR(?image),"/full/full/0/native.jpg","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
   
 iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"       
   />
-    
+    [[/if]] 
   </div>
       
 

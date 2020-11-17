@@ -31,7 +31,7 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
   							?? crm:P138i_is_represented_by ?visual_item.
   							?visual_item crm:P128i_is_carried_by ?photo.
   							?photo crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
-                ?photo rdfs:label ?photo_label.
+              
                 ?photo crm:P50_has_current_keeper ?keeper.
                 ?keeper rdfs:label ?keeper_label.
                 ?photo crm:P108i_was_produced_by ?production .
@@ -60,7 +60,7 @@ iiif-server-url="https://ids.lib.harvard.edu/ids/iiif"
                 <td>
                    Photograph:
                  	<semantic-link iri="{{photo.value}}"> 
-          				 {{photo_label.value}}
+          				{{photo.value}}
                   </semantic-link> <br>
                   Photographer:
                  	<semantic-link iri="{{photographer.value}}"> 
