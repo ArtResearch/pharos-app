@@ -10,7 +10,9 @@
     <div style='height: 500px;'>
       [[!-- IIIF viewer --]]
      [[#if (ask "ASK {?? crm:P2_has_type <http://vocab.getty.edu/aat/300133025> }") ]]      
-  [[this]]
+
+      
+    
   <rs-iiif-mirador
   
 image-or-region = "[[this]]"
@@ -20,9 +22,9 @@ image-id-pattern='BIND("image" AS ?type). BIND(?? AS ?imageIRI).
 ?visual_item crm:P128i_is_carried_by ?value.
 ?value  <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?image . 
   
-BIND("zeri!138800%21138695_g.jpg" AS ?imageID)'
+ BIND(REPLACE(STR(REPLACE(STR(?image),"[[singleValueFromSelect 'SELECT ?regex WHERE {??  <https://pharos.artresearch.net/custom/has_provider> ?provider . ?provider <https://pharos.artresearch.net/custom/has_iiif_regex> ?regex}']]","")), "(^.*)\\/(.*)$", "$2") AS ?imageID)'
   
-iiif-server-url="https://iiif.artresearch.net/iiif/2"       
+iiif-server-url="[[singleValueFromSelect 'SELECT ?server WHERE {??  <https://pharos.artresearch.net/custom/has_provider> ?provider . ?provider <https://pharos.artresearch.net/custom/has_iiif_server> ?server}']]"       
   />
     
    

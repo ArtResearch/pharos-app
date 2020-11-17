@@ -169,30 +169,6 @@
     '
       resource-selector='{
       "query":
-        [[#if solr]]
-          "
-          SELECT DISTINCT $suggestion $label WHERE {
-             {
-               { SELECT $suggestion ?score WHERE {
-             BIND(CONCAT(\"defType=edismax&ps=100&pf=suggestionSearchText&fl=id,score&rows=1000&q.op=AND&fq=fc:\", REPLACE(str(?__range__), \":\", \"\\\\\\\\:\"), \"&fq=frs:\", REPLACE(str(?__relation__), \":\", \"\\\\\\\\:\")) as ?sFC)
-             BIND(CONCAT(\"(\",LCASE(?__token__),\")\") as ?lcasetoken)
-             SERVICE <http://www.bigdata.com/rdf/fts#search> {
-                $suggestion fts:search ?lcasetoken .
-                $suggestion fts:endpoint \"[[solrEndpoint]]\" .
-                $suggestion fts:params ?sFC .
-                $suggestion fts:scoreField \"score\" .
-                $suggestion fts:score ?score .
-                $suggestion fts:fieldToSearch \"suggestionSearchText\" .
-                $suggestion fts:searchField \"id\" .
-                $suggestion fts:searchResultType \"URI\" .
-             } } }
-             <http://www.bigdata.com/queryHints#Prior> <http://www.bigdata.com/queryHints#runFirst> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean>.
-             ?suggestion rdfs:label ?label .
-             BIND (STRLEN(?label) as ?len)
-            }
-          } ORDER BY DESC(?score) ?len LIMIT 10
-          "
-     [[else]]
        "
        SELECT DISTINCT $suggestion $label WHERE {
              {
@@ -203,16 +179,18 @@
                    bds:minRelevance \"0.3\" ;
                    bds:matchAllTerms \"true\"  .
                  }
-                 ?suggestion rdfs:label ?label ;
-                             a ?__range__ .
+                 ?record owl:sameAs ?suggestion .
+                 ?suggestion crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos> . 
+                 ?suggestion rdfs:label ?label .
+                 ?record  a ?__range__ .
               }
             }
             FILTER(EXISTS {
-              ?subject ?__relation__ $suggestion .
+              ?subject ?__relation__ ?record  .
             })
           } ORDER BY DESC(?score)  LIMIT 10
        "
-     [[/if]],
+,
      "suggestionTupleTemplate": "<span title=\"{{label.value}}\">{{label.value}}</span>",
      "noSuggestionsTemplate": "<div class=\"suggestion-no-matches\">no matches found</div>"
    }'
@@ -386,7 +364,7 @@
                     query='
                     SELECT DISTINCT ?subject ?iri WHERE {
                      ?subject owl:sameAs ?rsubject .
-                     ?rsubject  a <http://pharos> .
+                     ?rsubject  crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos> .
                       FILTER EXISTS { ?subject (rdfs:label | rso:displayLabel) ?label }
                         OPTIONAL {?subject (rs:PX_has_main_representation | crm:P138i_has_representation) ?image}
                       BIND(?rsubject as ?iri) .
@@ -435,7 +413,7 @@
                 <semantic-search-result>
                   <semantic-table id='semantic-search-result-table'
                                   query='SELECT DISTINCT ?rsubject WHERE {  ?subject owl:sameAs ?rsubject .
-                     ?rsubject  a <http://pharos> . } ORDER BY ?rsubject'
+                     ?rsubject  crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos>  . } ORDER BY ?rsubject'
                                   options='{"showFilter":false, "resultsPerPage":10}'
                   >
                   </semantic-table>
