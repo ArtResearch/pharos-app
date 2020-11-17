@@ -25,78 +25,7 @@
       id='semantic-search'
       limit=50000
       optimizer=blazegraph
-      categories='{
-    "<http://www.researchspace.org/ontology/Concept>": [
-      {
-        "kind": "hierarchy",
-        "queryPattern": "$subject $__relation__ ?__value__ ."
-      }
-    ],
-    "<http://www.researchspace.org/ontology/Place>": [
-      {
-        "kind": "hierarchy",
-        "queryPattern": "$subject ?__relation__ ?__value__ ."
-      }
-    ],
-    "<http://www.researchspace.org/ontology/Time>": [
-      {
-        "kind": "date-range",
-        "queryPattern": "
-           {
-             $subject ?__relation__ ?date .
-             ?date crm:P82a_begin_of_the_begin ?begin ;
-                   crm:P82b_end_of_the_end ?end .
-             FILTER(?begin <= ?__dateEndValue__) .
-             FILTER(?end >= ?__dateBeginValue__) .
-           }
-        "
-      }
-    ],
-    "<http://www.researchspace.org/ontology/Text>": [
-      {
-        "kind": "text",
-        [[#if solr]]
-          "queryPattern":
-          "
-             {
-             $subject a ?__domain__ .
-             $subject rso:displayLabel ?label .
-             { SELECT $subject WHERE {
-             BIND(CONCAT(\"defType=edismax&ps=100&pf=suggestionSearchText&fl=id,score&q.op=AND&rows=5000&fq=fc:\", REPLACE(str(?__domain__), \":\", \"\\\\\\\\:\")) as ?sFC)
-             BIND(CONCAT(\"(\",LCASE(?__value__),\")\") as ?lcasevalue)
-             SERVICE <http://www.bigdata.com/rdf/fts#search> {
-                $subject fts:search ?lcasevalue .
-                $subject fts:endpoint \"[[solrEndpoint]]\" .
-                $subject fts:params ?sFC .
-                $subject fts:scoreField \"score\" .
-                $subject fts:score ?score .
-                $subject fts:fieldToSearch \"suggestionSearchText\" .
-                $subject fts:searchField \"id\" .
-                $subject fts:searchResultType \"URI\" .
-             } } ORDER BY DESC(?score) }
-                <http://www.bigdata.com/queryHints#Prior> <http://www.bigdata.com/queryHints#runFirst> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean>.
-           }
-          ",
-          "helpPage": "<http://help.metaphacts.com/resource/SolrFullTextSearchSyntax>",
-          "escapeLuceneSyntax": false
-        [[else]]
-          "queryPattern":
-          "
-             {
-               $subject a ?__domain__ .
-               $subject rso:displayLabel ?label .
-               SERVICE <http://www.bigdata.com/rdf/search#search> {
-                 ?label bds:search ?__value__ ;
-                        bds:minRelevance \"0.3\" ;
-                        bds:matchAllTerms \"true\"  .
-               }
-             }
-          "
-        [[/if]]
 
-      }
-    ]
-  }'
     search-profile='{
     "defaultProfile": "<http://www.researchspace.org/profile/all>",
     "categoriesQuery": "
@@ -194,128 +123,6 @@
      "suggestionTupleTemplate": "<span title=\"{{label.value}}\">{{label.value}}</span>",
      "noSuggestionsTemplate": "<div class=\"suggestion-no-matches\">no matches found</div>"
    }'
-
-     tree-selector='{
-     "rootsQuery": "
-        select distinct ?item ?label ?hasChildren where {
-         <http://www.bigdata.com/queryHints#Query> <http://www.bigdata.com/queryHints#optimizer> \"None\".
-         BIND(?__range__ as ?range)
-         BIND(IF(?range = rso:Concept, rso:Concept_has_broader_Concept, rso:Place_is_part_of_Place)	AS ?broader) .
-          {
-            ?item a ?__range__ .
-            ?item skos:inScheme ?schema .
-            FILTER(EXISTS { ?subject ?__relation__ ?item . }) .
-            MINUS { ?item ?broader ?parent }
-            ?item rso:displayLabel ?label .
-          }
-          OPTIONAL { ?child ?broader ?item . }
-          BIND(bound(?child) as ?hasChildren)
-        } order by ?label",
-     "childrenQuery": "
-       select distinct ?item ?label ?hasChildren where {
-         <http://www.bigdata.com/queryHints#Query> <http://www.bigdata.com/queryHints#optimizer> \"None\".
-         BIND(?__range__ as ?range)
-         BIND(IF(?range = rso:Concept, rso:Concept_has_broader_Concept, rso:Place_is_part_of_Place)	AS ?broader) .
-         {
-           FILTER(EXISTS { ?subject ?__relation__ ?item . }) .
-           ?item ?broader ?parent .
-           ?item rso:displayLabel ?label .
-         }
-         OPTIONAL { ?child ?broader ?item . }
-         BIND(bound(?child) as ?hasChildren)
-       } order by ?label",
-     "parentsQuery": "
-       select distinct ?item ?parent ?parentLabel where {
-          <http://www.bigdata.com/queryHints#Query> <http://www.bigdata.com/queryHints#optimizer> \"None\".
-         BIND(?__range__ as ?range)
-         BIND(IF(?range = rso:Concept, rso:Concept_has_broader_Concept, rso:Place_is_part_of_Place)	AS ?broader) .
-         ?item ?broader ?parent .
-         ?parent rso:displayLabel ?parentLabel .
-       }",
-     "searchQuery": [[#if solr]]
-       "
-  SELECT DISTINCT ?item ?label ?score ?hasChildren WHERE {
-            BIND(?__range__ AS ?range)
-            BIND(IF(?range = rso:Concept, rso:Concept_has_broader_Concept, rso:Place_is_part_of_Place) AS ?broader)
-            {
-              SELECT DISTINCT ?item ?score ?label WHERE {
-                {
-                  SELECT DISTINCT ?item ?score ?label WHERE {
-                    BIND(CONCAT(\"defType=edismax&ps=100&pf=suggestionSearchText&fl=id,score&rows=50&q.op=AND&fq=scheme:*&fq=fc:\", REPLACE(str(?__range__), \":\", \"\\\\\\\\:\"), \"&fq=frs:\", REPLACE(str(?__relation__), \":\", \"\\\\\\\\:\")) as ?sFC)
-                    BIND(CONCAT(\"(\",LCASE(?__token__),\")\") as ?lcasetoken)
-                    SERVICE <http://www.bigdata.com/rdf/fts#search> {
-                      ?item <http://www.bigdata.com/rdf/fts#search> ?lcasetoken.
-                      ?item <http://www.bigdata.com/rdf/fts#endpoint> \"[[solrEndpoint]]\".
-                      ?item <http://www.bigdata.com/rdf/fts#params> ?sFC.
-                      ?item <http://www.bigdata.com/rdf/fts#scoreField> \"score\".
-                      ?item <http://www.bigdata.com/rdf/fts#score> ?score.
-                      ?item <http://www.bigdata.com/rdf/fts#fieldToSearch> \"suggestionSearchText\".
-                      ?item <http://www.bigdata.com/rdf/fts#searchField> \"id\".
-                      ?item <http://www.bigdata.com/rdf/fts#searchResultType> \"URI\".
-                    }
-                  }
-                }
-                <http://www.bigdata.com/queryHints#Prior> <http://www.bigdata.com/queryHints#runFirst> \"true\"^^<http://www.w3.org/2001/XMLSchema#boolean>.
-                ?item rso:displayLabel ?label.
-                OPTIONAL {?item skos:inScheme ?schema .}
-              } LIMIT 500
-            }
-            OPTIONAL { ?child ?broader ?item. }
-            BIND(BOUND(?child) AS ?hasChildren)
-          }
-          ORDER BY DESC(?score) ?label
-          LIMIT 200
-        "
-      [[else]]
-        "
-          SELECT DISTINCT ?item ?label ?score ?hasChildren WHERE {
-            BIND(?__range__ AS ?range)
-            BIND(IF(?range = rso:Concept, rso:Concept_has_broader_Concept, rso:Place_is_part_of_Place) AS ?broader)
-            {
-              SELECT DISTINCT ?item ?score ?label WHERE {
-                {
-                  SELECT DISTINCT ?item ?score ?label WHERE {
-                    SERVICE <http://www.bigdata.com/rdf/search#search> {
-                      ?label bds:search ?__token__ ;
-                      bds:relevance ?score ;
-                      bds:minRelevance \"0.3\" ;
-                      bds:maxRank \"50000\" ;
-                      bds:matchAllTerms \"true\"  .
-                    }
-                    ?item rso:displayLabel ?label.
-                    OPTIONAL {?item skos:inScheme ?schema .}
-                  }
-                }
-                OPTIONAL {
-                  ?subject ?__relation__ ?item .
-                }
-                FILTER(BOUND(?subject))
-              } LIMIT 500
-            }
-            OPTIONAL { ?child ?broader ?item. }
-            BIND(BOUND(?child) AS ?hasChildren)
-          }
-          ORDER BY DESC(?score) ?label
-          LIMIT 200
-        "
-      [[/if]],
-     "placeholder": "Search ... "
-   }'
-
-    geo-selector='{
-     "query": "
-        SELECT ?value ?label ?lat ?long WHERE {
-          ?value crm:P87_is_identified_by ?coord;
-                 rso:displayLabel ?label.
-
-          ?coord wgs84_pos:lat ?lat;
-                 wgs84_pos:long ?long.
-
-          ?label bds:search ?__token__ ;
-          bds:relevance ?score .
-         } ORDER BY DESC(?score)  LIMIT 20
-     "
-   }'
       >
         
       </semantic-search-query-builder>
@@ -363,11 +170,10 @@
                     id='semantic-search-result-grid'
                     query='
                     SELECT DISTINCT ?subject ?iri WHERE {
-                     ?subject owl:sameAs ?rsubject .
-                     ?rsubject  crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos> .
+                 
                       FILTER EXISTS { ?subject (rdfs:label | rso:displayLabel) ?label }
                         OPTIONAL {?subject (rs:PX_has_main_representation | crm:P138i_has_representation) ?image}
-                      BIND(?rsubject as ?iri) .
+                      BIND(?subject as ?iri) .
                     } ORDER BY DESC(?image)
                   '
                     tuple-template='{{> gridItem }}',
@@ -412,8 +218,7 @@
               <bs-tab event-key="2" title="Table">
                 <semantic-search-result>
                   <semantic-table id='semantic-search-result-table'
-                                  query='SELECT DISTINCT ?rsubject WHERE {  ?subject owl:sameAs ?rsubject .
-                     ?rsubject  crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos>  . } ORDER BY ?rsubject'
+                                  query='SELECT DISTINCT ?subject WHERE {   . } ORDER BY ?subject'
                                   options='{"showFilter":false, "resultsPerPage":10}'
                   >
                   </semantic-table>
