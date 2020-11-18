@@ -99,7 +99,7 @@
       resource-selector='{
       "query":
        "
-       SELECT DISTINCT $suggestion $label WHERE {
+       SELECT DISTINCT $suggestion $label ?__relation__ ?record WHERE {
              {
                SELECT DISTINCT ?suggestion ?label ?score WHERE {
                 ?record owl:sameAs ?suggestion .
@@ -166,7 +166,8 @@
             <bs-tabs unmount-on-exit=true id='search-results' animation=false class='tabs-right'>
               <bs-tab event-key="1" title="Grid">
                 <semantic-search-result>
-                 
+  <semantic-table it='table' id="testtable" query='SELECT * WHERE { $subject <{{__contextRelation__}}> ${__contextRelationPattern__}
+                                                                  }'></semantic-table>
                   <semantic-table
                     id='semantic-search-result-grid'
                     query='
@@ -217,7 +218,13 @@
                 </semantic-search-result>
               </bs-tab>
               <bs-tab event-key="2" title="Table">
-
+                <semantic-search-result>
+                  <semantic-table id='semantic-search-result-table'
+                                  query='SELECT DISTINCT ?subject WHERE {   . } ORDER BY ?subject'
+                                  options='{"showFilter":false, "resultsPerPage":10}'
+                  >
+                  </semantic-table>
+                </semantic-search-result>
               </bs-tab>
               <bs-tab event-key="3" title="Chart">
                 <semantic-search-result-context ranges='["http://www.researchspace.org/ontology/Concept", "http://www.researchspace.org/ontology/Place", "http://www.researchspace.org/ontology/Actor"]'>
