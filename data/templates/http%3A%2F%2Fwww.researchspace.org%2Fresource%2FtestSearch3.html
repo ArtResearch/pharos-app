@@ -99,32 +99,36 @@
       resource-selector='{
       "query":
        "
-       SELECT DISTINCT $suggestion $label ?subjectio WHERE {
+       SELECT DISTINCT $suggestion $label WHERE {
              {
                SELECT DISTINCT ?suggestion ?label ?score WHERE {
-                ?record owl:sameAs ?suggestion .
-                ?suggestion crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos> . 
-                ?suggestion rdfs:label ?label .
-                ?record  a ?__range__ .
                  SERVICE <http://www.bigdata.com/rdf/search#search> {
                    $label bds:search ?__token__ ;
                    bds:relevance ?score ;
                    bds:minRelevance \"0.3\" ;
                    bds:matchAllTerms \"true\"  .
                  }
+                
+                
+                ?suggestion rdfs:label ?label .
+           
               }
             }
-            FILTER(EXISTS {
-              ?subject ?__relation__ ?record  .
-            })
+     
           } ORDER BY DESC(?score)  LIMIT 10
        "
 ,
-     "suggestionTupleTemplate": "<span title=\"{{label.value}}\">{{label.value}}</span>",
+     "suggestionTupleTemplate": "{{> suggestionTemplate }}",
      "noSuggestionsTemplate": "<div class=\"suggestion-no-matches\">no matches found</div>"
    }'
       >
-        
+        <template id ="suggestionTemplate">
+                  <semantic-if query='ASK { BIND((RAND() > 0.5) as ?x) FILTER(?x) }'>
+          <template id='then'><span title=\"{{label.value}}\">{{suggestion.value}}</span></template>
+          <template id='else'></template>
+        </semantic-if>
+      		  
+        </template>
       </semantic-search-query-builder>
       <div data-flex-layout="row stretch-stretch">
         <div data-flex-self="size-1of3" style="flex: 0 0 0;">
