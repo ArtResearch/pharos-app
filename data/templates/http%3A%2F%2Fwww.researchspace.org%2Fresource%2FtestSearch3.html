@@ -99,7 +99,7 @@
       resource-selector='{
       "query":
        "
-       SELECT DISTINCT $suggestion $label ?__relation__ ?record WHERE {
+       SELECT DISTINCT $suggestion $label ?subjectio WHERE {
              {
                SELECT DISTINCT ?suggestion ?label ?score WHERE {
                 ?record owl:sameAs ?suggestion .
@@ -166,8 +166,9 @@
             <bs-tabs unmount-on-exit=true id='search-results' animation=false class='tabs-right'>
               <bs-tab event-key="1" title="Grid">
                 <semantic-search-result>
-  <semantic-table it='table' id="testtable" query='SELECT * WHERE { $subject <{{__contextRelation__}}> ${__contextRelationPattern__}
-                                                                  }'></semantic-table>
+					
+                  <semantic-table it='table' id="testtable" query='
+SELECT * WHERE { $subject $label ?a }'></semantic-table>
                   <semantic-table
                     id='semantic-search-result-grid'
                     query='
