@@ -108,10 +108,9 @@
                    bds:minRelevance \"0.3\" ;
                    bds:matchAllTerms \"true\"  .
                  }
-                
-                
-                ?suggestion rdfs:label ?label .
-           
+                ?suggestion rdfs:label ?label.
+                ?suggestion crm:P2_has_type <https://pharos.artresearch.net/resource/type/pharos>.
+                ? 
               }
             }
      
@@ -123,12 +122,9 @@
    }'
       >
         <template id ="suggestionTemplate">
-                  <semantic-if query='ASK { BIND((RAND() > 0.5) as ?x) FILTER(?x) }'>
-          <template id='then'><span title=\"{{label.value}}\">{{suggestion.value}}</span></template>
-          <template id='else'></template>
-        </semantic-if>
-      		  
+            <span title=\"{{label.value}}\">{{label.value}}</span>
         </template>
+        
       </semantic-search-query-builder>
       <div data-flex-layout="row stretch-stretch">
         <div data-flex-self="size-1of3" style="flex: 0 0 0;">
@@ -170,7 +166,6 @@
             <bs-tabs unmount-on-exit=true id='search-results' animation=false class='tabs-right'>
               <bs-tab event-key="1" title="Grid">
                 <semantic-search-result>
-					
                   <semantic-table it='table' id="testtable" query='
 SELECT * WHERE { $subject $label ?a }'></semantic-table>
                   <semantic-table
