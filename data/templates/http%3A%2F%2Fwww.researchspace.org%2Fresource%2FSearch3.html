@@ -170,7 +170,7 @@
                     id='semantic-search-result-grid'
                     query='
                     SELECT DISTINCT ?subject ?iri WHERE {
-                 
+                 ?s ?dsadas ?sadad 
                       FILTER EXISTS { ?subject (rdfs:label | rso:displayLabel) ?label }
                         OPTIONAL {?subject (rs:PX_has_main_representation | crm:P138i_has_representation) ?image}
                       BIND(?subject as ?iri) .
